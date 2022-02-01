@@ -8,7 +8,7 @@
 
 .nav
 {
-	margin: 10px;
+	margin: 5px;
 	display: flex;
 	flex-direction: row;
   	align-items: center;
@@ -17,32 +17,39 @@
 
 .navitem
 {
-	vertical-align:middle;
-	width: 20%;
-	text-align: center;
+	width: 20%;/*每个元素占20%*/
+}
+
+.button1
+{
+	height: 50px;
+	width: 200%;
+	margin-top: -110px;
+	border-radius: 50%;
+	background-color: #ddc121;
 }
 
 .btn
 {
 	padding-left: 16px;
-	margin-top: 5px;
+	margin-top: 10px;
 	border-radius: 12px;
 	background-color: #bfbfbf;
-	/* color: #515151; */
+
 	
 	position: relative;
     border: none;
-    /* font-size: 28px; */
-    /* width: 200px; */
+
+
     text-align: center;
-    -webkit-transition-duration: 0s; /* Safari */
+    -webkit-transition-duration: 0s; 
     transition-duration: 0s;
     text-decoration: none;
-    /* overflow: hidden; */
-    /* cursor: pointer; */
+
+
 }
 
-.button:after {
+.btn:after {
     content: "";
     background: #ebe5e5;
     display: block;

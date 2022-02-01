@@ -6,11 +6,17 @@
 	<image src="/images/Tree.JPG" style="width:90%;height:350px"></image>
 </view>
 
+<!-- 家庭积分池 -->
+<view class="nav">
+		<button class="button1">
+		<text class='text'>家庭积分池</text>
+		</button>
+</view>
 
 <view class="nav">
 	<view class="navitem">
-		<button class="btn" style="width:60px; height:60px" >
-		<text class='text'>长辈 协助</text>
+		<button class="btn" style="width:60px; height:60px" ><!-- 按钮设置为方形 -->
+		<text class='text'>长辈 协助</text><!-- 加空格实现换行 -->
 		</button>
 	</view>
 

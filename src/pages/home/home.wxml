@@ -1,2 +1,52 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- <text>pages/home/home.wxml</text> -->
+
+<!-- 家庭树 -->
+<view class="img">
+	<image src="/images/Tree.JPG" style="width:90%;height:350px"></image>
+</view>
+
+
+<view class="nav">
+	<view class="navitem">
+		<button class="btn" style="width:60px; height:60px" >
+		<text class='text'>长辈 协助</text>
+		</button>
+	</view>
+
+	<view class="navitem">
+		<button class="btn" style="width:60px; height:60px" >
+		<text class='text'>服务 中心</text>
+		</button>
+	</view>
+
+	<view class="navitem">
+		<button class="btn" style="width:60px; height:60px" >
+		<text class='text'>实时 收益</text>
+		</button>
+	</view>
+
+	<view class="navitem">
+		<button class="btn" style="width:60px; height:60px" >
+		<text class='text'>风险 管控</text>
+		</button>
+	</view>
+</view>
+
+<!-- <view class="nav">
+	<view class="navitem">
+		<button class="btn" style="width:55px;height:55px" >E</button>
+	</view>
+
+	<view class="navitem">
+		<button class="btn" style="width:55px;height:55px" >F</button>
+	</view>
+
+	<!-- <view class="navitem">
+		<button class="btn" style="width:55px;height:55px" >A</button>
+	</view>
+
+	<view class="navitem">
+		<button class="btn" style="width:55px;height:55px" >A</button>
+	</view> -->
+<!-- </view> -->

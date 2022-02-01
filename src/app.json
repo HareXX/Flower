@@ -2,7 +2,8 @@
 	"pages":[
 		"pages/home/home",
 		"pages/invest/invest",
-		"pages/me/me"
+		"pages/me/me",
+		"pages/tmp/tmp"
 	],
 	"window":{
 		"backgroundTextStyle":"light",

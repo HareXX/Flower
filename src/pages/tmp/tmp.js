@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/tmp/tmp.js
 Page({
 
 	/**
@@ -7,7 +7,7 @@ Page({
 	data: {
 
 	},
-	
+
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

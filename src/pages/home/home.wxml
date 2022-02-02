@@ -3,7 +3,7 @@
 
 <!-- 家庭树 -->
 <view class="img">
-	<image src="/images/Tree.JPG" style="width:90%;height:350px"></image>
+	<image src="/images/Tree.JPG" style="width:80%;height:600rpx"></image>
 </view>
 
 <!-- 家庭积分池 -->
@@ -15,25 +15,25 @@
 
 <view class="nav">
 	<view class="navitem">
-		<button class="btn" style="width:60px; height:60px" ><!-- 按钮设置为方形 -->
+		<button class="btn" style="width:110rpx; height:110rpx" ><!-- 按钮设置为方形 -->
 		<text class='text'>长辈 协助</text><!-- 加空格实现换行 -->
 		</button>
 	</view>
 
 	<view class="navitem">
-		<button class="btn" style="width:60px; height:60px" >
+		<button class="btn" style="width:110rpx; height:110rpx" >
 		<text class='text'>服务 中心</text>
 		</button>
 	</view>
 
 	<view class="navitem">
-		<button class="btn" style="width:60px; height:60px" >
+		<button class="btn" style="width:110rpx; height:110rpx" >
 		<text class='text'>实时 收益</text>
 		</button>
 	</view>
 
 	<view class="navitem">
-		<button class="btn" style="width:60px; height:60px" >
+		<button class="btn" style="width:110rpx; height:110rpx" >
 		<text class='text'>风险 管控</text>
 		</button>
 	</view>

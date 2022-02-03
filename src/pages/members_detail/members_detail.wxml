@@ -1,0 +1,42 @@
+<!--pages/members_detail/members_detail.wxml-->
+<!-- <text>pages/members_detail/members_detail.wxml</text> -->
+
+<!-- 用户A -->
+<view style="display:flex;align-items:center" class="img">
+	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+  <view>
+    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <text class='text'>选择用户A</text><!-- 加空格实现换行 -->
+    </button>
+  </view>
+</view>
+
+<!-- 用户B -->
+<view style="display:flex;align-items:center" class="img">
+	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+  <view>
+    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <text class='text'>选择用户B</text><!-- 加空格实现换行 -->
+    </button>
+  </view>
+</view>
+
+<!-- 用户C -->
+<view style="display:flex;align-items:center" class="img">
+	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+  <view>
+    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <text class='text'>选择用户C</text><!-- 加空格实现换行 -->
+    </button>
+  </view>
+</view>
+
+<!-- 用户D -->
+<view style="display:flex;align-items:center" class="img">
+	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+  <view>
+    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <text class='text'>选择用户D</text><!-- 加空格实现换行 -->
+    </button>
+  </view>
+</view>

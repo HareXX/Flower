@@ -1,0 +1,71 @@
+/* pages/members_detail/members_detail.wxss */
+.img
+{
+	display:flex;
+	height: 100px;
+	justify-content: center;
+	align-items:center;
+}
+
+.nav
+{
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.navitem
+{
+	width: 20%;/*每个元素占20%*/
+}
+
+.button1
+{
+	height: 30px;
+	width: 200%;
+	margin-top: -110px;
+	border-radius: 50%;
+	background-color: #ddc121;
+}
+
+.btn
+{
+	padding-left: 16px;
+	margin-top: 10px;
+	border-radius: 12px;
+	background-color: #bfbfbf;
+
+	
+	position: relative;
+    border: none;
+
+
+    text-align: center;
+    -webkit-transition-duration: 0s; 
+    transition-duration: 0s;
+    text-decoration: none;
+
+
+}
+
+.btn:after {
+    content: "";
+    background: #ebe5e5;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.text
+{
+	word-break: keep-all;
+	font-size: 20px;
+	text-align: center;
+}

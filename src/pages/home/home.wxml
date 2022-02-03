@@ -15,7 +15,7 @@
 
 <view class="nav">
 	<view class="navitem">
-		<button class="btn" style="width:110rpx; height:110rpx" ><!-- 按钮设置为方形 -->
+		<button class="btn" style="width:110rpx; height:110rpx" bindtap="btnTap1"><!-- 按钮设置为方形 -->
 		<text class='text'>长辈 协助</text><!-- 加空格实现换行 -->
 		</button>
 	</view>
@@ -35,6 +35,20 @@
 	<view class="navitem">
 		<button class="btn" style="width:110rpx; height:110rpx" >
 		<text class='text'>风险 管控</text>
+		</button>
+	</view>
+</view>
+
+<view class="nav">
+	<view class="navitem">
+		<button class="btn" style="width:110rpx; height:110rpx" >
+		<text class='text'>历史 记录</text>
+		</button>
+	</view>
+
+	<view class="navitem">
+		<button class="btn" style="width:110rpx; height:110rpx" >
+		<text class='text'>更多 功能</text>
 		</button>
 	</view>
 </view>

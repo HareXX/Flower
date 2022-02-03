@@ -8,6 +8,12 @@ Page({
 
 	},
 	
+	btnTap1(e) {
+		wx.navigateTo({
+		  url: '../senior-helper/senior-helper',
+		})
+	},
+
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

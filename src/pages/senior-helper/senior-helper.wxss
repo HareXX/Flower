@@ -14,7 +14,7 @@
 .btn {
     margin-top: 80rpx;
     margin-left: 80rpx;
-    background-color: #09ff00; 
+    background-color: #bfbfbf; 
 
     position: relative;
     border: none;

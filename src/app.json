@@ -1,10 +1,10 @@
 {
 	"pages":[
-		"pages/senior-helper/senior-helper",
 		"pages/home/home",
 		"pages/invest/invest",
 		"pages/me/me",
-		"pages/tmp/tmp"
+		"pages/tmp/tmp",
+		"pages/senior-helper/senior-helper"
 	],
 	"window":{
 		"backgroundTextStyle":"light",

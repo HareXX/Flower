@@ -1,5 +1,6 @@
 {
 	"pages":[
+		"pages/senior-helper/senior-helper",
 		"pages/home/home",
 		"pages/invest/invest",
 		"pages/me/me",

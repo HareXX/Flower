@@ -1,44 +1,49 @@
 {
-	"pages":[
+	"pages": [
+		"pages/homepage/homepage",
 		"pages/home/home",
 		"pages/invest/invest",
+		"pages/other_service/other_service",
 		"pages/me/me",
 		"pages/tmp/tmp",
 		"pages/senior-helper/senior-helper",
 		"pages/family_members/family_members",
-		"pages/members_detail/members_detail"
+		"pages/members_detail/members_detail",
+		"custom-tab-bar/index"
 	],
-	"window":{
-		"backgroundTextStyle":"light",
+	"window": {
+		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#fff",
 		"navigationBarTitleText": "Weixin",
-		"navigationBarTextStyle":"black"
+		"navigationBarTextStyle": "black"
 	},
 	"tabBar": {
-		
+		"custom": true,
 		"color": "#bfbfbf",
 		"selectedColor": "#515151",
-		"list": [{
-			"pagePath": "pages/invest/invest",
-			"text": "理财",
-			"iconPath": "images/licai_unchosen.png",
-			"selectedIconPath": "images/licai_chosen.png"
-		},{
-			"pagePath": "pages/home/home",
-			"text": "家",
-			"iconPath": "images/home_unchosen.png",
-			"selectedIconPath": "images/home_chosen.png"
-		},{
-			"pagePath": "pages/me/me",
-			"text": "我的",
-			"iconPath": "images/me_unchosen.png",
-			"selectedIconPath": "images/me_chosen.png"
-		}]
+		"list": [
+			{
+				"pagePath": "pages/homepage/homepage",
+				"text": "主页"
+			},
+			{
+				"pagePath": "pages/invest/invest",
+				"text": "理财"
+			},
+			{
+				"pagePath": "pages/home/home",
+				"text": "家"
+			},
+			{
+				"pagePath": "pages/other_service/other_service",
+				"text": "服务"
+			},
+			{
+				"pagePath": "pages/me/me",
+				"text": "我的"
+			}
+		]
 	},
 	"sitemapLocation": "sitemap.json",
-	"usingComponents": {
-		"van-tabbar": "@vant/weapp/tabbar/index",
-		"van-tabbar-item": "@vant/weapp/tabbar-item/index",
-		"van-icon": "@vant/weapp/icon/index"
-	  }
+	"usingComponents": {}
 }

@@ -7,13 +7,21 @@ Page({
 	data: {
 
 	},
-	
+
+	// "lazyCodeLoading": "requiredComponents",
+
 	btnTap1(e) {
 		wx.navigateTo({
 		  url: '../senior-helper/senior-helper',
 		})
 	},
 
+	imgTap1(e)
+	{
+		wx.navigateTo({
+		  url: '../family_members/family_members',
+		})
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

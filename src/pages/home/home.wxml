@@ -3,7 +3,7 @@
 
 <!-- 家庭树 -->
 <view class="img">
-	<image src="/images/Tree.JPG" style="width:80%;height:600rpx"></image>
+	<image src="/images/Tree.png" style="width:80%;height:600rpx" bindtap="imgTap1"></image>
 </view>
 
 <!-- 家庭积分池 -->

@@ -19,8 +19,6 @@
 	},
 	"tabBar": {
 		"custom": true,
-		"color": "#bfbfbf",
-		"selectedColor": "#515151",
 		"list": [
 			{
 				"pagePath": "pages/homepage/homepage",
@@ -45,5 +43,12 @@
 		]
 	},
 	"sitemapLocation": "sitemap.json",
-	"usingComponents": {}
+	"usingComponents": {
+		"van-search": "@vant/weapp/search/index",
+		"van-icon": "@vant/weapp/icon/index",
+		"van-grid": "@vant/weapp/grid/index",
+		"van-grid-item": "@vant/weapp/grid-item/index",
+		"van-image": "@vant/weapp/image/index",
+		"van-button": "@vant/weapp/button/index"
+	}
 }

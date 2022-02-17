@@ -1,0 +1,16 @@
+.nav
+{
+	display: flex;
+}
+
+.search-container
+{
+	margin-top: 0rpx;
+	width: 90%;
+}
+
+.question-container
+{
+	width:10%;
+	margin-top: 15rpx;
+}

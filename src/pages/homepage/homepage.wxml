@@ -1,0 +1,33 @@
+<view class="nav">
+	<view class="search-container">
+		<van-search
+			value="{{ value }}"
+			placeholder="请输入搜索关键词"
+			shape="round"
+			right-icon="close"
+		>
+		</van-search>
+	</view>
+
+	<view class="question-container">
+		<van-icon 
+			name="smile-o" 
+			size="60rpx"
+			color="grey"
+		/>
+	</view>
+</view>
+
+<view class="assets-container">
+	<van-grid column-num="2">
+		<van-grid-item use-slot="true">
+			<text>我的资产(元)</text>
+			<text>xxxx</text>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<text>昨日收益(元)</text>
+			<text>xxxx</text>
+		</van-grid-item>
+	</van-grid>
+</view>

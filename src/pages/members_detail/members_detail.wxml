@@ -3,9 +3,9 @@
 
 <!-- 用户A -->
 <view style="display:flex;align-items:center" class="img">
-	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+	<image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
   <view>
-    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <button class='btn' style="width:400rpx; height:80rpx" ><!-- 按钮设置为方形 -->
     <text class='text'>选择用户A</text><!-- 加空格实现换行 -->
     </button>
   </view>
@@ -13,9 +13,9 @@
 
 <!-- 用户B -->
 <view style="display:flex;align-items:center" class="img">
-	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+	<image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
   <view>
-    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <button class='btn' style="width:400rpx; height:80rpx" ><!-- 按钮设置为方形 -->
     <text class='text'>选择用户B</text><!-- 加空格实现换行 -->
     </button>
   </view>
@@ -23,9 +23,9 @@
 
 <!-- 用户C -->
 <view style="display:flex;align-items:center" class="img">
-	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+	<image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
   <view>
-    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <button class='btn' style="width:400rpx; height:80rpx" ><!-- 按钮设置为方形 -->
     <text class='text'>选择用户C</text><!-- 加空格实现换行 -->
     </button>
   </view>
@@ -33,9 +33,9 @@
 
 <!-- 用户D -->
 <view style="display:flex;align-items:center" class="img">
-	<image src="/images/family_members.png" style="width:70px;height:80px"></image>
+	<image src="/images/family_members.png" style="width:100rpx;height:100rpx"></image>
   <view>
-    <button class='btn' style="width:180px; height:40px" ><!-- 按钮设置为方形 -->
+    <button class='btn' style="width:400rpx; height:80rpx" ><!-- 按钮设置为方形 -->
     <text class='text'>选择用户D</text><!-- 加空格实现换行 -->
     </button>
   </view>

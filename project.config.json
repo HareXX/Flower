@@ -1,5 +1,5 @@
 {
-    "miniprogramRoot": "/src",
+    "miniprogramRoot": "src/",
     "description": "项目配置文件",
     "packOptions": {
         "ignore": []
@@ -23,9 +23,9 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
-        "useApiHook": false,
-        "useApiHostProcess": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -33,14 +33,17 @@
         },
         "useIsolateContext": false,
         "userConfirmedBundleSwitch": false,
-        "packNpmManually": false,
-        "packNpmRelationList": [],
         "minifyWXSS": true,
         "disableUseStrict": false,
         "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "ignoreUploadUnusedFiles": true
+        "ignoreUploadUnusedFiles": true,
+        "packNpmManually": true,
+        "packNpmRelationList": [{
+            "packageJsonPath": "./package.json",
+            "miniprogramNpmDistDir": "./"
+        }]
     },
     "compileType": "miniprogram",
     "libVersion": "2.22.0",

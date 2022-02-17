@@ -4,7 +4,8 @@
 		"pages/invest/invest",
 		"pages/me/me",
 		"pages/tmp/tmp",
-		"pages/senior-helper/senior-helper"
+		"pages/senior-helper/senior-helper",
+		"pages/AI-query/AI-query"
 	],
 	"window":{
 		"backgroundTextStyle":"light",
@@ -33,6 +34,5 @@
 			"selectedIconPath": "images/me_chosen.png"
 		}]
 	},
-	"style": "v2",
 	"sitemapLocation": "sitemap.json"
 }

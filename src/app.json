@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/wx_login/wx_login",
 		"pages/homepage/homepage",
 		"pages/home/home",
 		"pages/invest/invest",
@@ -7,13 +8,9 @@
 		"pages/me/me",
 		"pages/tmp/tmp",
 		"pages/senior-helper/senior-helper",
-<<<<<<< HEAD
-		"pages/AI-query/AI-query"
-=======
 		"pages/family_members/family_members",
 		"pages/members_detail/members_detail",
 		"custom-tab-bar/index"
->>>>>>> 0e8b6e08cf89f04d1f55fa1192d7e250fcb90212
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -46,9 +43,6 @@
 			}
 		]
 	},
-<<<<<<< HEAD
-	"sitemapLocation": "sitemap.json"
-=======
 	"sitemapLocation": "sitemap.json",
 	"usingComponents": {
 		"van-search": "@vant/weapp/search/index",
@@ -58,5 +52,4 @@
 		"van-image": "@vant/weapp/image/index",
 		"van-button": "@vant/weapp/button/index"
 	}
->>>>>>> 0e8b6e08cf89f04d1f55fa1192d7e250fcb90212
 }

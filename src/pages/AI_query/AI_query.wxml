@@ -1,7 +1,7 @@
 <!--pages/AI_query/AI_query.wxml-->
 <text>pages/AI_query/AI_query.wxml</text>
 
-<!-- <form class="page-form" bindsubmit="formSubmit" bindreset="formReset">
+<form class="page-form" bindsubmit="formSubmit" bindreset="formReset">
     <view class="group">
         <input class="question" type="text" bindfocus="inputFocus" name="question" auto-focus="true" placeholder="请简洁描述您的问题" value="{{entry}}"/>
         <button class="cancel" form-type="reset">×</button>
@@ -17,4 +17,4 @@
     </block>
 </scroll-view>
 <loading hidden="{{hidden}}">加载中...</loading>
-<toast hidden="{{toastHidden}}" duration="2000" bindchange="toastChange">{{errMsg}}</toast> -->
+<toast hidden="{{toastHidden}}" duration="2000" bindchange="toastChange">{{errMsg}}</toast>

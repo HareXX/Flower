@@ -1,25 +1,25 @@
-// pages/AI_query/AI_query.jsvar 
-app = getApp(),
-    api = 'https://op.juhe.cn/robot/index',
-    appKey = 'd3b7f81ac8efa513bcb95639ac9dee99';
+// pages/AI_query/AI_query.js
+var app = getApp(),
+  api = 'https://op.juhe.cn/robot/index',
+  appKey = 'd3b7f81ac8efa513bcb95639ac9dee99';
 
 Page({
-  data:{
-    title:"你来提问，我来回答",
+  data: {
+    title: "你来提问，我来回答",
     hidden: true,
     toastHidden: true,
     errMsg: '',
     user: []
   },
-  onLoad:function(options){
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     // console.log(options);
     // wx.clearStorage();
   },
-  onShow: function(args) {
+  onShow: function (args) {
     var data = this.data,
-        anim,
-        lastMsg;
+      anim,
+      lastMsg;
     anim = wx.createAnimation({
       duration: 400,
       timingFunction: 'ease-in-out'
@@ -32,16 +32,16 @@ Page({
       toView: 'toView' + (lastMsg ? lastMsg.id : 0)
     });
   },
-  toastChange: function() {
+  toastChange: function () {
     var _data = this.data;
     _data.toastHidden = true;
     this.setData(_data);
   },
-  formSubmit: function(e) {
+  formSubmit: function (e) {
     var _this = this,
-        q = e.detail.value.question,
-        _data = _this.data,
-        anim = this.anim;
+      q = e.detail.value.question,
+      _data = _this.data,
+      anim = this.anim;
     anim.scale(1.1, 1.1).step();
     anim.scale(1, 1).step();
     if (!q) {
@@ -66,7 +66,7 @@ Page({
       header: {
         'Content-Type': 'application/json'
       },
-      success: function(res) {
+      success: function (res) {
         var d, lastMsg;
         if (res.statusCode === 200) {
           d = res.data;
@@ -104,7 +104,7 @@ Page({
     });
   },
   */
-  formReset: function() {
+  formReset: function () {
     var data = this.data;
     data.entry = '';
     this.setData(data);

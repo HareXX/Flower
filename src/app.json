@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/AI_query/AI_query",
 		"pages/wx_login/wx_login",
 		"pages/homepage/homepage",
 		"pages/invest/invest",
@@ -10,8 +11,7 @@
 		"pages/senior-helper/senior-helper",
 		"pages/family_members/family_members",
 		"pages/members_detail/members_detail",
-		"custom-tab-bar/index",
-		"pages/AI_query/AI_query"
+		"custom-tab-bar/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

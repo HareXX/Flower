@@ -1,4 +1,3 @@
-/* pages/AI_query/AI_query.wxss */
 .page-form {
     position: fixed;
     right: 0;

@@ -1,6 +1,7 @@
 {
 	"pages": [
 		"pages/AI_query/AI_query",
+		"pages/AI_query/answers/1",
 		"pages/wx_login/wx_login",
 		"pages/homepage/homepage",
 		"pages/invest/invest",
@@ -35,7 +36,7 @@
 				"text": "家"
 			},
 			{
-				"pagePath": "pages/other_service/other_service",
+				"pagePath": "pages/AI_query/AI_query",
 				"text": "服务"
 			},
 			{

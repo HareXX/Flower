@@ -1,20 +1,11 @@
 <view class="nav">
 	<view class="search-container">
-		<van-search
-			value="{{ value }}"
-			placeholder="请输入搜索关键词"
-			shape="round"
-			right-icon="close"
-		>
+		<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">
 		</van-search>
 	</view>
 
 	<view class="question-container">
-		<van-icon 
-			name="smile-o" 
-			size="60rpx"
-			color="grey"
-		/>
+		<van-icon name="smile-o" size="60rpx" color="grey" />
 	</view>
 </view>
 

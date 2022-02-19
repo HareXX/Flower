@@ -1,4 +1,4 @@
-// pages/AI-query/AI-query.jsvar 
+// pages/AI_query/AI_query.jsvar 
 app = getApp(),
     api = 'https://op.juhe.cn/robot/index',
     appKey = 'd3b7f81ac8efa513bcb95639ac9dee99';

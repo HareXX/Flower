@@ -2,6 +2,10 @@
 	"pages": [
 		"pages/AI_query/AI_query",
 		"pages/AI_query/answers/1",
+		"pages/AI_query/answers/2",
+		"pages/AI_query/answers/3",
+		"pages/AI_query/answers/4",
+		"pages/AI_query/answers/5",
 		"pages/wx_login/wx_login",
 		"pages/homepage/homepage",
 		"pages/invest/invest",

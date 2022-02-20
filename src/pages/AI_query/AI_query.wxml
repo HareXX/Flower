@@ -7,6 +7,15 @@
 
         <van-grid-item text="2. 如何申请家庭关联账户">
         </van-grid-item>
+
+        <van-grid-item text="3. 医疗健康界面从哪里进入">
+        </van-grid-item>
+
+        <van-grid-item text="4. 可用家庭积分明细在哪里查看">
+        </van-grid-item>
+
+        <van-grid-item text="5. 中年人和老年人的界面有什么不同">
+        </van-grid-item>
     </van-grid>
 </view>
 

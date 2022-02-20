@@ -1,4 +1,4 @@
-/* pages/me/me.wxss */
+/* pages/account_security/account_security.wxss */
 page {
   background-color: #e4e4e4;
 }

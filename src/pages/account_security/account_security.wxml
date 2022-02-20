@@ -1,0 +1,11 @@
+<!--pages/account_security/account_security.wxml-->
+<view>
+    <van-cell title="绑定银行卡" is-link link-type="navigateTo"
+  url="/pages/bind_bankcard/bind_bankcard"/>
+  <view class="row"></view>
+    <van-cell title="设置密码" is-link link-type="navigateTo"
+  url="/pages/password_settings/password_settings"/>
+  <view class="line"></view>
+    <van-cell title="修改密码" is-link link-type="navigateTo"
+  url="/pages/password_modification/password_modification"/>
+</view>

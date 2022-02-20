@@ -1,0 +1,30 @@
+<!--pages/personal_card/personal_card.wxml-->
+
+<view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+<view class="hr"></view>
+  <view class='item'>
+    <view class="title">手机绑定</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+
+<view class="hr"></view>
+  <view class='item'>
+    <view class="title">姓名</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>
+
+<view class="hr"></view>
+  <view class='item'>
+    <view class="title">我的二维码</view>
+    <view class="detail2">
+      <text>></text>
+    </view>
+</view>

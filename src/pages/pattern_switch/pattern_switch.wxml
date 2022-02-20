@@ -1,0 +1,10 @@
+<!--pages/pattern_switch/pattern_switch.wxml-->
+<view class='add_btn'>
+    <button class='btn'>
+        老年模式
+    </button>
+    <view class="row"></view>
+    <button class='btn'>
+        中年模式
+    </button>
+</view>

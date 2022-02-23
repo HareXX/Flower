@@ -1,65 +1,4 @@
 {
-<<<<<<< Updated upstream
-	"pages": [
-		"pages/AI_query/AI_query",
-		"pages/AI_query/answers/1",
-		"pages/AI_query/answers/2",
-		"pages/AI_query/answers/3",
-		"pages/AI_query/answers/4",
-		"pages/AI_query/answers/5",
-		"pages/wx_login/wx_login",
-		"pages/homepage/homepage",
-		"pages/invest/invest",
-		"pages/home/home",
-		"pages/other_service/other_service",
-		"pages/me/me",
-		"pages/tmp/tmp",
-		"pages/senior-helper/senior-helper",
-		"pages/family_members/family_members",
-		"pages/members_detail/members_detail",
-		"custom-tab-bar/index"
-	],
-	"window": {
-		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "Weixin",
-		"navigationBarTextStyle": "black"
-	},
-	"tabBar": {
-		"custom": true,
-		"list": [
-			{
-				"pagePath": "pages/homepage/homepage",
-				"text": "主页"
-			},
-			{
-				"pagePath": "pages/invest/invest",
-				"text": "理财"
-			},
-			{
-				"pagePath": "pages/home/home",
-				"text": "家"
-			},
-			{
-				"pagePath": "pages/AI_query/AI_query",
-				"text": "服务"
-			},
-			{
-				"pagePath": "pages/me/me",
-				"text": "我的"
-			}
-		]
-	},
-	"sitemapLocation": "sitemap.json",
-	"usingComponents": {
-		"van-search": "@vant/weapp/search/index",
-		"van-icon": "@vant/weapp/icon/index",
-		"van-grid": "@vant/weapp/grid/index",
-		"van-grid-item": "@vant/weapp/grid-item/index",
-		"van-image": "@vant/weapp/image/index",
-		"van-button": "@vant/weapp/button/index"
-	}
-=======
   "pages": [
     "pages/wx_login/wx_login",
     "pages/homepage/homepage",
@@ -79,7 +18,13 @@
     "pages/pattern_switch/pattern_switch",
     "pages/bind_bankcard/bind_bankcard",
     "pages/password_settings/password_settings",
-    "pages/password_modification/password_modification"
+	"pages/password_modification/password_modification",
+	"pages/AI_query/AI_query",
+	"pages/AI_query/answers/1",
+	"pages/AI_query/answers/2",
+	"pages/AI_query/answers/3",
+	"pages/AI_query/answers/4",
+	"pages/AI_query/answers/5"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -125,5 +70,4 @@
     "van-slider": "@vant/weapp/slider/index",
     "van-swipe-cell": "@vant/weapp/swipe-cell/index"
   }
->>>>>>> Stashed changes
 }

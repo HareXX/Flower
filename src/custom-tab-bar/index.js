@@ -20,7 +20,7 @@ Component({
 			{
 				text: "服务",
 				icon: "apps-o",
-				url: "/pages/AI_query/AI_query"
+				url: "/pages/other_service/other_service"
 			},
 			{
 				text: "我的",

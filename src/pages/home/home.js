@@ -9,6 +9,11 @@ Page({
 	},
 
 	// "lazyCodeLoading": "requiredComponents",
+	navToAI_Query(e){
+		wx.navigateTo({
+			url: '../AI_query/AI_query',
+		  })
+	},
 
 	btnTap1(e) {
 		wx.navigateTo({

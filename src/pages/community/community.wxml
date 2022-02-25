@@ -1,0 +1,49 @@
+<van-grid column-num="3"  border="{{false}}" >
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="info"
+		>
+			预约挂号
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="primary"
+		>
+			在线问诊
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="warning"
+		>
+			健康资讯
+		</van-button>
+	</van-grid-item>
+	
+</van-grid>
+
+<view class="nav">
+	<van-cell title="社区活动" />
+</view>
+
+<van-cell-group>
+	<van-cell title="健康过新年,防疫紧相连" custom-style="height:150rpx">
+	</van-cell>
+		
+	<van-cell title="健康过新年,防疫紧相连" custom-style="height:150rpx">
+	</van-cell>
+
+	<van-cell title="健康过新年,防疫紧相连" custom-style="height:150rpx">
+	</van-cell>
+	
+</van-cell-group>
+

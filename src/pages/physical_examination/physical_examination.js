@@ -1,19 +1,13 @@
-// pages/health/health.js
+import { areaList } from '@vant/area-data';
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		areaList,
 	},
 
-	navToPE: function(e)
-	{
-		wx.navigateTo({
-		  url: '../physical_examination/physical_examination',
-		})
-	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

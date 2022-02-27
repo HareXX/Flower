@@ -5,7 +5,7 @@
 		square
 		type="info"
 		>
-			预约挂号
+			24小时应急服务
 		</van-button>
 	</van-grid-item>
 	
@@ -15,7 +15,7 @@
 		square
 		type="primary"
 		>
-			在线问诊
+			社区护照中心
 		</van-button>
 	</van-grid-item>
 	
@@ -25,25 +25,38 @@
 		square
 		type="warning"
 		>
-			健康资讯
+			社区康复中心
 		</van-button>
 	</van-grid-item>
 	
 </van-grid>
 
 <view class="nav">
-	<van-cell title="社区活动" />
+	<van-cell title="社区活动" is-link value="查看更多"/>
+</view>
+
+<view style="height: 550rpx;">
+	<van-cell-group>
+	<van-cell title="手语课堂" is-link custom-style="height:150rpx" label="明天" value="报名">
+	</van-cell>
+		
+	<van-cell title="爱心义卖" is-link custom-style="height:150rpx" label="3天后" value="报名">
+	</van-cell>
+
+
+</van-cell-group></view>
+
+<view class="nav">
+	<van-cell title="终生教育" is-link value="查看更多"/>
 </view>
 
 <van-cell-group>
-	<van-cell title="健康过新年,防疫紧相连" custom-style="height:150rpx">
+	<van-cell title="丝巾编织" is-link custom-style="height:150rpx" label="距您0.8km" value="报名">
 	</van-cell>
 		
-	<van-cell title="健康过新年,防疫紧相连" custom-style="height:150rpx">
+	<van-cell title="绿植养护" is-link custom-style="height:150rpx" label="距您1.9km" value="报名">
 	</van-cell>
 
-	<van-cell title="健康过新年,防疫紧相连" custom-style="height:150rpx">
-	</van-cell>
-	
+
 </van-cell-group>
 

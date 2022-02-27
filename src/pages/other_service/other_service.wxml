@@ -35,7 +35,7 @@
 
 
 <view class="nav">
-	<van-cell title="最新资讯" />
+	<van-cell title="最新资讯" is-link value="查看更多"/>
 </view>
 
 <van-cell-group>

@@ -27,7 +27,8 @@
 		"pages/AI_query/answers/5",
 		"pages/health/health",
 		"pages/community/community",
-		"pages/nurse/nurse"
+		"pages/nurse/nurse",
+		"pages/physical_examination/physical_examination"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -72,6 +73,7 @@
 		"van-cell-group": "@vant/weapp/cell-group/index",
 		"van-slider": "@vant/weapp/slider/index",
 		"van-swipe-cell": "@vant/weapp/swipe-cell/index",
-		"van-divider": "@vant/weapp/divider/index"
+		"van-divider": "@vant/weapp/divider/index",
+		"van-area": "@vant/weapp/area/index"
 	}
 }

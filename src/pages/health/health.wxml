@@ -34,6 +34,7 @@
 		custom-style="height:200rpx;width:250rpx;border-radius:20rpx;"
 		square
 		type="warning"
+		bindtap="navToPE"
 		>
 			体检检查
 		</van-button>

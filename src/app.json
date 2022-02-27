@@ -27,7 +27,8 @@
 		"pages/AI_query/answers/5",
 		"pages/health/health",
 		"pages/community/community",
-		"pages/nurse/nurse"
+		"pages/nurse/nurse",
+		"pages/physical_examination/physical_examination"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

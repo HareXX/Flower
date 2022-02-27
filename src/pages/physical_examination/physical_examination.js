@@ -1,4 +1,4 @@
-// pages/health/health.js
+// pages/physical_examination/physical_examination.js
 Page({
 
 	/**
@@ -8,12 +8,6 @@ Page({
 
 	},
 
-	navToPE: function(e)
-	{
-		wx.navigateTo({
-		  url: '../physical_examination/physical_examination',
-		})
-	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

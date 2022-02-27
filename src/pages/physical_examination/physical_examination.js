@@ -1,11 +1,11 @@
-import { areaList } from '@vant/area-data';
+// pages/physical_examination/physical_examination.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		areaList,
+
 	},
 
 	/**

@@ -74,17 +74,6 @@
 				square
 				type="info"
 			>
-				一起看
-			</van-button>
-		</van-grid-item>
-
-		<van-grid-item use-slot="true">
-			<van-button
-				plain
-				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
-				square
-				type="info"
-			>
 				实时收益
 			</van-button>
 		</van-grid-item>
@@ -147,7 +136,45 @@
 </view>
 
 <view wx:else>
+	<van-grid
+		column-num="4"
+		border="{{ false }}"
+	>
+		
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				长辈协助
+			</van-button>
+		</van-grid-item>
 
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				实时收益
+			</van-button>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				风险管控
+			</van-button>
+		</van-grid-item>
+
+	</van-grid>
 </view>
 
 <view style="height:150rpx;"></view>

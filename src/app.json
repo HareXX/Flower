@@ -73,6 +73,7 @@
 		"van-cell-group": "@vant/weapp/cell-group/index",
 		"van-slider": "@vant/weapp/slider/index",
 		"van-swipe-cell": "@vant/weapp/swipe-cell/index",
-		"van-divider": "@vant/weapp/divider/index"
+		"van-divider": "@vant/weapp/divider/index",
+		"van-config-provider": "@vant/weapp/config-provider/index"
 	}
 }

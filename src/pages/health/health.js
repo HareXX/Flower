@@ -1,4 +1,4 @@
-// pages/personal_card/personal_card.js
+// pages/health/health.js
 Page({
 
   /**
@@ -62,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  change_img: function(opotions){
-    wx.navigateTo({
-      url: '/pages/upload_avatar/upload_avatar'
-    })
-	},
+  }
 })

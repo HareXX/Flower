@@ -17,11 +17,11 @@
 </view>
 
 <view class='add_btn'>
-    <button class='btn'>
+    <button class='btn' bindtap="switch_off">
         切换账号
     </button>
     <view class="row"></view>
-    <button class='btn'>
+    <button class='btn' bindtap="exit_out">
         退出登录
     </button>
 </view>

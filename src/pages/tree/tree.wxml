@@ -1,0 +1,51 @@
+<!--pages/tree/tree.wxml-->
+
+<van-grid column-num="4" border = "{{ true }}" square>
+	<van-grid-item use-slot wx:for="{{ numOfFamily }}" wx:for-item="index">
+		{{family[index].name}}
+	</van-grid-item>
+	<van-grid-item icon="add-o" text="添加成员"/>
+</van-grid>
+
+<!-- <van-divider/> -->
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+>
+	家庭昵称修改
+</van-button>
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+>
+	关系设置
+</van-button>
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+	bindtap="navToAddFamilyMember"
+>
+	授权管理
+</van-button>
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="warning"
+>
+	退出关联
+</van-button>

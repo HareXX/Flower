@@ -28,7 +28,9 @@
 		"pages/health/health",
 		"pages/community/community",
 		"pages/nurse/nurse",
-		"pages/physical_examination/physical_examination"
+		"pages/physical_examination/physical_examination",
+		"pages/tree/tree",
+		"pages/add_family_member/add_family_member"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -74,6 +76,7 @@
 		"van-slider": "@vant/weapp/slider/index",
 		"van-swipe-cell": "@vant/weapp/swipe-cell/index",
 		"van-divider": "@vant/weapp/divider/index",
-		"van-config-provider": "@vant/weapp/config-provider/index"
+		"van-config-provider": "@vant/weapp/config-provider/index",
+		"van-switch": "@vant/weapp/switch/index"
 	}
 }

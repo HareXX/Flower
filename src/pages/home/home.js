@@ -17,6 +17,13 @@ Page({
 			url: '../AI_query/AI_query',
 		  })
 	},
+	
+	navToTree(e)
+	{
+		wx.navigateTo({
+			url: '../tree/tree',
+		})
+	},
 
 	btnTap1(e) {
 		wx.navigateTo({

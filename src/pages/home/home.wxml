@@ -28,6 +28,7 @@
 		height="600rpx"
 		fit="contain"
 		src="/images/Tree.png"
+		bindtap="navToTree"
 	/>
 
 	<!-- <button class="pool">

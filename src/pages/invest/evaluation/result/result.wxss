@@ -1,0 +1,6 @@
+/* pages/invest/evaluation/result/result.wxss */
+
+.heading {
+    font-weight: bold;
+    font-size: larger;
+}

@@ -3,13 +3,13 @@
 <view class="heading">花旗慧投</view>
 <view class="button_container">
     <van-grid clickable column-num="3">
-        <van-grid-item use-slot="false" url="./more-info/more-info">
+        <van-grid-item use-slot="false" url="./introduction/introduction">
             了解慧投
         </van-grid-item>
-        <van-grid-item use-slot="true">
+        <van-grid-item use-slot="true" url="./evaluation/evaluation">
             智能评测
         </van-grid-item>
-        <van-grid-item use-slot="true">
+        <van-grid-item use-slot="true" url="./portfolio/portfolio">
             智能组合
         </van-grid-item>
     </van-grid>

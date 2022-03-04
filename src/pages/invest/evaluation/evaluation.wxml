@@ -1,0 +1,10 @@
+<!-- pages/invest/evaluation/evaluation.wxml -->
+<text>pages/invest/evaluation/evaluation.wxml</text>
+<view class="heading">风险等级评估问卷</view>
+<scroll-view>
+    <form class="form">
+        <view>问题1. </view>
+        <view>问题2. </view>
+    </form>
+</scroll-view>
+<button bindtap="navToResult" url="./result/result">一键生成风险评估</button>

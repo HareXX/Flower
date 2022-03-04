@@ -1,0 +1,6 @@
+/* pages/invest/evaluation/evaluation.wxss */
+
+@import "../invest.wxss";
+.heading {
+    font-size: larger;
+}

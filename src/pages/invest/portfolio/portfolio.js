@@ -1,4 +1,4 @@
-// pages/invest/more-info/more-info.js
+// pages/invest/portfolio/portfolio.js
 Page({
 
     /**

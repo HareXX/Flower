@@ -1,8 +1,11 @@
 {
     "pages": [
-        "pages/AI_query/AI_query",
+        "pages/invest/evaluation/result/result",
+        "pages/invest/evaluation/evaluation",
         "pages/invest/invest",
-        "pages/invest/more-info/more-info",
+        "pages/invest/introduction/introduction",
+        "pages/invest/portfolio/portfolio",
+        "pages/AI_query/AI_query",
         "pages/home/home",
         "pages/finance/finance",
         "pages/AI_query/answers/1",

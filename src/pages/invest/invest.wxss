@@ -8,7 +8,7 @@
 }
 
 .button_container {
-    /* background-color: blue; */
+    background-color: blue;
     /* border: 5px solid;
     border-color: green; */
 }
@@ -17,10 +17,6 @@
     color: green;
 }
 
-van-grid {
-    /* border: 5px solid;
-    border-color: red; */
-}
 
 van-grid-item {
     font-size: large;

@@ -4,13 +4,11 @@
 }
 
 .question-hovered {
-    background-color: green;
 }
 
 .question-container {
-    color: red;
+    color: black;
     font-size: larger;
-    background-color: aqua;
     border-spacing: 10rpx;
 }
 

@@ -14,6 +14,7 @@
 
 	<view class="question-container">
 		<van-icon 
+			bindtap="navToAI_Query"
 			name="smile-o" 
 			size="60rpx"
 			color="grey"
@@ -48,7 +49,7 @@
 </view>
 
 
-<view wx:if="{{true}}" style="width:80%;margin: 0 auto">
+<view wx:if="{{true}}" style="width:90%;margin: 0 auto">
 	
 	<van-grid
 		column-num="4"
@@ -58,7 +59,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -69,7 +70,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -80,7 +81,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -91,7 +92,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -102,7 +103,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -113,7 +114,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -124,7 +125,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -135,7 +136,7 @@
 		<van-grid-item use-slot="true">
 			<van-button
 				plain
-				custom-style="height:120rpx; width:120rpx; border-radius:15%;"
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
@@ -148,3 +149,5 @@
 <view wx:else>
 
 </view>
+
+<view style="height:150rpx;"></view>

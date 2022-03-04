@@ -5,6 +5,11 @@ Page({
 	 * 页面的初始数据
 	 */
 
+	navToAI_Query(e){
+		wx.navigateTo({
+			url: '../AI_query/AI_query',
+		  })
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

@@ -5,7 +5,12 @@
 	</view>
 
 	<view class="question-container">
-		<van-icon name="smile-o" size="60rpx" color="grey" />
+		<van-icon 
+			name="smile-o" 
+			size="60rpx" 
+			color="grey" 
+			bindtap="navToAI_Query"
+		/>
 	</view>
 </view>
 
@@ -22,3 +27,5 @@
 		</van-grid-item>
 	</van-grid>
 </view>
+
+<view style="height:150rpx;"></view>

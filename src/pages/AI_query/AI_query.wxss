@@ -1,104 +1,12 @@
-.question {
-    color: red;
-    border: red;
-}
-
 .question-hovered {
-    background-color: green;
+    background-color: grey;
 }
 
-.question-container {
-    color: red;
+.question_text {
+    /* height: 80rpx; */
     font-size: larger;
-    background-color: aqua;
-    border-spacing: 10rpx;
 }
 
-.page-form {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    background-color: #fff;
-    border-top: 1px solid #e1e1e1;
-}
-
-.page-head,
-.page-form,
-.page-result {
-    display: block;
-    padding: 0 20px;
-}
-
-.page-form {
-    padding: 10px 20px;
-}
-
-.page-head {
-    margin: 20px 0;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.page-result {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 67px;
-    left: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.help-text {
-    padding: 10px 0;
-}
-
-.group {
-    position: relative;
-    margin-right: 56px;
-}
-
-.group .cancel,
-.group .search {
-    position: absolute;
-    display: inline-block;
-}
-
-.group .question {
-    padding-left: 10px;
-    height: 44px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.group .cancel {
-    top: 0;
-    right: 0;
-    z-index: 5;
-}
-
-.group .search {
-    top: 0;
-    right: -56px;
-}
-
-.page-result .row {
-    padding: 10px 20px;
-    border-bottom: 1px solid #e1e1e1;
-}
-
-.page-result .row:last-child {
-    border-bottom: 0;
-}
-
-.page-result .user-question {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.page-result .sys-anwser {
-    line-height: 1.432;
+van-grid-item {
+    text-align: left;
 }

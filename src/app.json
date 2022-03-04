@@ -1,6 +1,10 @@
 {
     "pages": [
         "pages/AI_query/AI_query",
+        "pages/invest/invest",
+        "pages/invest/more-info/more-info",
+        "pages/home/home",
+        "pages/finance/finance",
         "pages/AI_query/answers/1",
         "pages/AI_query/answers/2",
         "pages/AI_query/answers/3",
@@ -22,8 +26,6 @@
         "pages/AI_query/answers/19",
         "pages/wx_login/wx_login",
         "pages/homepage/homepage",
-        "pages/invest/invest",
-        "pages/home/home",
         "pages/other_service/other_service",
         "pages/me/me",
         "pages/tmp/tmp",

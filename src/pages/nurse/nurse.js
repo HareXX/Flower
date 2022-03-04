@@ -1,17 +1,39 @@
-// pages/homepage/homepage.js
+// pages/nurse/nurse.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-
+		active:1
+	},
+	
+	updTo1(e)
+	{
+		this.setData({
+			active : 1
+		})
 	},
 
-	navToAI_Query(e){
-		wx.navigateTo({
-			url: '../AI_query/AI_query',
-		  })
+	updTo2: function(e)
+	{
+		this.setData({
+			active : 2
+		})
+	},
+
+	updTo3: function(e)
+	{
+		this.setData({
+			active : 3
+		})
+	},
+
+	navTo1: function(e)
+	{
+		wx.navigateToMiniProgram({
+		  appId: 'wx56f4459e89f63e7a',
+		})
 	},
 	/**
 	 * 生命周期函数--监听页面加载
@@ -31,7 +53,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		this.getTabBar().init();
+
 	},
 
 	/**

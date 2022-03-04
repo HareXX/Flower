@@ -1,4 +1,4 @@
-// pages/homepage/homepage.js
+// pages/physical_examination/physical_examination.js
 Page({
 
 	/**
@@ -8,11 +8,6 @@ Page({
 
 	},
 
-	navToAI_Query(e){
-		wx.navigateTo({
-			url: '../AI_query/AI_query',
-		  })
-	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
@@ -31,7 +26,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		this.getTabBar().init();
+
 	},
 
 	/**

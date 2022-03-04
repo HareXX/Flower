@@ -1,0 +1,111 @@
+<van-grid column-num="3"  border="{{false}}" >
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="info"
+		bindtap="updTo1"
+		>
+			服务存入
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="primary"
+		bindtap="updTo2"
+		>
+			护理寻找
+		</van-button>
+	</van-grid-item>
+	
+	<van-grid-item use-slot="true">
+		<van-button
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		square
+		type="warning"
+		bindtap="updTo3"
+		>
+			储蓄余额
+		</van-button>
+	</van-grid-item>
+	
+</van-grid>
+
+<view wx:if="{{active == 1}}">
+	<view style="height : 250rpx;">
+		<van-cell title="服务存入"/>
+	</view>
+
+</view>
+
+<view wx:elif="{{active == 2}}">
+
+	<view style="height : 250rpx;">
+		<van-cell title="护理寻找"/>
+	</view>
+</view>
+
+<view wx:elif="{{active == 3}}">
+	<view style="height : 250rpx;">
+		<van-cell title="储蓄余额"/>
+	</view>
+
+
+</view>
+
+
+<view style="height: 400rpx;">
+	<!-- <van-cell-group>
+		<van-cell title="手语课堂" is-link custom-style="height:150rpx" label="明天" value="报名">
+		</van-cell>
+			
+		<van-cell title="爱心义卖" is-link custom-style="height:150rpx" label="3天后" value="报名">
+		</van-cell>
+	</van-cell-group> -->
+</view>
+
+<view class="nav">
+	<van-cell title="临时护理"/>
+</view>
+
+<van-cell-group>
+	<van-cell>
+		<van-button
+		custom-style="width:600rpx"
+		round
+		type="primary"
+		block
+		bindtap="navTo1"
+		>
+			家政服务
+		</van-button>
+		
+	</van-cell>
+		
+	<van-cell>
+		<van-button
+		custom-style="width:600rpx"
+		round
+		type="primary"
+		block
+		>
+			上门送药
+		</van-button>
+	</van-cell>
+
+	<van-cell>
+		<van-button
+		custom-style="width:600rpx"
+		round
+		type="primary"
+		block
+		>
+			老人接送
+		</van-button>
+	</van-cell>
+
+</van-cell-group>
+

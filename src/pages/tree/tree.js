@@ -1,16 +1,23 @@
-// pages/homepage/homepage.js
+// pages/tree/tree.js
 Page({
 
-
+	/**
+	 * 页面的初始数据
+	 */
 	data: {
-		hasInvestment : true
+		family : [{name : "Hare", checked : false}, {name : "Hare2", checked : false}],
+		numOfFamily : 2,
 	},
 
-	navToAI_Query(e){
+	navToAddFamilyMember(e){
 		wx.navigateTo({
-			url: '../AI_query/AI_query',
+			url: '../add_family_member/add_family_member',
 		  })
 	},
+
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
 	onLoad: function (options) {
 
 	},
@@ -26,7 +33,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		this.getTabBar().init();
+
 	},
 
 	/**

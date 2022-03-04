@@ -1,18 +1,35 @@
-// pages/homepage/homepage.js
+// pages/add_family_member/add_family_member.js
 Page({
 
-
+	/**
+	 * 页面的初始数据
+	 */
 	data: {
-		hasInvestment : true
+		family : [],
+		numOfFamily : 2,
+		
 	},
 
-	navToAI_Query(e){
-		wx.navigateTo({
-			url: '../AI_query/AI_query',
-		  })
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+
+	onChange(e) {
+		// 需要手动对 checked 状态进行更新
+			this.data.family[e.currentTarget.dataset.index].checked = e.detail
 	},
 	onLoad: function (options) {
-
+		var Pages = getCurrentPages();
+		var prevPage = Pages[Pages.length - 2];
+		console.log(prevPage.data);
+		this.setData({
+			family : prevPage.data.family,
+			numOfFamily : prevPage.data.numOfFamil
+		})
+		for (var i = 0; i < this.data.numOfFamily; ++i)
+			this.data.family[i].unique = 'unique_' + i
+		
+		// console.log(Pages[Pages.length - 1].data)
 	},
 
 	/**
@@ -26,7 +43,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		this.getTabBar().init();
+
 	},
 
 	/**

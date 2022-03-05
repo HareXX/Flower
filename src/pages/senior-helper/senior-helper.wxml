@@ -1,27 +1,22 @@
-<!--pages/senior-helper/senior-helper.wxml-->
+<!--pages/add_family_member/add_family_member.wxml-->
+<view wx:if="{{numOfFamily !== 0}}">
+	<view wx:for="{{ family }}" wx:for-index="idx" style="display: flex;flex-direction: row-reverse;margin-top: 50rpx;">
+		
+			<view style="margin-right: 200rpx;">
+			
+				<!-- <van-switch 
+					checked="{{ family[idx].checked }}" 
+					data-index="{{idx}}" bind:change="onChange" 
+				/> -->
+				<van-button type="info">选择</van-button>
+				
+			</view>
+			<view style="margin-right: 200rpx;">
+				{{ family[idx].name }}
+			</view>
 
-<view class="nav">
-    <view class="navitem">
-        <button class="btn" style="width:500rpx; height:100rpx">
-            <text class='text'>用户A</text>
-        </button>
-    </view>
+	</view>
+</view>
 
-    <view class="navitem">
-        <button class="btn" style="width:500rpx; height:100rpx">
-            <text class='text'>用户B</text>
-        </button>
-    </view>
-
-    <view class="navitem">
-        <button class="btn" style="width:500rpx; height:100rpx">
-            <text class='text'>用户C</text>
-        </button>
-    </view>
-
-    <view class="navitem">
-        <button class="btn" style="width:500rpx; height:100rpx">
-            <text class='text'>用户D</text>
-        </button>
-    </view>
+<view wx:else>
 </view>

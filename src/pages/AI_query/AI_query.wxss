@@ -1,3 +1,17 @@
+<<<<<<< Updated upstream
+=======
+.question {
+    color: red;
+    border: red;
+}
+
+.question-container {
+    color: black;
+    font-size: larger;
+    border-spacing: 10rpx;
+}
+
+>>>>>>> Stashed changes
 .page-form {
     position: fixed;
     right: 0;

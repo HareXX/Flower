@@ -19,7 +19,7 @@
 	家庭昵称修改
 </van-button>
 
-<van-button 
+<!-- <van-button 
 	size="large"
 	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
 	square
@@ -27,7 +27,7 @@
 	type="info"
 >
 	关系设置
-</van-button>
+</van-button> -->
 
 <van-button 
 	size="large"

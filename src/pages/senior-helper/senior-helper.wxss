@@ -6,11 +6,6 @@
     justify-content: center;
 }
 
-.navitem {
-    /* width: 10%;
-    height: 50%; */
-}
-
 .btn {
     margin-top: 80rpx;
     margin-left: 80rpx;

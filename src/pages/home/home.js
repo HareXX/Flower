@@ -9,6 +9,8 @@ Page({
 		userInfo: {},
 		hasUserInfo: false,
 		canIUseGetUserProfile: false,
+		family : [],
+		numOfFamily : 0,
 	},
 
 	// "lazyCodeLoading": "requiredComponents",
@@ -37,6 +39,13 @@ Page({
 		  url: '../family_members/family_members',
 		})
 	},
+
+	navToSeniorHelper(e)
+	{
+		wx.navigateTo({
+		  url: '../senior-helper/senior-helper',
+		})
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
@@ -47,6 +56,9 @@ Page({
 			  	canIUseGetUserProfile: true
 			})
 		}
+		this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
+		this.data.numOfFamily = 2
+		
 	},
 	getUserProfile(e) {
 		// 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
@@ -77,7 +89,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		
+		this.getTabBar().init();
 	},
 
 	/**

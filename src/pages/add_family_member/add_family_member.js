@@ -6,17 +6,21 @@ Page({
 	 */
 	data: {
 		family : [],
-		numOfFamily : 2,
-		
+		numOfFamily : 0,
 	},
 
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 
-	onChange(e) {
-		// 需要手动对 checked 状态进行更新
-			this.data.family[e.currentTarget.dataset.index].checked = e.detail
+	onChange: function(e) {
+		var that = this
+		var arr = that.data.family
+		arr[e.currentTarget.dataset.index].checked = e.detail
+		this.setData({
+			family : arr
+		})
+		this.data.family[e.currentTarget.dataset.index].checked = e.detail
 	},
 	onLoad: function (options) {
 		var Pages = getCurrentPages();
@@ -24,11 +28,10 @@ Page({
 		console.log(prevPage.data);
 		this.setData({
 			family : prevPage.data.family,
-			numOfFamily : prevPage.data.numOfFamil
+			numOfFamily : prevPage.data.numOfFamily
 		})
 		for (var i = 0; i < this.data.numOfFamily; ++i)
 			this.data.family[i].unique = 'unique_' + i
-		
 		// console.log(Pages[Pages.length - 1].data)
 	},
 

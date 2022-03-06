@@ -1,9 +1,7 @@
+
 .question {
     color: red;
     border: red;
-}
-
-.question-hovered {
 }
 
 .question-container {

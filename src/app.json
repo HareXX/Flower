@@ -92,5 +92,4 @@
 		"van-config-provider": "@vant/weapp/config-provider/index",
 		"van-switch": "@vant/weapp/switch/index"
 	}
-
 }

@@ -9,8 +9,8 @@ Page({
 		userInfo: {},
 		hasUserInfo: false,
 		canIUseGetUserProfile: false,
-		family : [{name : "Hare", checked : false}, {name : "Hare2", checked : false}],
-		numOfFamily : 2,
+		family : [],
+		numOfFamily : 0,
 	},
 
 	// "lazyCodeLoading": "requiredComponents",
@@ -56,7 +56,8 @@ Page({
 			  	canIUseGetUserProfile: true
 			})
 		}
-
+		this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
+		this.data.numOfFamily = 2
 		
 	},
 	getUserProfile(e) {

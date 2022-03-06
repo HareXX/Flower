@@ -62,5 +62,17 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
-	}
+	},
+
+	switch_off: function(opotions){
+    wx.navigateTo({
+      url: '/pages/switch_account/switch_account'
+    })
+	},
+
+	exit_out: function(opotions){
+    wx.navigateTo({
+      url: '/pages/initial_page/initial_page'
+    })
+	},
 })

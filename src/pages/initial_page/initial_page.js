@@ -1,4 +1,4 @@
-// pages/personal_card/personal_card.js
+// pages/initial_page/initial_page.js
 Page({
 
   /**
@@ -40,14 +40,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-       let user=wx.getStorageSync('user')
-       let id=wx.getStorageSync('id')
-       this.setData({
-         userInfo:user,
-         identity:id
-       }),
-       console.log(user)
-       console.log(id)
 
   },
 
@@ -70,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  change_img: function(opotions){
-    wx.navigateTo({
-      url: '/pages/upload_avatar/upload_avatar'
-    })
-	},
+  }
 })

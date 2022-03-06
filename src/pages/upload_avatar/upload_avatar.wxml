@@ -1,0 +1,6 @@
+<!--pages/upload_avatar/upload_avatar.wxml-->
+<text>头像</text>
+<view>
+<button bindtap="uploadimg">点击选择上传图片</button>
+</view>
+<image src='{{source}}' style='width:600rpx; height:600rpx' />

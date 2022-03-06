@@ -50,7 +50,7 @@
 </view>
 
 <!-- 需要修改 -->
-<view wx:if="{{true}}" style="width:80%;margin: 0 auto">
+<view wx:if="{{true}}" style="width:90%;margin: 0 auto">
 	
 	<van-grid
 		column-num="4"

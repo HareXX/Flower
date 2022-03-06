@@ -13,7 +13,15 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : `0${n}`
 }
-
+const formatDate = date => {
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  return `${[ month, day].map(DateformatNumber).join('/')}`
+}
+const DateformatNumber = n => {
+  n = n.toString()
+  return `${n}`
+}
 module.exports = {
-  formatTime
+  formatTime,formatDate
 }

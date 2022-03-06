@@ -5,12 +5,7 @@
 	</view>
 
 	<view class="question-container">
-		<van-icon 
-			name="smile-o" 
-			size="60rpx" 
-			color="grey" 
-			bindtap="navToAI_Query"
-		/>
+		<van-icon name="smile-o" size="60rpx" color="grey" bindtap="navToAI_Query" />
 	</view>
 </view>
 
@@ -28,4 +23,11 @@
 	</van-grid>
 </view>
 
+<view class="container">
+	<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"></canvas>
+</view>
+
+<view class="history">
+	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
+</view>
 <view style="height:150rpx;"></view>

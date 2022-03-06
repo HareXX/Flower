@@ -1,2 +1,6 @@
 <!--pages/invest/invest.wxml-->
-<text>pages/invest/invest.wxml</text>
+<!-- item.id用于遍历 -->
+<view class="container">
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" ></canvas>
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px"></canvas>
+</view>

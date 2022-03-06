@@ -1,4 +1,4 @@
 <!--index.wxml-->
-<view class="userinfo-avatar" bindtap="bindViewTap">
+<!-- <view class="userinfo-avatar" bindtap="bindViewTap">
 	<open-data type="userAvatarUrl"></open-data>
-</view>
+</view> -->

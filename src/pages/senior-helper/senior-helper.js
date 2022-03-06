@@ -5,7 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+		family : [],
+		numOfFamily : 0,
     },
 
 
@@ -13,9 +14,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-		// wx.navigateBack({
-		//   delta: 1,
-		// })
+		var Pages = getCurrentPages();
+		var prevPage = Pages[Pages.length - 2];
+		console.log(prevPage.data);
+		this.setData({
+			family : prevPage.data.family,
+			numOfFamily : prevPage.data.numOfFamily
+		})
     },
 
     /**

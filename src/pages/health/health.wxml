@@ -35,6 +35,7 @@
 		square
 		type="warning"
 		bindtap="navToPE"
+		color="#"
 		>
 			体检检查
 		</van-button>

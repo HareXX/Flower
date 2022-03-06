@@ -5,8 +5,8 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		family : [{name : "Hare", checked : false}, {name : "Hare2", checked : false}],
-		numOfFamily : 2,
+		family : [],
+		numOfFamily : 0,
 	},
 
 	navToAddFamilyMember(e){
@@ -19,7 +19,14 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-
+		var Pages = getCurrentPages();
+		var prevPage = Pages[Pages.length - 2];
+		console.log(prevPage.data);
+		this.setData({
+			family : prevPage.data.family,
+			numOfFamily : prevPage.data.numOfFamily
+		})
+		console.log(Pages)
 	},
 
 	/**
@@ -33,7 +40,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
+		
 	},
 
 	/**

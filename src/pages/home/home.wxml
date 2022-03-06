@@ -63,6 +63,7 @@
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
+				bindtap="navToSeniorHelper"
 			>
 				长辈协助
 			</van-button>
@@ -108,17 +109,6 @@
 				square
 				type="info"
 			>
-				家庭群聊
-			</van-button>
-		</van-grid-item>
-
-		<van-grid-item use-slot="true">
-			<van-button
-				plain
-				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
-				square
-				type="info"
-			>
 				健康档案
 			</van-button>
 		</van-grid-item>
@@ -131,6 +121,17 @@
 				type="info"
 			>
 				知识问答
+			</van-button>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				服务预约
 			</van-button>
 		</van-grid-item>
 	</van-grid>

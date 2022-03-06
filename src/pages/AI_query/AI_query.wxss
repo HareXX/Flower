@@ -1,3 +1,17 @@
+.question {
+    color: red;
+    border: red;
+}
+
+.question-hovered {
+}
+
+.question-container {
+    color: black;
+    font-size: larger;
+    border-spacing: 10rpx;
+}
+
 .page-form {
     position: fixed;
     right: 0;

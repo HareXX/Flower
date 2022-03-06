@@ -1,31 +1,77 @@
-<view class="nav">
-	<view class="search-container">
-		<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">
-		</van-search>
+
+<view wx:if="{{hasInvestment == true}}">
+	<view class="nav">
+		<view class="search-container">
+			<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">
+			</van-search>
+		</view>
+
+		<view class="question-container">
+			<van-icon 
+				name="smile-o" 
+				size="60rpx" 
+				color="grey" 
+				bindtap="navToAI_Query"
+			/>
+		</view>
 	</view>
 
-	<view class="question-container">
-		<van-icon 
-			name="smile-o" 
-			size="60rpx" 
-			color="grey" 
-			bindtap="navToAI_Query"
-		/>
+	<view style="margin-top: 50rpx; width: 80%; margin : 0 auto">
+		<text style="display: block;">您还没有开始您的投资，</text>
+		<text style="display: block;">快来创建自己的投资组合吧！</text>
 	</view>
+
+	<van-divider />
+	<view style="width: 80%;margin : 0 auto">
+		<text style="display:block;size: 40rpx;">本平台投资优势</text>
+		<view style="display: block;"></view>
+		<text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
+		<text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
+	</view>
+	<van-divider />
+	<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+	bindtap="navToCommunity"
+	>
+		开启我的专属投资组合
+	</van-button>
+	
 </view>
 
-<view class="assets-container">
-	<van-grid column-num="2">
-		<van-grid-item use-slot="true">
-			<text>我的资产(元)</text>
-			<text>xxxx</text>
-		</van-grid-item>
+<view wx:else="{{hasInvestment == false}}">
+	<view class="nav">
+		<view class="search-container">
+			<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">
+			</van-search>
+		</view>
 
-		<van-grid-item use-slot="true">
-			<text>昨日收益(元)</text>
-			<text>xxxx</text>
-		</van-grid-item>
-	</van-grid>
+		<view class="question-container">
+			<van-icon 
+				name="smile-o" 
+				size="60rpx" 
+				color="grey" 
+				bindtap="navToAI_Query"
+			/>
+		</view>
+	</view>
+
+	<view class="assets-container">
+		<van-grid column-num="2">
+			<van-grid-item use-slot="true">
+				<text>我的资产(元)</text>
+				<text>xxxx</text>
+			</van-grid-item>
+
+			<van-grid-item use-slot="true">
+				<text>昨日收益(元)</text>
+				<text>xxxx</text>
+			</van-grid-item>
+		</van-grid>
+	</view>
 </view>
 
 <view style="height:150rpx;"></view>

@@ -10,7 +10,7 @@
     "include": []
   },
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "coverView": true,
     "es6": true,
     "postcss": true,

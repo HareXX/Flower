@@ -31,13 +31,18 @@ Page({
                       console.log(wxname)
                       //发起网络请求
                       wx.request({
+<<<<<<< HEAD
                         // url: '47.113.191.64:9001/login',
                         url: 'http://localhost:9001/user/login',
+=======
+                        url: '47.113.191.64:9001/login',
+>>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0
                         data: {
                           code:res.code,
                           name:wxname,
                           picture:picture
                         }, 
+<<<<<<< HEAD
                         method: 'POST',
 
                       // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
@@ -47,6 +52,17 @@ Page({
                          success: function (res) {
                         console.log(res.data)
                         console.log("成功")
+=======
+                        method: 'GET',
+
+                      // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+                      header: {
+                        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' 
+                      },
+                         success: function (res) {
+                        console.log(res.data)
+                        console.log("chenggong")
+>>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0
                         },
                         fail:function(err){
                           console.log("失败")
@@ -79,4 +95,8 @@ Page({
       }
     })
   }
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0

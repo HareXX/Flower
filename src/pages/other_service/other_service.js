@@ -26,5 +26,8 @@ Page({
 		wx.navigateTo({
 			url: '../nurse/nurse'
 		})
-	}
+	},
+	onShow: function () {
+		this.getTabBar().init();
+	},
 })

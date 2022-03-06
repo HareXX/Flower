@@ -1,42 +1,33 @@
-<!--pages/AI_query/AI_query.wxml-->
-
-<view class="assets-container">
-    <van-grid clickable column-num="1">
-        <van-grid-item text="1. 什么是家庭关联账户">
-        </van-grid-item>
-
+<!-- pages/AI_query/AI_query.wxml -->
+<view class="question-container">
+    <!-- <van-grid clickable column-num="1">
+        <navigator class="question" url="/src/pages/AI_query/answers/1.html">1. 什么是家庭关联账户</navigator>
         <van-grid-item text="2. 如何申请家庭关联账户">
         </van-grid-item>
-
-        <van-grid-item text="3. 医疗健康界面从哪里进入">
-        </van-grid-item>
-
-        <van-grid-item text="4. 可用家庭积分明细在哪里查看">
-        </van-grid-item>
-
-        <van-grid-item text="5. 中年人和老年人的界面有什么不同">
-        </van-grid-item>
-    </van-grid>
+    </van-grid> -->
+    <view class="question_text" wx:for="{{question_list}}" wx:for-item="question" wx:key="id" hover-class="question-hovered" bindtap="navigate_page" data-operation="{{question.id}}">
+        {{question.id}}.{{question.text}}
+    </view>
 </view>
-
-<form class="page-form" bindsubmit="formSubmit" bindreset="formReset">
+<!-- <form class="page-form" bindsubmit="formSubmit" bindreset="formReset">
     <view class="group">
         <input class="question" type="text" bindfocus="inputFocus" name="question" auto-focus="true" placeholder="请简洁描述您的问题" value="{{entry}}" />
         <button class="cancel" form-type="reset">×</button>
-        <button class="search" type="primary" form-type="submit" animation="{{animationData}}">问</button>
+        <button class="search" type="primary" form-type="submit" animation="{{animationData}}">
+            问
+        </button>
     </view>
 </form>
-
 <scroll-view class="page-result" scroll-y="true" scroll-into-view="{{toView}}">
     <block wx:for="{{user}}" wx:for-item="qa">
         <view class="row" id="toView{{qa.id}}">
             <text class="user-question">{{qa.question}}</text>
-            <view class="sys-anwser">{{qa.anwser}}<navigator wx:if="{{qa.url}}" url="qa.url">{{qa.url}}</navigator>
+            <view class="sys-anwser">
+                {{qa.anwser}}
+                <navigator wx:if="{{qa.url}}" url="qa.url">{{qa.url}}</navigator>
             </view>
         </view>
     </block>
 </scroll-view>
-
 <loading hidden="{{hidden}}">加载中...</loading>
-
-<toast hidden="{{toastHidden}}" duration="2000" bindchange="toastChange">{{errMsg}}</toast>
+<toast hidden="{{toastHidden}}" duration="2000" bindchange="toastChange">{{errMsg}}</toast> -->

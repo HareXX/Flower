@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 /* pages/invest/invest.wxss */
+=======
+/**index.wxss**/
+.userinfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #aaa;
+  }
+  
+  .userinfo-avatar {
+	overflow: hidden;
+	width: 128rpx;
+	height: 128rpx;
+	margin: 20rpx;
+	border-radius: 50%;
+  }
+  
+  .usermotto {
+	margin-top: 200px;
+  }
+>>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0

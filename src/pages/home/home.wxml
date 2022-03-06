@@ -28,6 +28,7 @@
 		height="600rpx"
 		fit="contain"
 		src="/images/Tree.png"
+		bindtap="navToTree"
 	/>
 
 	<!-- <button class="pool">
@@ -48,7 +49,7 @@
 
 </view>
 
-
+<!-- 需要修改 -->
 <view wx:if="{{true}}" style="width:90%;margin: 0 auto">
 	
 	<van-grid
@@ -62,19 +63,9 @@
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
+				bindtap="navToSeniorHelper"
 			>
 				长辈协助
-			</van-button>
-		</van-grid-item>
-
-		<van-grid-item use-slot="true">
-			<van-button
-				plain
-				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
-				square
-				type="info"
-			>
-				一起看
 			</van-button>
 		</van-grid-item>
 
@@ -118,17 +109,6 @@
 				square
 				type="info"
 			>
-				家庭群聊
-			</van-button>
-		</van-grid-item>
-
-		<van-grid-item use-slot="true">
-			<van-button
-				plain
-				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
-				square
-				type="info"
-			>
 				健康档案
 			</van-button>
 		</van-grid-item>
@@ -143,11 +123,60 @@
 				知识问答
 			</van-button>
 		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				服务预约
+			</van-button>
+		</van-grid-item>
 	</van-grid>
 </view>
 
 <view wx:else>
+	<van-grid
+		column-num="4"
+		border="{{ false }}"
+	>
+		
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				长辈协助
+			</van-button>
+		</van-grid-item>
 
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				实时收益
+			</van-button>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				风险管控
+			</van-button>
+		</van-grid-item>
+
+	</van-grid>
 </view>
 
 <view style="height:150rpx;"></view>

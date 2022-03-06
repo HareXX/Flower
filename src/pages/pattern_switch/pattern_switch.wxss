@@ -8,6 +8,6 @@ page {
 }
 .btn{
   width:100%;
-  background: #f3f4f5;
+  background: #ffffff;
   color: rgb(12, 12, 12);
 }

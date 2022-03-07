@@ -16,14 +16,9 @@
 		</view>
 	</view>
 
-<<<<<<< HEAD
-	<view class="question-container">
-		<van-icon name="smile-o" size="60rpx" color="grey" bindtap="navToAI_Query" />
-=======
 	<view style="margin-top: 50rpx; width: 80%; margin : 0 auto">
 		<text style="display: block;">您还没有开始您的投资，</text>
 		<text style="display: block;">快来创建自己的投资组合吧！</text>
->>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0
 	</view>
 
 	<van-divider />

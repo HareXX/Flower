@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 <!--pages/invest/invest.wxml-->
 <!-- item.id用于遍历 -->
 <view class="container">
     <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" ></canvas>
     <canvas canvas-id="pieCanvas" class="canvas" style="height:300px"></canvas>
 </view>
-=======
-<!--index.wxml-->
-<!-- <view class="userinfo-avatar" bindtap="bindViewTap">
-	<open-data type="userAvatarUrl"></open-data>
-</view> -->
->>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0

@@ -6,7 +6,6 @@ Page({
 	data: {
 		hasInvestment : true
 	},
-<<<<<<< HEAD
 	createSimulationData: function () {
 		var categories = [];
 		var data = [];
@@ -19,23 +18,6 @@ Page({
 			categories: categories,
 			data: data
 		}
-=======
-
-	navToAI_Query(e){
-		wx.navigateTo({
-			url: '../AI_query/AI_query',
-		  })
-	},
-	onLoad: function (options) {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-	onReady: function () {
-
->>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0
 	},
 	onShow: function (e) {
 		this.getTabBar().init();
@@ -48,76 +30,48 @@ Page({
 		}
 
 		var simulationData = this.createSimulationData();
-		lineChart = new wxCharts({
-			canvasId: 'lineCanvas',
-			type: 'line',
-			categories: simulationData.categories,
-			animation: true,
-			// background: '#f5f5f5',
-			series: [{
-				name: '成交量1',
-				data: simulationData.data,
-				format: function (val, name) {
-					return val.toFixed(2) + '万';
-				}
-			}, {
-				name: '成交量2',
-				data: [2, 0, 0, 3, null, 4, 0, 0, 2, 0],
-				format: function (val, name) {
-					return val.toFixed(2) + '万';
-				}
-			}],
-			xAxis: {
-				disableGrid: true
-			},
-			yAxis: {
-				title: '成交金额 (万元)',
-				format: function (val) {
-					return val.toFixed(2);
-				},
-				min: 0
-			},
-			width: windowWidth,
-			height: 200,
-			dataLabel: false,
-			dataPointShape: true,
-			extra: {
-				lineStyle: 'curve'
-			}
-		});
+		// lineChart = new wxCharts({
+		// 	canvasId: 'lineCanvas',
+		// 	type: 'line',
+		// 	categories: simulationData.categories,
+		// 	animation: true,
+		// 	// background: '#f5f5f5',
+		// 	series: [{
+		// 		name: '成交量1',
+		// 		data: simulationData.data,
+		// 		format: function (val, name) {
+		// 			return val.toFixed(2) + '万';
+		// 		}
+		// 	}, {
+		// 		name: '成交量2',
+		// 		data: [2, 0, 0, 3, null, 4, 0, 0, 2, 0],
+		// 		format: function (val, name) {
+		// 			return val.toFixed(2) + '万';
+		// 		}
+		// 	}],
+		// 	xAxis: {
+		// 		disableGrid: true
+		// 	},
+		// 	yAxis: {
+		// 		title: '成交金额 (万元)',
+		// 		format: function (val) {
+		// 			return val.toFixed(2);
+		// 		},
+		// 		min: 0
+		// 	},
+		// 	width: windowWidth,
+		// 	height: 200,
+		// 	dataLabel: false,
+		// 	dataPointShape: true,
+		// 	extra: {
+		// 		lineStyle: 'curve'
+		// 	}
+		// });
 	},
-<<<<<<< HEAD
 	navToAI_Query(e) {
 		wx.navigateTo({
 			url: '../AI_query/AI_query',
 		})
-=======
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-	},
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
->>>>>>> 7712be3c822aca61350a7e5237e13668ec59d0f0
 	},
 
 	navToHistory(e) {

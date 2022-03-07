@@ -1,4 +1,6 @@
-<!--index.wxml-->
-<!-- <view class="userinfo-avatar" bindtap="bindViewTap">
-	<open-data type="userAvatarUrl"></open-data>
-</view> -->
+<!--pages/invest/invest.wxml-->
+<!-- item.id用于遍历 -->
+<view class="container">
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" ></canvas>
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px"></canvas>
+</view>

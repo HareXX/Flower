@@ -4,7 +4,7 @@
 	<van-grid-item use-slot wx:for="{{ numOfFamily }}" wx:for-item="index">
 		{{family[index].name}}
 	</van-grid-item>
-	<van-grid-item icon="add-o" text="添加成员"/>
+	<van-grid-item icon="add-o" bindtap="navToAddMember" text="添加成员"/>
 </van-grid>
 
 <!-- <van-divider/> -->

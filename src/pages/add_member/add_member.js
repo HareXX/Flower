@@ -1,38 +1,18 @@
-// pages/tree/tree.js
+// pages/add_member/add_member.js
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		family : [],
-		numOfFamily : 0,
+
 	},
 
-	navToAddFamilyMember(e){
-		wx.navigateTo({
-			url: '../add_family_member/add_family_member',
-		  })
-	},
-
-	navToAddMember(e)
-	{
-		wx.navigateTo({
-			url: '../add_member/add_member',
-		})
-	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		var Pages = getCurrentPages();
-		var prevPage = Pages[Pages.length - 2];
-		console.log(prevPage.data);
-		this.setData({
-			family : prevPage.data.family,
-			numOfFamily : prevPage.data.numOfFamily
-		})
-		console.log(Pages)
+
 	},
 
 	/**
@@ -46,7 +26,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-		
+
 	},
 
 	/**

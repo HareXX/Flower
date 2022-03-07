@@ -31,13 +31,13 @@ Page({
                       console.log(wxname)
                       //发起网络请求
                       wx.request({
-                        url: '47.113.191.64:9001/user/login',
+                        url: 'http://47.113.191.64:9001/user/login',
                         data: {
                           code:res.code,
                           name:wxname,
                           picture:picture
                         }, 
-                        method: 'GET',
+                        method: 'POST',
 
                       // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
                       header: {

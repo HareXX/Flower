@@ -29,7 +29,9 @@
         "pages/community/community",
         "pages/nurse/nurse",
         "pages/physical_examination/physical_examination",
-        "pages/my_history/my_history"
+		"pages/my_history/my_history",
+		"pages/tree/tree",
+		"pages/add_family_member/add_family_member"
     ],
     "window": {
         "backgroundTextStyle": "light",

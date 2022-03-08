@@ -44,7 +44,8 @@
 		"pages/physical_examination/physical_examination",
 		"pages/tree/tree",
 		"pages/add_family_member/add_family_member",
-		"pages/add_member/add_member"
+		"pages/add_member/add_member",
+		"pages/my_history/my_history"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -91,6 +92,7 @@
 		"van-swipe-cell": "@vant/weapp/swipe-cell/index",
 		"van-divider": "@vant/weapp/divider/index",
 		"van-config-provider": "@vant/weapp/config-provider/index",
-		"van-switch": "@vant/weapp/switch/index"
+		"van-switch": "@vant/weapp/switch/index",
+		"van-calendar": "@vant/weapp/calendar/index"
 	}
 }

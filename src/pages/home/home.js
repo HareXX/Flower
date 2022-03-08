@@ -6,9 +6,9 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		open_ID : null,
 		userInfo: {},
-		hasUserInfo: false,
-		canIUseGetUserProfile: false,
+		isInFamily : false,
 		family : [],
 		numOfFamily : 0,
 	},
@@ -51,11 +51,29 @@ Page({
 	 */
 	onLoad: function (options) {
 		this.getTabBar().init();
-		if (wx.getUserProfile) {
-			this.setData({
-			  	canIUseGetUserProfile: true
-			})
-		}
+		var that = this
+		console.log(wx.getStorageSync('id'))
+		this.setData({
+			open_ID : wx.getStorageSync('id')
+		})
+		wx.request({
+			url: 'http://47.113.191.64:9001/inFamily',
+			data :{
+				identity : that.data.open_ID
+			},
+			method : "GET",
+			header : {
+				'Content-Type':'text/plain;charset:utf-8;'
+			},
+			success : function (res) {
+				console.log("成功")
+				console.log(res)
+			},
+			fail : function (err) {
+				console.log("失败")
+				console.log(err)
+			}
+		})
 		this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
 		this.data.numOfFamily = 2
 		

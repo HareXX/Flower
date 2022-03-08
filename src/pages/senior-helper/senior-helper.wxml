@@ -9,7 +9,7 @@
 					data-index="{{idx}}" bind:change="onChange" 
 				/> -->
 				<view wx:if="{{family[idx].checked == true}}">
-					<van-button type="info" custom-style="width:150rpx">选择</van-button>
+					<van-button type="info" custom-style="width:150rpx" bindtap="navToSeniorHelperUser">选择</van-button>
 				</view>
 				<view wx:else>
 					<van-button disabled type="info" custom-style="width:150rpx">无权限</van-button>

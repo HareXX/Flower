@@ -24,6 +24,7 @@
 		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
 		square
 		type="warning"
+		color="#ffa900"
 		>
 			社区康复中心
 		</van-button>

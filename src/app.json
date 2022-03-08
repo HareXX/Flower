@@ -44,7 +44,8 @@
 		"pages/physical_examination/physical_examination",
 		"pages/tree/tree",
 		"pages/add_family_member/add_family_member",
-		"pages/add_member/add_member"
+		"pages/add_member/add_member",
+		"pages/senior_helper_user/senior_helper_user"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

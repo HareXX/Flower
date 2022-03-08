@@ -9,6 +9,11 @@ Page({
 		numOfFamily : 0,
     },
 
+	navToSeniorHelperUser(e) {
+		wx.navigateTo({
+			url: '../senior_helper_user/senior_helper_user',
+		  })
+	},
 
     /**
      * 生命周期函数--监听页面加载

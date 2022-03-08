@@ -1,5 +1,6 @@
 <!-- pages/AI_query/AI_query.wxml -->
-<view class="question-container">
+<view style="margin-top: 50rpx; width: 80%; margin : 0 auto">
+	<view class="question-container">
     <!-- <van-grid clickable column-num="1">
         <navigator class="question" url="/src/pages/AI_query/answers/1.html">1. 什么是家庭关联账户</navigator>
         <van-grid-item text="2. 如何申请家庭关联账户">
@@ -9,6 +10,8 @@
         {{question.id}}.{{question.text}}
     </view>
 </view>
+</view>
+
 <!-- <form class="page-form" bindsubmit="formSubmit" bindreset="formReset">
     <view class="group">
         <input class="question" type="text" bindfocus="inputFocus" name="question" auto-focus="true" placeholder="请简洁描述您的问题" value="{{entry}}" />

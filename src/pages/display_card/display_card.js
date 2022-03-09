@@ -1,10 +1,13 @@
-// pages/account_security/account_security.js
+// pages/display_card/display_card.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    bankphone:'',
+    bankname:'',
+    bankid:''
 
   },
 
@@ -12,7 +15,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var identity=wx.getStorageSync('id')
+    console.log(identity)
+    wx.request({
+      url: 'http://localhost:9001/user/hascard',
+      data: {
+        identity:identity,
+      }, 
+      method: 'POST',
+    // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+    header: {
+      'content-type': 'application/json;charset=utf-8' 
+    },
+       success: function (res) {
+       console.log(res)
+
+       }
+      })
+
   },
 
   /**
@@ -62,25 +82,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  to_bank: function(opotions){
-    var identity=wx.getStorageSync('id')
-    console.log(identity)
-    wx.request({
-      url: 'http://localhost:9001/user/hascard',
-      data: {
-        identity:identity,
-      }, 
-      method: 'POST',
-    // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
-    header: {
-      'content-type': 'application/json;charset=utf-8' 
-    },
-       success: function (res) {
-       console.log(res)
-
-       }
-      })
-	},
+  }
 })

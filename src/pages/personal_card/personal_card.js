@@ -40,15 +40,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-       let user=wx.getStorageSync('user')
-       let id=wx.getStorageSync('id')
-       this.setData({
-         userInfo:user,
-         identity:id
-       }),
-       console.log(user)
-       console.log(id)
-
   },
 
   /**
@@ -72,9 +63,9 @@ Page({
 
   },
 
-  change_img: function(opotions){
+  to_phone_number: function(opotions){
     wx.navigateTo({
-      url: '/pages/upload_avatar/upload_avatar'
+      url: '../phone_number/phone_number'
     })
 	},
 })

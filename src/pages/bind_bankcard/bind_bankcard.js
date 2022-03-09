@@ -9,8 +9,7 @@ Page({
     cardType: '',
     name: '',
     phoneNumber: '',
-    bankName: '',
-    bankNumber: ''
+    bankNumber: '',
   },
   //手机号
   getUserIdCardPhoneNumber: function (e) {
@@ -85,15 +84,6 @@ Page({
         duration: 1000
       })
     }
-    else if (!that.data.bankName) {
-      wx.showToast({
-        title: '支行名称不能为空',
-        icon: 'none',
-        image: '',
-        duration: 1000
-      })
-
-    }
     else if (!that.data.cardType) {
       wx.showToast({
         title: '不支持该类型的银行卡，请更换',
@@ -104,7 +94,24 @@ Page({
 
     }
     else {
-      //TODO post data to sever
+      var identity=wx.getStorageSync('id')
+      console.log(identity)
+      wx.request({
+        url: 'http://localhost:9001/user/bankcard',
+        data: {
+          ownerIdentity:identity,
+          cardID:this.data.bankNumber,
+          ownerName:this.data.name,
+          phoneNumber:this.data.phoneNumber
+        }, 
+        method: 'POST',
+      // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+      header: {'content-type': 'application/json;charset=UTF-8'},
+         success: function (res) {
+            console.log(res.data)
+            console.log("成功")
+          }
+      })
     }
   },
 

@@ -15,6 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this
     var identity=wx.getStorageSync('id')
     console.log(identity)
     wx.request({
@@ -28,8 +29,15 @@ Page({
       'content-type': 'application/json;charset=utf-8' 
     },
        success: function (res) {
-       console.log(res)
-
+       console.log(res.data[0])
+       var bankphone=res.data[0].phoneNumber
+       var bankid=res.data[0].cardID
+       var bankname=res.data[0].ownerName
+       that.setData({
+        bankphone:bankphone,
+        bankname:bankname,
+        bankid:bankid
+      })
        }
       })
 

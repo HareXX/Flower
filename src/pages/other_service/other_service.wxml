@@ -6,6 +6,7 @@
 	block
 	type="info"
 	bindtap="navToHealth"
+	color="#1597ef"
 >
 	医疗健康
 </van-button>
@@ -28,6 +29,7 @@
 	block
 	type="warning"
 	bindtap="navToNurse"
+	color="#ffa900"
 >
 	护理服务
 </van-button>

@@ -46,7 +46,9 @@
     "pages/tree/tree",
     "pages/add_family_member/add_family_member",
     "pages/phone_number/phone_number",
-    "pages/display_card/display_card"
+    "pages/display_card/display_card",
+    "pages/add_member/add_member",
+		"pages/senior_helper_user/senior_helper_user"
   ],
   "window": {
     "backgroundTextStyle": "light",

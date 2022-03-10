@@ -6,11 +6,13 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		open_ID : null,
 		userInfo: {},
-		hasUserInfo: false,
-		canIUseGetUserProfile: false,
-		family : [],
-		numOfFamily : 0,
+		isInFamily : false,
+		familyID : -1,
+		family : [{identity : null, avatarUrl : "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKK7lZKx3UpbNQnjvibLtrVp3pGF1yTqV802bHEVeVSsFibkicPLQhUyIOUAicQSOVWRwxT9eJPwaW9Bg/132", userName : "Hare"},
+		{identity : null, avatarUrl : "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKK7lZKx3UpbNQnjvibLtrVp3pGF1yTqV802bHEVeVSsFibkicPLQhUyIOUAicQSOVWRwxT9eJPwaW9Bg/132", userName : "Hare"}],
+		numOfFamily : 2,
 	},
 
 	// "lazyCodeLoading": "requiredComponents",
@@ -51,32 +53,14 @@ Page({
 	 */
 	onLoad: function (options) {
 		this.getTabBar().init();
-		if (wx.getUserProfile) {
-			this.setData({
-			  	canIUseGetUserProfile: true
-			})
-		}
-		this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
-		this.data.numOfFamily = 2
-		
-	},
-	getUserProfile(e) {
-		// 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
-		// 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-		wx.getUserProfile({
-			desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-			success: (res) => {
-				this.setData({
-					userInfo: res.userInfo,
-					hasUserInfo: true,
-				})
-				console.log(成功)
-			},
-			fail: (res) =>
-			{
-				console.log(失败)
-			}
+		var that = this
+		var serverUrl = app.globalData.serverUrl
+		console.log(wx.getStorageSync('id'))
+		this.setData({
+			open_ID : wx.getStorageSync('id')
 		})
+
+		
 	},
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
@@ -90,6 +74,110 @@ Page({
 	 */
 	onShow: function () {
 		this.getTabBar().init();
+
+		var that = this
+		var serverUrl = app.globalData.serverUrl
+		wx.request({
+			url: serverUrl + '/inFamily',
+			data :{
+				identity : that.data.open_ID
+			},
+			method : "GET",
+			header : {
+				'Content-Type':'text/plain;charset:utf-8;'
+			},
+			success : function (res) {
+				console.log("获取是否在家庭成功")
+				console.log(res)
+				that.setData({
+					isInFamily : res.data == 1 ? true : false
+				})
+				console.log(that.data)
+			},
+			fail : function (err) {
+				console.log("获取是否在家庭失败")
+				console.log(err)
+			}
+		})
+
+		// console.log(that.data.isInFamily)
+		if (that.data.isInFamily)
+		{
+			wx.request({
+				url: serverUrl + '/getFamilyID',
+				data :{
+					identity : that.data.open_ID
+				},
+				method : "GET",
+				header : {
+					'Content-Type':'text/plain;charset:utf-8;'
+				},
+				success : function (res) {
+					console.log("获取家庭ID成功")
+					console.log(res)
+					that.setData({
+						familyID : res.data,
+					})
+					console.log(that.data)
+				},
+				fail : function (err) {
+					console.log("获取家庭ID失败")
+					console.log(err)
+				}
+			})
+		
+		
+		// this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
+		// this.data.numOfFamily = 2
+
+
+			
+			//获取家庭成员
+			wx.request({
+				url : serverUrl + '/allMember',
+				data : {
+					identity : that.data.open_ID
+				},
+				method : "GET",
+				header : {
+					'Content-Type':'text/plain;charset:utf-8;'
+				},
+				success : function (res) {
+					console.log("获取家庭成员成功")
+					that.setData({
+						family : res.data,
+						numOfFamily : res.data.length
+					})
+				},
+				fail : function (res) {
+					console.log("获取家庭成员失败")
+					console.log(res)
+				}
+			})
+				
+			wx.request({
+				url : serverUrl + '/allRelation',
+				data : {
+					identity : that.data.open_ID
+				},
+				method : "GET",
+				header : {
+					'Content-Type':'text/plain;charset:utf-8;'
+				},
+				success : function (res) {
+					console.log("获取授权关系成功")
+					for (var i = 0; i < that.data.numOfFamily; ++i)
+					{
+						if (family[i].identity == open_ID) continue
+						family[i].checked = res.data[family[i].identity] == 1 ? true : false
+					}
+				},
+				fail : function (res) {
+					console.log("获取授权关系失败")
+					console.log(res)
+				}
+			})
+		}
 	},
 
 	/**

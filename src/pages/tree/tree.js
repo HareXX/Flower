@@ -5,8 +5,17 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		show: false,
 		family : [],
 		numOfFamily : 0,
+	},
+
+	onClose() {
+		this.setData({ show: false });
+	  },
+
+	showPopup() {
+		this.setData({ show: true });
 	},
 
 	navToAddFamilyMember(e){

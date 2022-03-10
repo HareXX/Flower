@@ -2,9 +2,10 @@
 	<van-grid column-num="2"  border="{{false}}">
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:240rpx;width:240rpx;border-radius:20rpx;"
+		custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
 		square
 		type="info"
+		color="#59b9c6"
 		>
 			<text style="font-size: 40rpx;">预约挂号</text>
 		</van-button>
@@ -12,33 +13,36 @@
 	
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:240rpx;width:240rpx;border-radius:20rpx;"
+		custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
 		square
 		type="primary"
+		color="#2ca9e1"
 		>
-			在线问诊
+		<text style="font-size: 40rpx;">在线问诊</text>
+
 		</van-button>
 	</van-grid-item>
 	
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:250rpx;width:250rpx;border-radius:20rpx;"
+		custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
 		square
-		color="#5BC1EC"
+		color="#5383c3"
 		>
-			健康资讯
+		<text style="font-size: 40rpx;">健康咨询</text>
 		</van-button>
 	</van-grid-item>
 	
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:250rpx;width:250rpx;border-radius:20rpx;"
+		custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
 		square
 		type="warning"
 		bindtap="navToPE"
-		color="#"
+		color="#88aea3"
 		>
-			体检检查
+			<text style="font-size: 40rpx;">体检检查</text>
+
 		</van-button>
 	</van-grid-item>
 	

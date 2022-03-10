@@ -27,6 +27,8 @@
 		square
 		type="warning"
 		bindtap="updTo3"
+		color="#ffa900"
+
 		>
 			储蓄余额
 		</van-button>
@@ -76,7 +78,7 @@
 		<van-button
 		custom-style="width:600rpx"
 		round
-		type="primary"
+		type="info"
 		block
 		bindtap="navTo1"
 		>
@@ -89,7 +91,7 @@
 		<van-button
 		custom-style="width:600rpx"
 		round
-		type="primary"
+		type="info"
 		block
 		>
 			上门送药
@@ -100,7 +102,7 @@
 		<van-button
 		custom-style="width:600rpx"
 		round
-		type="primary"
+		type="info"
 		block
 		>
 			老人接送

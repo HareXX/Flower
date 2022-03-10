@@ -1,1 +1,5 @@
 /* pages/add_member/add_member.wxss */
+
+page {
+    background-color: #f7f8fa;
+}

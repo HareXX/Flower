@@ -1,10 +1,12 @@
 // pages/add_family_member/add_family_member.js
+var app = getApp()
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
+		open_ID : null,
 		family : [],
 		numOfFamily : 0,
 	},
@@ -16,22 +18,28 @@ Page({
 		var that = this
 		var arr = that.data.family
 		arr[e.currentTarget.dataset.index].checked = e.detail
-		this.setData({
+		that.setData({
 			family : arr
 		})
-		this.data.family[e.currentTarget.dataset.index].checked = e.detail
+		that.data.family[e.currentTarget.dataset.index].checked = e.detail
+
 	},
 	onLoad: function (options) {
-		var Pages = getCurrentPages();
-		var prevPage = Pages[Pages.length - 2];
-		console.log(prevPage.data);
+		let that = this
+		var Pages = getCurrentPages()
+		var prevPage = Pages[Pages.length - 2]
+		console.log(prevPage.data)
 		this.setData({
 			family : prevPage.data.family,
-			numOfFamily : prevPage.data.numOfFamily
+			numOfFamily : prevPage.data.numOfFamily,
+			open_ID : prevPage.data.open_ID
 		})
-		for (var i = 0; i < this.data.numOfFamily; ++i)
-			this.data.family[i].unique = 'unique_' + i
+		console.log("加载数据成功")
+		
+		// for (var i = 0; i < this.data.numOfFamily; ++i)
+		// 	this.data.family[i].unique = 'unique_' + i
 		// console.log(Pages[Pages.length - 1].data)
+
 	},
 
 	/**
@@ -45,7 +53,6 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow: function () {
-
 	},
 
 	/**

@@ -8,6 +8,7 @@ Page({
   onLoad(){
   },
 
+
   login(){
     var that = this
     var identity='';
@@ -81,3 +82,4 @@ Page({
   })
 }
 })
+

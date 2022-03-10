@@ -12,13 +12,9 @@
     margin-top: 15rpx;
 }
 
-.img {
-    display: flex;
-    height: 800rpx;
-    justify-content: center;
-    align-items: center;
+.tree-container{
+	height: 700rpx;
 }
-
 
 /* .nav
 {
@@ -33,7 +29,11 @@
     width: 20%;
     /*每个元素占20%*/
 }
-
+.tree{
+	width : "80%";
+	height : "1200rpx";
+	
+}
 .pool {
     /* height: 100rpx;
 	width: 400rpx;
@@ -44,19 +44,7 @@
     display: flex;
 }
 
-.btn {
-    line-height: 40rpx;
-    padding-left: 27rpx;
-    margin-top: 10rpx;
-    border-radius: 12rpx;
-    background-color: #bfbfbf;
-    position: relative;
-    border: none;
-    text-align: center;
-    /* -webkit-transition-duration: 0s; 
-    transition-duration: 0s;
-    text-decoration: none; */
-}
+
 
 
 /* .btn:after {

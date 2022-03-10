@@ -14,7 +14,8 @@ App({
       }
     })
   },
-  globalData: {
-    
-  }
+	globalData: {
+		serverUrl : "http://localhost:9001"
+		//serverUrl : "http://47.113.191.64:9001"
+	}
 })

@@ -23,24 +23,35 @@
 </view>
 
 <view class="tree-container">
-	<van-image
+	<!-- <van-image
 		width="100%"
-		height="600rpx"
+		height="1200rpx"
 		fit="contain"
-		src="/images/Tree.png"
+		src="/images/树.png"
 		bindtap="navToTree"
-	/>
-
+	/> -->
+	<image 
+		style="width : 90%; height: 550rpx;margin-left: 50rpx; position: relative;"
+		src="/images/树.png"
+		bindtap="navToTree"
+	>
+	</image>
+	<image 
+		style="width : 90%; height: 350rpx;margin-left: 50rpx; margin-top: -170rpx;"
+		src="/images/池子.png"
+		bindtap="navToAI_Query"
+	>
+	</image>
 	<!-- <button class="pool">
 		<text class='text'>家庭积分池</text>
 	</button> -->
 	
-	<van-button
+	<!-- <van-button
 		block
 		custom-style="height:100rpx; width:60%; margin-top:-50rpx; border-radius:50%; background-color:orange; border:orange;font-weight:border"
 	>
 	家庭积分池
-	</van-button>
+	</van-button> -->
 	<!-- <van-button
 		custom-style="height:100rpx; width:60%; margin-top:-50rpx; border-radius:50%; background-color:orange; border:orange;"
 	>
@@ -50,15 +61,16 @@
 </view>
 
 <!-- 需要修改 -->
-<view wx:if="{{true}}" style="width:90%;margin: 0 auto">
+<view wx:if="{{true}}" style="width:90%;margin: 0 auto; margin-top: 80rpx;">
 	
 	<van-grid
 		column-num="4"
-		border="{{ false }}"
+		square
+		border="{{true}}"
 	>
 		
-		<van-grid-item use-slot="true">
-			<van-button
+		<van-grid-item use-slot="true" >
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
@@ -66,73 +78,119 @@
 				bindtap="navToSeniorHelper"
 			>
 				长辈协助
-			</van-button>
+			</van-button>-->
+			
+			<van-image
+				width="160rpx"
+				height="160rpx"
+
+				fit="contain"
+				clickable="{{true}}"
+				src="/images/长辈协助.png"
+				bindtap="navToSeniorHelper"
+			/>
+			<!-- <image
+				style="width: 350rpx; height: 150px;"
+				src="/images/长辈协助.png"
+				
+			/> -->
+
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				实时收益
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				src="/images/实时收益.png"
+			/>
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				风险管控
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="165rpx"
+				height="165rpx"
+				src="/images/风险管控.png"
+			/>
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				历史记录
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				src="/images/历史记录.png"
+			/>
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				健康档案
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				src="/images/健康档案.png"
+			/>
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				知识问答
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="165rpx"
+				height="165rpx"
+				src="/images/知识问答.png"
+			/>
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				服务预约
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="170rpx"
+				height="170rpx"
+				src="/images/服务预约.png"
+			/>
 		</van-grid-item>
 	</van-grid>
 </view>
@@ -144,14 +202,20 @@
 	>
 		
 		<van-grid-item use-slot="true">
-			<van-button
+			<!-- <van-button
 				plain
 				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
 				square
 				type="info"
 			>
 				长辈协助
-			</van-button>
+			</van-button> -->
+			<van-image
+				width="10rem"
+				height="10rem"
+				fit="contain"
+				src="../images/长辈协助.png"
+			/>
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">

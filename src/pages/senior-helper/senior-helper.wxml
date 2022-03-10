@@ -8,7 +8,7 @@
 					checked="{{ family[idx].checked }}" 
 					data-index="{{idx}}" bind:change="onChange" 
 				/> -->
-				<view wx:if="{{family[idx].checked == true}}">
+				<view wx:if="{{hasAuth[idx] == true}}">
 					<van-button type="info" custom-style="width:150rpx" bindtap="navToSeniorHelperUser">选择</van-button>
 				</view>
 				<view wx:else>
@@ -17,8 +17,13 @@
 				
 				
 			</view>
-			<view style="margin-right: 200rpx;">
-				{{ family[idx].name }}
+			<view style="margin-right: 150rpx;">
+					<image
+						style="width: 85rpx;height: 85rpx;border-radius: 50%;"
+						src="{{family[idx].avatarUrl}}"
+					/>
+					<view>{{family[idx].userName}}</view>
+				
 			</view>
 
 	</view>

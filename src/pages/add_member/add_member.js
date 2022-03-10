@@ -8,7 +8,16 @@ Page({
 		value : ''
 	},
 
-	
+	onChange(event) {
+		this.setData({
+			value : event.detail
+		})
+	},
+
+	confirm  : function (e)
+	{
+		console.log(this.data.value)
+	},
 
 	/**
 	 * 生命周期函数--监听页面加载

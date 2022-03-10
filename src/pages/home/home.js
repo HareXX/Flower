@@ -9,6 +9,7 @@ Page({
 		open_ID : null,
 		userInfo: {},
 		isInFamily : false,
+		isFamilyAdmin : false,
 		familyID : -1,
 		family : [{identity : null, avatarUrl : "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKK7lZKx3UpbNQnjvibLtrVp3pGF1yTqV802bHEVeVSsFibkicPLQhUyIOUAicQSOVWRwxT9eJPwaW9Bg/132", userName : "Hare"},
 		{identity : null, avatarUrl : "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKK7lZKx3UpbNQnjvibLtrVp3pGF1yTqV802bHEVeVSsFibkicPLQhUyIOUAicQSOVWRwxT9eJPwaW9Bg/132", userName : "Hare"}],

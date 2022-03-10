@@ -78,8 +78,16 @@ Page({
       'content-type': 'application/json;charset=utf-8' 
     },
        success: function (res) {
-       console.log(res)
-
+         if(res.data[0]==null){
+          wx.navigateTo({
+            url: '../bind_bankcard/bind_bankcard',
+          })
+         }
+         else{
+         wx.navigateTo({
+           url: '../display_card/display_card',
+         })
+        }
        }
       })
 	},

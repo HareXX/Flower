@@ -110,6 +110,15 @@ Page({
          success: function (res) {
             console.log(res.data)
             console.log("成功")
+            wx.showToast({
+              title: '绑定银行卡成功！',
+              icon: 'none',
+              image: '',
+              duration: 2000
+            })
+            wx.navigateTo({
+              url: '../account_security/account_security',
+            })
           }
       })
     }

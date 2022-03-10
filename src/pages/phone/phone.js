@@ -52,6 +52,7 @@ Page({
     this.setData({
       currentChoose: time
     });
+    wx.setStorageSync('sex', 0)
   },
   setInput: function(e) {
     console.log(e.detail.value)
@@ -64,7 +65,7 @@ Page({
         console.log("手机号为空")
         wx.showToast({
           title: '手机号不能为空',
-          icon: 'loading',
+          icon: 'none',
           image: '',
           duration: 1000
         })

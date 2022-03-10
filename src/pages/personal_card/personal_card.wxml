@@ -1,13 +1,10 @@
 <!--pages/personal_card/personal_card.wxml-->
 
-<text>\n\n</text>
-
-<view class="member">
+<!-- <view class="member">
     <view class="info-box">
         <view class="info">
             <view>
-                <!-- 头像 -->
-                <open-data type="userAvatarUrl"></open-data>
+                 <open-data type="userAvatarUrl"></open-data>
             </view>
           </view>
     </view>
@@ -19,7 +16,6 @@
     <view class="info-box">
         <view class="info">
             <view>
-            <!-- 微信昵称: -->
                 <open-data type="userNickName"></open-data>
             </view>
         </view>
@@ -58,4 +54,32 @@
     <view class="detail2">
       <text>></text>
     </view>
+</view> -->
+
+<!--用户头像和昵称-->
+<view class="userInformation">
+  <view class="userInfomation-avatar">
+    <open-data type="userAvatarUrl" ></open-data>
+  </view>
+  <view class="userInformation-nickname">
+    <open-data type="userNickName"></open-data>
+  </view>
 </view>
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation" bindtap="to_phone_number"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/手机号.png"></image>
+      </view>
+      <view class="text">手机号</view><!--文字-->
+      <view class="right-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/箭头.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<!-- <view class="whitedivide"></view> -->

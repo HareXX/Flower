@@ -1,17 +1,22 @@
-// pages/initial_page/initial_page.js
+// pages/phone_number/phone_number.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      pho:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let pho=wx.getStorageSync('phone')
+      console.log(pho)
+      this.setData({
+        pho:pho
+      })
 
   },
 
@@ -40,7 +45,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+      
   },
 
   /**

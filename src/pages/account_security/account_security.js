@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -62,5 +62,33 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  to_bank: function(opotions){
+    var identity=wx.getStorageSync('id')
+    console.log(identity)
+    wx.request({
+      url: 'http://localhost:9001/user/hascard',
+      data: {
+        identity:identity,
+      }, 
+      method: 'POST',
+    // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+    header: {
+      'content-type': 'application/json;charset=utf-8' 
+    },
+       success: function (res) {
+         if(res.data[0]==null){
+          wx.navigateTo({
+            url: '../bind_bankcard/bind_bankcard',
+          })
+         }
+         else{
+         wx.navigateTo({
+           url: '../display_card/display_card',
+         })
+        }
+       }
+      })
+	},
 })

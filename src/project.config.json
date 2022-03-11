@@ -52,5 +52,6 @@
         "useCompilerPlugins": false,
         "ignoreUploadUnusedFiles": true
     },
+    "appid": "wx1aa63d33e9daf0e6",
     "condition": {}
 }

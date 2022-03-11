@@ -34,6 +34,37 @@ Page({
 		this.setData({ show: true });
 	},
 
+	exitFamily(e){
+		var that = this
+		wx.request({
+			url : serverUrl + '/family/delMember',
+			data : {
+				identity : that.data.open_ID,
+				familyID : that.data.familyID
+			},
+			method : "POST",
+			header : {
+				'Content-Type':'application/x-www-form-urlencoded'
+			},
+			success : function (res) {
+				console.log("删除成员成功")
+				Dialog.alert({
+					context : this,
+					selector:"#van-dialog",
+					message: '退出成功',
+				}).then(() => {
+					wx.navigateBack({
+					  delta: 1,
+					})
+				});
+			},
+			fail : function (res) {
+				console.log("获取授权关系失败")
+				console.log(res)
+			}
+		})
+	},
+
 	navToAddFamilyMember(e){
 		wx.navigateTo({
 			url: '../add_family_member/add_family_member',

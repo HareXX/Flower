@@ -1,5 +1,6 @@
 // pages/home/home.js
 const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
 
 	/**
@@ -7,9 +8,9 @@ Page({
 	 */
 	data: {
 		open_ID : null,
-		userInfo: {},
 		isInFamily : false,
 		isFamilyAdmin : false,
+		FamilyAdminOpen_ID : '',
 		familyID : -1,
 		family : [{identity : null, avatarUrl : "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKK7lZKx3UpbNQnjvibLtrVp3pGF1yTqV802bHEVeVSsFibkicPLQhUyIOUAicQSOVWRwxT9eJPwaW9Bg/132", userName : "Hare"},
 		{identity : null, avatarUrl : "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKK7lZKx3UpbNQnjvibLtrVp3pGF1yTqV802bHEVeVSsFibkicPLQhUyIOUAicQSOVWRwxT9eJPwaW9Bg/132", userName : "Hare"}],
@@ -53,7 +54,6 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function (options) {
-		this.getTabBar().init();
 		var that = this
 		var serverUrl = app.globalData.serverUrl
 		console.log(wx.getStorageSync('id'))
@@ -62,6 +62,44 @@ Page({
 		})
 
 		
+	},
+	checkIsHouseHolder : function(i)
+	{
+		var that = this
+		wx.request({
+			url: serverUrl + '/family/isHouseHolder',
+			data : {
+				houseHolderIdentity : that.data.family[i].identity,
+			},
+			method : "GET",
+			header : {
+				'Content-Type':'text/plain;charset:utf-8;'
+			},
+
+			success : function (res) {
+				console.log("现在是" + i)
+				console.log("获取户主成功")
+				if (res.data == true)
+				{
+					console.log(i)
+					console.log(that.data.family[i])
+					that.setData({
+						FamilyAdminOpen_ID : that.data.family[i].identity
+					})
+					if (that.data.family[i].identity == that.data.open_ID)
+					{
+						that.setData({
+							isFamilyAdmin : true
+						})
+					}
+					console.log(that.data)
+				}
+			},
+			fail : function (res) {
+				console.log("获取户主失败")
+				console.log(res)
+			}
+		})
 	},
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
@@ -77,9 +115,9 @@ Page({
 		this.getTabBar().init();
 
 		var that = this
-		var serverUrl = app.globalData.serverUrl
+		
 		wx.request({
-			url: serverUrl + '/inFamily',
+			url: serverUrl + '/family/inFamily',
 			data :{
 				identity : that.data.open_ID
 			},
@@ -94,6 +132,88 @@ Page({
 					isInFamily : res.data == 1 ? true : false
 				})
 				console.log(that.data)
+
+				if (that.data.isInFamily)
+				{
+					wx.request({
+						url: serverUrl + '/family/getFamilyID',
+						data :{
+							identity : that.data.open_ID
+						},
+						method : "GET",
+						header : {
+							'Content-Type':'text/plain;charset:utf-8;'
+						},
+						success : function (res) {
+							console.log("获取家庭ID成功")
+							console.log(res)
+							that.setData({
+								familyID : res.data,
+							})
+							console.log(that.data)
+						},
+						fail : function (err) {
+							console.log("获取家庭ID失败")
+							console.log(err)
+						}
+					})
+				
+				
+				// this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
+				// this.data.numOfFamily = 2
+					
+					//获取家庭成员
+					wx.request({
+						url : serverUrl + '/family/allMembers',
+						data : {
+							identity : that.data.open_ID
+						},
+						method : "GET",
+						header : {
+							'Content-Type':'text/plain;charset:utf-8;'
+						},
+						success : function (res) {
+							console.log("获取家庭成员成功")
+							that.setData({
+								family : res.data,
+								numOfFamily : res.data.length
+							})
+							for (var i = 0; i < that.data.numOfFamily; ++i)
+							{
+								that.checkIsHouseHolder(i)
+							}
+
+							wx.request({
+								url : serverUrl + '/family/allRelation',
+								data : {
+									identity : that.data.open_ID
+								},
+								method : "GET",
+								header : {
+									'Content-Type':'text/plain;charset:utf-8;'
+								},
+								success : function (res) {
+									console.log("获取授权关系成功")
+									for (var i = 0; i < that.data.numOfFamily - 1; ++i)
+									{
+										if (that.data.family[i].identity == that.data.open_ID) continue
+										that.data.family[i].checked = res.data[that.data.family[i].identity] == 1 ? true : false
+									}
+								},
+								fail : function (res) {
+									console.log("获取授权关系失败")
+									console.log(res)
+								}
+							})
+						},
+						fail : function (res) {
+							console.log("获取家庭成员失败")
+							console.log(res)
+						}
+					})
+					
+					
+				}
 			},
 			fail : function (err) {
 				console.log("获取是否在家庭失败")
@@ -101,84 +221,8 @@ Page({
 			}
 		})
 
-		// console.log(that.data.isInFamily)
-		if (that.data.isInFamily)
-		{
-			wx.request({
-				url: serverUrl + '/getFamilyID',
-				data :{
-					identity : that.data.open_ID
-				},
-				method : "GET",
-				header : {
-					'Content-Type':'text/plain;charset:utf-8;'
-				},
-				success : function (res) {
-					console.log("获取家庭ID成功")
-					console.log(res)
-					that.setData({
-						familyID : res.data,
-					})
-					console.log(that.data)
-				},
-				fail : function (err) {
-					console.log("获取家庭ID失败")
-					console.log(err)
-				}
-			})
+		console.log(that.data.isInFamily)
 		
-		
-		// this.data.family = [{name : "Hare", checked : false}, {name : "Hare2", checked : false}]
-		// this.data.numOfFamily = 2
-
-
-			
-			//获取家庭成员
-			wx.request({
-				url : serverUrl + '/allMember',
-				data : {
-					identity : that.data.open_ID
-				},
-				method : "GET",
-				header : {
-					'Content-Type':'text/plain;charset:utf-8;'
-				},
-				success : function (res) {
-					console.log("获取家庭成员成功")
-					that.setData({
-						family : res.data,
-						numOfFamily : res.data.length
-					})
-				},
-				fail : function (res) {
-					console.log("获取家庭成员失败")
-					console.log(res)
-				}
-			})
-				
-			wx.request({
-				url : serverUrl + '/allRelation',
-				data : {
-					identity : that.data.open_ID
-				},
-				method : "GET",
-				header : {
-					'Content-Type':'text/plain;charset:utf-8;'
-				},
-				success : function (res) {
-					console.log("获取授权关系成功")
-					for (var i = 0; i < that.data.numOfFamily; ++i)
-					{
-						if (family[i].identity == open_ID) continue
-						family[i].checked = res.data[family[i].identity] == 1 ? true : false
-					}
-				},
-				fail : function (res) {
-					console.log("获取授权关系失败")
-					console.log(res)
-				}
-			})
-		}
 	},
 
 	/**

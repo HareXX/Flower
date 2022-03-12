@@ -45,12 +45,18 @@
 		"pages/nurse/nurse",
 		"pages/physical_examination/physical_examination",
 		"pages/tree/tree",
-		"pages/add_family_member/add_family_member",
+		"pages/smart_invest/smart_invest",
+		"pages/questionnare/questionnare",
+		"pages/risk/risk",
+		"pages/time/time",
+		"pages/anticipate_result/anticipate_result",
 		"pages/phone_number/phone_number",
 		"pages/display_card/display_card",
-		"pages/add_member/add_member",
-		"pages/senior_helper_user/senior_helper_user",
-		"pages/delete_member/delete_member"
+		"pages/smart_invest/smart_invest",
+		"pages/questionnare/questionnare",
+		"pages/risk/risk",
+		"pages/time/time",
+		"pages/anticipate_result/anticipate_result"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -60,8 +66,7 @@
 	},
 	"tabBar": {
 		"custom": true,
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/homepage/homepage",
 				"text": "主页"
 			},

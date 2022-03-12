@@ -35,7 +35,7 @@
 	square
 	block
 	type="info"
-	bindtap="navToCommunity"
+	bindtap="navToInvest"
 	>
 		开启我的专属投资组合
 	</van-button>

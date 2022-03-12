@@ -1,5 +1,5 @@
 <!--pages/senior_helper_user/senior_helper_user.wxml-->
-<view>
+<view style="width: 80%; margin : 0 auto;">
 	<van-grid column-num="3" border="{{false}}">
 		<van-grid-item use-slot="true">
 			<van-button
@@ -37,7 +37,11 @@
 
 		
 	</van-grid>
-	<van-button 
+	
+
+</view>
+
+<van-button 
 		size="large"
 		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx;margin-top : 40rpx"
 		square
@@ -56,5 +60,3 @@
 	>
 			亲情卡
 	</van-button>
-
-</view>

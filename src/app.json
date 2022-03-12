@@ -49,7 +49,9 @@
 		"pages/display_card/display_card",
 		"pages/add_member/add_member",
 		"pages/senior_helper_user/senior_helper_user",
-		"pages/delete_member/delete_member"
+		"pages/delete_member/delete_member",
+		"pages/risk_family/risk_family",
+		"pages/business_trainer/business_trainer"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
@@ -100,6 +102,8 @@
 		"van-field": "@vant/weapp/field/index",
 		"van-picker": "@vant/weapp/picker/index",
 		"van-popup": "@vant/weapp/popup/index",
-		"van-dialog": "@vant/weapp/dialog/index"
+		"van-dialog": "@vant/weapp/dialog/index",
+		"van-tab": "@vant/weapp/tab/index",
+		"van-tabs": "@vant/weapp/tabs/index"
 	}
 }

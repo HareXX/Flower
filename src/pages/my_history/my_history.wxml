@@ -5,7 +5,8 @@
     <van-cell-group inset>
         <van-cell title="详细记录：" value="" />
         <van-cell title="今日总收益：" value="{{total_income}}" />
-        <van-cell title="今日股票收益：" value="{{total_income}}" />
-        <van-cell title="今日债券收益：" value="{{total_income}}" />
     </van-cell-group>
+    <view wx:for="{{records}}" wx:for-index="idx">
+            <van-cell title="{{records[idx].fundName}}" value="{{records[idx].amount}}" />
+        </view>
 </view>

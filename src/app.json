@@ -19,6 +19,7 @@
 		"pages/bind_bankcard/bind_bankcard",
 		"pages/password_settings/password_settings",
 		"pages/password_modification/password_modification",
+		"pages/my_history/my_history",
 		"pages/AI_query/AI_query",
 		"pages/AI_query/answers/1",
 		"pages/AI_query/answers/2",
@@ -100,6 +101,7 @@
 		"van-field": "@vant/weapp/field/index",
 		"van-picker": "@vant/weapp/picker/index",
 		"van-popup": "@vant/weapp/popup/index",
-		"van-dialog": "@vant/weapp/dialog/index"
+		"van-dialog": "@vant/weapp/dialog/index",
+		"van-calendar": "@vant/weapp/calendar/index"
 	}
 }

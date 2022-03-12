@@ -1,0 +1,28 @@
+<!--pages/smart_invest/smart_invest.wxml-->
+ <!-- <view> -->
+  <view class="font">花旗惠投
+  </view>
+	<!-- <van-image
+		width="100%"
+		height="600rpx"
+		fit="contain"
+		src="/images/花旗.png"
+	/>
+</view> -->
+
+<view class='imagesize'>
+  <image src="/images/花旗.png" class='in-image'   >
+  </image>
+</view>
+
+<view class='add_btn'>
+    <button class='btn'>
+        惠投简介
+    </button>
+    <button class='btn' bindtap="toquestionnare">
+        问卷测评
+    </button>
+    <button class='btn'>
+        智能推荐
+    </button>
+</view>

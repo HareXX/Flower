@@ -1,13 +1,20 @@
 {
-  "description": "项目配置文件",
+  "appid": "wx1aa63d33e9daf0e6",
+  "projectname": "",
+  "compileType": "miniprogram",
+  "scripts": {},
   "packOptions": {
-    "ignore": [
-      {
-        "value": ".eslintrc.js",
-        "type": "file"
-      }
-    ],
+    "ignore": [],
     "include": []
+  },
+  "watchOptions": {
+    "ignore": []
+  },
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "staticServerOptions": {
+    "servePath": ""
   },
   "setting": {
     "urlCheck": false,
@@ -24,13 +31,8 @@
     "enhance": true,
     "useMultiFrameRuntime": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmManually": true,
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./miniprogram/"
-      }
-    ],
+    "packNpmManually": false,
+    "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
     "ignoreUploadUnusedFiles": true,
@@ -42,24 +44,6 @@
     },
     "useStaticServer": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false,
-    "minifyWXML": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
-    "useIsolateContext": true
-  },
-  "appid": "wx1aa63d33e9daf0e6",
-  "condition": {},
-  "projectname": "",
-  "compileType": "miniprogram",
-  "scripts": {},
-  "watchOptions": {
-    "ignore": []
-  },
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "staticServerOptions": {
-    "servePath": ""
+    "useCompilerPlugins": false
   }
 }

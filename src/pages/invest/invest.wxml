@@ -1,6 +1,6 @@
 <!--pages/invest/invest.wxml-->
 <!-- item.id用于遍历 -->
-<view class="container">
+<!-- <view class="container">
     <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" ></canvas>
     <canvas canvas-id="pieCanvas" class="canvas" style="height:300px"></canvas>
 </view> -->
@@ -87,3 +87,4 @@
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
 </view>
+<view style="height:150rpx;"></view>

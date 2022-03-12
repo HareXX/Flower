@@ -1,0 +1,13 @@
+/* pages/anticipate_result/anticipate_result.wxss */
+.add_btn{
+  width: 100%;
+  display:flex;
+  bottom: 0rpx;
+  position: fixed;
+}
+.btn{
+  margin-top: 30rpx;
+  width: 300rpx;
+  background: #14a1fd;
+  color: #fff;
+}

@@ -1,15 +1,13 @@
 {
-  "appid": "wx1aa63d33e9daf0e6",
-  "projectname": "",
-  "compileType": "miniprogram",
-  "libVersion": "2.22.0",
-  "scripts": {},
+  "description": "项目配置文件",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "value": ".eslintrc.js",
+        "type": "file"
+      }
+    ],
     "include": []
-  },
-  "watchOptions": {
-    "ignore": []
   },
   "setting": {
     "urlCheck": false,
@@ -26,8 +24,13 @@
     "enhance": true,
     "useMultiFrameRuntime": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
     "minifyWXSS": true,
     "disableUseStrict": false,
     "ignoreUploadUnusedFiles": true,
@@ -40,66 +43,23 @@
     "useStaticServer": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "minifyWXML": true
+    "minifyWXML": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "useIsolateContext": true
   },
-  "condition": {
-    "plugin": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "current": -1,
-      "list": []
-    },
-    "gamePlugin": {
-      "current": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "",
-          "pathName": "pages/account_security/account_security",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/homepage/homepage",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/smart_invest/smart_invest",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/risk/risk",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/time/time",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/questionnare/questionnare",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        }
-      ]
-    }
+  "appid": "wx1aa63d33e9daf0e6",
+  "condition": {},
+  "projectname": "",
+  "compileType": "miniprogram",
+  "scripts": {},
+  "watchOptions": {
+    "ignore": []
+  },
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "staticServerOptions": {
+    "servePath": ""
   }
 }

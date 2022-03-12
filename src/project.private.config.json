@@ -53,8 +53,8 @@
           "name": "",
           "pathName": "pages/questionnare/questionnare",
           "query": "",
-          "scene": null,
-          "launchMode": "default"
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

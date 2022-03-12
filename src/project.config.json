@@ -44,6 +44,7 @@
     },
     "useStaticServer": true,
     "showES6CompileOption": false,
+<<<<<<< Updated upstream
     "useCompilerPlugins": false,
     "useApiHook": true,
     "useApiHostProcess": true
@@ -81,5 +82,21 @@
   },
   "watchOptions": {
     "ignore": []
+=======
+    "useCompilerPlugins": false
+  },
+  "appid": "wx1aa63d33e9daf0e6",
+  "projectname": "",
+  "compileType": "miniprogram",
+  "scripts": {},
+  "watchOptions": {
+    "ignore": []
+  },
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "staticServerOptions": {
+    "servePath": ""
+>>>>>>> Stashed changes
   }
 }

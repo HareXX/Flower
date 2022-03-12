@@ -46,7 +46,12 @@
     "pages/tree/tree",
     "pages/add_family_member/add_family_member",
     "pages/phone_number/phone_number",
-    "pages/display_card/display_card"
+    "pages/display_card/display_card",
+    "pages/smart_invest/smart_invest",
+    "pages/questionnare/questionnare",
+    "pages/risk/risk",
+    "pages/time/time",
+    "pages/anticipate_result/anticipate_result"
   ],
   "window": {
     "backgroundTextStyle": "light",

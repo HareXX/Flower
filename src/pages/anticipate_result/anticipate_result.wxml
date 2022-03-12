@@ -1,0 +1,12 @@
+<!--pages/anticipate_result/anticipate_result.wxml-->
+<view class='add_btn'>
+    <button class='btn'>
+        惠投简介
+    </button>
+    <button class='btn' bindtap="toquestionnare">
+        问卷测评
+    </button>
+    <button class='btn'>
+        智能推荐
+    </button>
+</view>

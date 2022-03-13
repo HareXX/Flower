@@ -1,4 +1,4 @@
-// pages/questionnare/questionnare.js
+// pages/my_history/my_history.js
 Page({
 
   /**
@@ -62,24 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  totime: function (options) {
-    wx.redirectTo({
-          url: '../time/time'
-    })  
-  },
-
-  torisk: function (options) {
-    wx.redirectTo({
-          url: '../risk/risk'
-    })  
-  },
-
-  toimprove: function (options) {
-    wx.redirectTo({
-          url: '../info_improvement/info_improvement'
-    })  
   }
-
 })

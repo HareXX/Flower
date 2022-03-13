@@ -482,7 +482,7 @@ Page({
     if(x>=84&&x<=94) console.log("中庸进取型")
     if(x>=95&&x<=105) console.log("进取型")
     wx.redirectTo({
-      url: '../anticipate_result/anticipate_result',
+      url: '../questionnare/questionnare',
     })
   },
 })

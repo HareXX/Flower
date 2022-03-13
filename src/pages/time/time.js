@@ -75,6 +75,13 @@ Page({
               { "id": 2, "name": "B:一年后的1070元", "isSelected": false }
             ]
         }
+      },
+      {
+        "type": "SAQ",
+        "content": {
+          "description": "What's your name?",
+          "answer": "i dont know"
+        }
       }
     ],
   },
@@ -194,7 +201,6 @@ Page({
   complete :function(){
     var arr=this.data.questionnaireArray;
     var a=0.0,b=0.0,c=0.0;
-    console.log(arr)
     if(arr[0].content.options[0].isSelected==true) a=0.9615384615
     if(arr[0].content.options[1].isSelected==true) a=0.9523809524
     if(arr[0].content.options[2].isSelected==true) a=0.9433962264
@@ -211,7 +217,7 @@ Page({
     if(c>0.935&&c<=0.949) console.log("中等时间偏好者")
     if(c>0.949&&c<=0.962) console.log("弱时间偏好者，更喜欢未来收益")
     wx.redirectTo({
-      url: '../anticipate_result/anticipate_result',
+      url: '../questionnare/questionnare',
     })
   },
 })

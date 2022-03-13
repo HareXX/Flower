@@ -19,6 +19,7 @@
     "pages/bind_bankcard/bind_bankcard",
     "pages/password_settings/password_settings",
     "pages/password_modification/password_modification",
+    "pages/my_history/my_history",
     "pages/AI_query/AI_query",
     "pages/AI_query/answers/1",
     "pages/AI_query/answers/2",
@@ -44,14 +45,14 @@
     "pages/nurse/nurse",
     "pages/physical_examination/physical_examination",
     "pages/tree/tree",
-    "pages/add_family_member/add_family_member",
+    "pages/risk/risk",
+    "pages/time/time",
+    "pages/anticipate_result/anticipate_result",
     "pages/phone_number/phone_number",
     "pages/display_card/display_card",
     "pages/smart_invest/smart_invest",
     "pages/questionnare/questionnare",
-    "pages/risk/risk",
-    "pages/time/time",
-    "pages/anticipate_result/anticipate_result"
+    "pages/info_improvement/info_improvement"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -101,6 +102,8 @@
     "van-switch": "@vant/weapp/switch/index",
     "van-field": "@vant/weapp/field/index",
     "van-picker": "@vant/weapp/picker/index",
-    "van-popup": "@vant/weapp/popup/index"
+    "van-popup": "@vant/weapp/popup/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-calendar": "@vant/weapp/calendar/index"
   }
 }

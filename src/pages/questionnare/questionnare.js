@@ -74,6 +74,12 @@ Page({
     wx.redirectTo({
           url: '../risk/risk'
     })  
+  },
+
+  toimprove: function (options) {
+    wx.redirectTo({
+          url: '../info_improvement/info_improvement'
+    })  
   }
 
 })

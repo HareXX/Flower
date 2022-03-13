@@ -15,22 +15,6 @@
       </radio-group>
     </view>
   </block>
-  <block wx:if="{{item.type === 'MCQ'}}">
-    <view class = 'MCQ' data-id='{{fatherIndex}}'>
-      <view class='MCQTitle'>
-        <view class='MCQQ'>Q</view>
-        <view class='MCQindex'>{{fatherIndex+1}}</view>
-        <view class='MCQquto'>:</view>
-        <text class='MCQDiscription' data-id='{{fatherIndex}}'>{{item.content.description}}</text>
-      </view>
-
-      <checkbox-group class="MCQOption" bindchange="checkboxChangeMCQ">
-        <label class="MCQText" wx:for="{{item.content.options}}" wx:key="MCQID" data-id='{{fatherIndex}}' bindtouchstart='getTempFatherIndex'>
-          <checkbox value="{{item.name}}" checked="{{item.isSelected}}" data-id='{{index}}'/>{{item.name}}
-        </label>
-      </checkbox-group>
-    </view>
-  </block>
 </view>
 
 <view class='add_btn'>

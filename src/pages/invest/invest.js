@@ -1,4 +1,3 @@
-var wxCharts = require('../../utils/wxcharts.js');
 Page({
 
 

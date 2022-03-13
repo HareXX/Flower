@@ -34,12 +34,14 @@ Page({
 	},
 
 	onLoad: function (options) {
+		var that = this
 		var Pages = getCurrentPages();
 		var prevPage = Pages[Pages.length - 2];
 		console.log(prevPage.data);
-		this.setData({
+		that.setData({
 			tarOpen_ID : prevPage.data.tarOpen_ID
 		})
+		console.log(that.data.tarOpen_ID)
 	},
 
 

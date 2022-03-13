@@ -17,7 +17,13 @@ Page({
 		numOfFamily : 2,
 	},
 
-	// "lazyCodeLoading": "requiredComponents",
+	navToHealth(e)
+	{
+		wx.navigateTo({
+			url: '../health_records_home/health_records_home',
+		})
+	},
+
 	navToAI_Query(e){
 		wx.navigateTo({
 			url: '../AI_query/AI_query',
@@ -64,9 +70,7 @@ Page({
 		  url: '../senior-helper/senior-helper',
 		})
 	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
+
 	onLoad: function (options) {
 		var that = this
 		var serverUrl = app.globalData.serverUrl

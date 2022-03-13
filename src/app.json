@@ -60,7 +60,13 @@
 		"pages/illness_records/illness_records",
 		"pages/medicine_records/new_record",
 		"pages/illness_records/new_record",
-		"pages/daily_condition/new_record"
+		"pages/daily_condition/new_record",
+		"pages/daily_condition/query",
+		"pages/illness_records/query",
+		"pages/medicine_records/query",
+		"pages/health_records_home/health_records_home",
+		"pages/health_records_home/health_user",
+		"pages/health_records_home/health_records"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

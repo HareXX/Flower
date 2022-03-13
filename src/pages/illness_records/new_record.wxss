@@ -1,1 +1,3 @@
-/* pages/illness_records/new_record.wxss */
+page {
+    background-color: #f7f8fa;
+}

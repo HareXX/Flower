@@ -3,17 +3,25 @@ const app = getApp()
 Page({
 
     data: {
-		hasAuth : [true, false],
+		hasAuth : [true, true, false],
 		family : [],
 		numOfFamily : 0,
 		open_ID : null,
-		isInFamily : false
+		isInFamily : false,
+		tarOpen_ID : null
     },
 
-	navToSeniorHelperUser(e) {
+	navToHealthRecords(e)
+	{
+		var that = this
+		// console.log(e)
+		that.setData({
+			tarOpen_ID : that.data.family[e.currentTarget.dataset.index].identity
+		})
+		console.log(that.data.tarOpen_ID)
 		wx.navigateTo({
-			url: '../senior_helper_user/senior_helper_user',
-		  })
+			url: '../health_records_home/health_records',
+		})
 	},
 
 

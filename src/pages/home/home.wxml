@@ -175,6 +175,7 @@
 			<van-image
 				width="160rpx"
 				height="160rpx"
+				bindtap="navToHealth"
 				src="/images/健康档案.png"
 			/>
 		</van-grid-item>

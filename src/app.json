@@ -51,7 +51,16 @@
 		"pages/senior_helper_user/senior_helper_user",
 		"pages/delete_member/delete_member",
 		"pages/risk_family/risk_family",
-		"pages/business_trainer/business_trainer"
+		"pages/business_trainer/business_trainer",
+		"pages/new_health_records/new_health_records",
+		"pages/health_records/health_records",
+		"pages/basic_info/basic_info",
+		"pages/daily_condition/daily_condition",
+		"pages/medicine_records/medicine_records",
+		"pages/illness_records/illness_records",
+		"pages/medicine_records/new_record",
+		"pages/illness_records/new_record",
+		"pages/daily_condition/new_record"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

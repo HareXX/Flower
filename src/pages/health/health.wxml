@@ -1,4 +1,4 @@
-<view style="width:80%; margin : 0 auto">
+<view style="width:80%; margin : 0 auto;margin-top: 200rpx;">
 	<van-grid column-num="2"  border="{{false}}">
 	<van-grid-item use-slot="true">
 		<van-button
@@ -46,6 +46,39 @@
 		</van-button>
 	</van-grid-item>
 	
-</van-grid>
+	</van-grid>
+
+
+
+
+	<view wx:if="{{hasHealthRecords}}">
+		<!-- <van-cell-group inset>
+			<van-cell title="单元格" value="内容" />
+			<van-cell title="单元格" value="内容" label="描述信息" />
+		</van-cell-group> -->
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;border-radius:15rpx"
+			block
+			type="info"
+			bindtap="navtoHealthRecords"
+		>
+			查看我的健康档案
+		</van-button>
+	</view>
+
+	<view wx:else>
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;border-radius:15rpx"
+			block
+			type="info"
+			bindtap="navToCreateHealthRecords"
+		>
+			新建健康档案
+		</van-button>
+	</view>
+
+	
 
 </view>

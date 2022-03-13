@@ -1567,9 +1567,5 @@ function verifyIDCard(id) {
     'msg': '校验通过'
   }
 }
-<<<<<<< Updated upstream
-module.exports.verifyIDCard = verifyIDCard
-=======
 module.exports.verifyIDCard = verifyIDCard
 
->>>>>>> Stashed changes

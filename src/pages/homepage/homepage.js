@@ -60,9 +60,8 @@ Page({
 	 */
 	onShareAppMessage: function () {
 
-<<<<<<< Updated upstream
-	}
-=======
+	},
+
 	navToHistory(e) {
 		wx.navigateTo({
 			url: '../my_history/my_history',
@@ -74,5 +73,4 @@ Page({
 			url: '../smart_invest/smart_invest',
 		})
 	},
->>>>>>> Stashed changes
 })

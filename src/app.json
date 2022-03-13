@@ -45,18 +45,13 @@
 		"pages/nurse/nurse",
 		"pages/physical_examination/physical_examination",
 		"pages/tree/tree",
-		"pages/smart_invest/smart_invest",
-		"pages/questionnare/questionnare",
 		"pages/risk/risk",
 		"pages/time/time",
 		"pages/anticipate_result/anticipate_result",
 		"pages/phone_number/phone_number",
 		"pages/display_card/display_card",
 		"pages/smart_invest/smart_invest",
-		"pages/questionnare/questionnare",
-		"pages/risk/risk",
-		"pages/time/time",
-		"pages/anticipate_result/anticipate_result"
+		"pages/questionnare/questionnare"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

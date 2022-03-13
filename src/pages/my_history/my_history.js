@@ -26,12 +26,15 @@ Page({
     var that = this
     wx.request({
       url: serverUrl + '/asset/history',
-      header: {
-        'Content-Type': 'text/plain;charset:utf-8;'
-      },
       data: {
-        identity: that.data.open_ID
+        identity: that.data.open_ID,
+        timestamp: '2022-03-13',
       },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json;charset=utf-8',
+      },
+
       success: function (res) {
         console.log('成功')
         that.setData({

@@ -52,7 +52,8 @@
     "pages/display_card/display_card",
     "pages/smart_invest/smart_invest",
     "pages/questionnare/questionnare",
-    "pages/info_improvement/info_improvement"
+    "pages/info_improvement/info_improvement",
+    "pages/add_invest/add_invest"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -60,7 +60,6 @@ Page({
     wx.setStorageSync('phone', e.detail.value)
   },
   confirmPublish: function() {
-      var compare = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
       var that = this;
       if (wx.getStorageSync('phone').length==0) {
         console.log("手机号为空")
@@ -75,15 +74,6 @@ Page({
         console.log("长度问题")
         wx.showToast({
           title: '手机号长度有误',
-          icon: 'none',
-          image: '',
-          duration: 1000
-        })
-        return false;
-      } else if (!compare.test(wx.getStorageSync('phone'))) {
-        console.log("格式不对")
-        wx.showToast({
-          title: '请输入正确的手机号！',
           icon: 'none',
           image: '',
           duration: 1000

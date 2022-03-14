@@ -67,14 +67,6 @@ Page({
         duration: 1000
       })
       return false;
-    } else if (!compare.test(this.data.phoneNumber)) {
-      wx.showToast({
-        title: '请输入正确的手机号！',
-        icon: 'none',
-        image: '',
-        duration: 1000
-      })
-      return false;
     }
     else if (!that.data.bankNumber) {
       wx.showToast({

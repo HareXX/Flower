@@ -1,4 +1,4 @@
-// pages/my_history/my_history.js
+// pages/anticipate_result/anticipate_result.js
 Page({
 
   /**

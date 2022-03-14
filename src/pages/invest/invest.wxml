@@ -1,6 +1,40 @@
 <!--pages/invest/invest.wxml-->
-<!-- item.id用于遍历 -->
-<view class="container">
-    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" ></canvas>
-    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px"></canvas>
+<!--间隔灰横条-->
+<view class="graydivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/资产管理.png"></image>
+      </view>
+      <view class="text">我的资产：{{myasset}}元</view><!--文字-->
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/收益.png"></image>
+      </view>
+      <view class="text">昨日收益：{{yester}}元</view><!--文字-->
+    </view>
+  </view>
+</view>
+<!--间隔白横线-->
+<view class="whitedivide"></view>
+<!--手机-->
+<view class='function'>
+  <view style="width:100%">
+    <view class="functioninformation"><!--左边图片&文字-->
+      <view class="left-icon"><!--图片-->
+        <image class="icon-picture" src="../../images/累计收入.png"></image>
+      </view>
+      <view class="text">累计收益：{{sumasset}}元</view><!--文字-->
+    </view>
+  </view>
 </view>

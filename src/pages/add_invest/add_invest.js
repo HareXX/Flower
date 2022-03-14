@@ -1,4 +1,4 @@
-// pages/my_history/my_history.js
+// pages/add_invest/add_invest.js
 Page({
 
   /**

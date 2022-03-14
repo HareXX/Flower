@@ -74,9 +74,22 @@ Page({
 		})
 	},
 
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage: function () {
+
+	},
+
 	navToHistory(e) {
 		wx.navigateTo({
 			url: '../my_history/my_history',
 		})
-	}
+	},
+
+	navToInvest(e) {
+		wx.navigateTo({
+			url: '../smart_invest/smart_invest',
+		})
+	},
 })

@@ -1,4 +1,4 @@
-// pages/my_history/my_history.js
+// pages/smart_invest/smart_invest.js
 Page({
 
   /**
@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  toquestionnare: function (options) {
+    wx.redirectTo({
+          url: '../questionnare/questionnare'
+    })  
   }
 })

@@ -31,7 +31,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": false,
+        "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": true,
         "packNpmRelationList": [
@@ -49,7 +49,7 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.22.0",
-    "appid": "wx5ce92cf725920bed",
+    "appid": "wx1aa63d33e9daf0e6",
     "projectname": "Flower",
     "debugOptions": {
         "hidedInDevtools": []

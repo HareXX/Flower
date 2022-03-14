@@ -1,123 +1,93 @@
-var wxCharts = require('../../utils/wxcharts.js');
-var app = getApp();
-var lineChart = null;
 Page({
-	data: {},
-	createSimulationData: function () {
-		var categories = [];
-		var data = [];
-		for (var i = 0; i < 10; i++) {
-			categories.push('2016-' + (i + 1));
-			data.push(Math.random() * (20 - 10) + 10);
-		}
-		// data[4] = null;
-		return {
-			categories: categories,
-			data: data,
-		}
-	},
-	onShow: function () {
-		this.getTabBar().init();
-		this.line()
-		this.pie()
-	},
 
-	line: function () {
-		var windowWidth = 320;
-		try {
-			var res = wx.getSystemInfoSync();
-			windowWidth = res.windowWidth;
-		} catch (e) {
-			console.error('getSystemInfoSync failed!');
-		}
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    myasset:'',
+    yester:'',
+    sumasset:'',
+    valtext:'jkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk',
+    title:'asddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
+  },
 
-		var simulationData = this.createSimulationData();
-		lineChart = new wxCharts({
-			canvasId: 'lineCanvas',
-			type: 'line',
-			categories: simulationData.categories,
-			animation: true,
-			// background: '#f5f5f5',
-			series: [{
-				name: '成交量1',
-				data: simulationData.data,
-				format: function (val, name) {
-					return val.toFixed(2) + '万';
-				}
-			}, {
-				name: '成交量2',
-				data: [2, 0, 0, 3, null, 4, 0, 0, 2, 0],
-				format: function (val, name) {
-					return val.toFixed(2) + '万';
-				}
-			}],
-			xAxis: {
-				disableGrid: true,
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that=this
+			var tempid=wx.getStorageSync('id')
+			wx.request({
+				url: 'http://localhost:9001/asset/financial',
+				data: {
+					identity:tempid,
+				}, 
+				method: 'POST',
+			// 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+			header: {'content-type': 'application/x-www-form-urlencoded'},
+				 success: function (res) {
+				console.log(res.data.assets)
+				console.log(res.data.benefitsSum)
+				console.log(res.data.benefitsYesterday)
+       var myasset=res.data.assets
+       var sumasset=res.data.benefitsSum
+       var yester=res.data.benefitsYesterday
+       that.setData({
+        myasset:myasset,
+      	yester:yester,
+        sumasset:sumasset
+      })
+       }
+      })
 
-			},
-			yAxis: {
-				title: '成交金额 (万元)',
-				format: function (val) {
-					return val.toFixed(2);
-				},
-				min: 0
-			},
-			width: windowWidth,
-			height: 200,
-			dataLabel: false,
-			dataPointShape: true,
-			extra: {
-				lineStyle: 'curve'
-			}
-		});
-	},
-	pie: function () {
-		var windowWidth = 320;
-		try {
-			var res = wx.getSystemInfoSync();
-			windowWidth = res.windowWidth;
-		} catch (e) {
-			console.error('getSystemInfoSync failed!');
-		}
+  },
 
-		pieChart = new wxCharts({
-			animation: true,
-			canvasId: 'pieCanvas',
-			type: 'pie',
-			series: [{
-				name: '成交量1',
-				data: 15,
-			}, {
-				name: '成交量2',
-				data: 35,
-			}, {
-				name: '成交量3',
-				data: 78,
-			}, {
-				name: '成交量4',
-				data: 63,
-			}, {
-				name: '成交量2',
-				data: 35,
-			}, {
-				name: '成交量3',
-				data: 78,
-			}, {
-				name: '成交量4',
-				data: 63,
-			}, {
-				name: '成交量2',
-				data: 35,
-			}, {
-				name: '成交量3',
-				data: 78,
-			}, {
-				name: '成交量3',
-				data: 78,
-			}],
-			width: windowWidth,
-			height: 300,
-			dataLabel: false,
-		});
-	}
-});
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

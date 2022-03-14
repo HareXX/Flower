@@ -69,7 +69,7 @@ Page({
 	},
 
 	navToInvest(e) {
-		wx.redirectTo({
+		wx.navigateTo({
 			url: '../smart_invest/smart_invest',
 		})
 	},

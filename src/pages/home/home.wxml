@@ -32,13 +32,13 @@
 	/> -->
 	<image 
 		style="width : 90%; height: 550rpx;margin-left: 50rpx; position: relative;"
-		src="/images/树.png"
+		src="https://s2.loli.net/2022/03/11/AMiXphHJrZbQwun.png"
 		bindtap="navToTree"
 	>
 	</image>
 	<image 
 		style="width : 90%; height: 350rpx;margin-left: 50rpx; margin-top: -170rpx;"
-		src="/images/池子.png"
+		src="https://s2.loli.net/2022/03/11/Qdgn2VCbwWDMTsS.png"
 		bindtap="navToAI_Query"
 	>
 	</image>
@@ -120,14 +120,32 @@
 				square
 				type="info"
 			>
+				知识问答
+			</van-button> -->
+			<van-image
+				width="165rpx"
+				height="165rpx"
+				src="/images/历史记录.png"
+			/>
+		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<!-- <van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
 				风险管控
 			</van-button> -->
 			<van-image
 				width="165rpx"
 				height="165rpx"
+				bindtap="navToRisk"
 				src="/images/风险管控.png"
 			/>
 		</van-grid-item>
+
 
 		<van-grid-item use-slot="true">
 			<!-- <van-button
@@ -141,7 +159,7 @@
 			<van-image
 				width="160rpx"
 				height="160rpx"
-				src="/images/历史记录.png"
+				src="/images/声临其境.png"
 			/>
 		</van-grid-item>
 
@@ -157,25 +175,12 @@
 			<van-image
 				width="160rpx"
 				height="160rpx"
+				bindtap="navToHealth"
 				src="/images/健康档案.png"
 			/>
 		</van-grid-item>
 
-		<van-grid-item use-slot="true">
-			<!-- <van-button
-				plain
-				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
-				square
-				type="info"
-			>
-				知识问答
-			</van-button> -->
-			<van-image
-				width="165rpx"
-				height="165rpx"
-				src="/images/知识问答.png"
-			/>
-		</van-grid-item>
+		
 
 		<van-grid-item use-slot="true">
 			<!-- <van-button
@@ -192,6 +197,25 @@
 				src="/images/服务预约.png"
 			/>
 		</van-grid-item>
+
+		<van-grid-item use-slot="true">
+			<!-- <van-button
+				plain
+				custom-style="height:150rpx; width:150rpx; border-radius:15%;"
+				square
+				type="info"
+			>
+				健康档案
+			</van-button> -->
+			<van-image
+				width="160rpx"
+				height="160rpx"
+				src="/images/金融训练.png"
+				bindtap="navToBusinessTrainer"
+			/>
+		</van-grid-item>
+
+		
 	</van-grid>
 </view>
 

@@ -22,7 +22,10 @@ Page({
 			family : arr
 		})
 		that.data.family[e.currentTarget.dataset.index].checked = e.detail
-
+		console.log(e.detail)
+		wx.request({
+		  url: 'url',
+		})
 	},
 	onLoad: function (options) {
 		let that = this

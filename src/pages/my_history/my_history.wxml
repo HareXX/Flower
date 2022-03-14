@@ -1,2 +1,12 @@
-<!--pages/my_history/my_history.wxml-->
-<text>pages/my_history/my_history.wxml</text>
+<!--pages/my_history.wxml-->
+<view class="=dateR">
+    <van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" />
+    <van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
+    <van-cell-group inset>
+        <van-cell title="详细记录：" value="" />
+        <van-cell title="今日总收益：" value="{{total_income}}" />
+    </van-cell-group>
+    <view wx:for="{{records}}" wx:for-index="idx">
+            <van-cell title="{{records[idx].fundName}}" value="{{records[idx].amount}}" />
+        </view>
+</view> 

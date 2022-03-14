@@ -114,12 +114,13 @@ Page({
 						console.log("testinfo")
 						console.log(that.data.family[i].identity)
 						console.log(that.data.family[i])
-					if (that.data.family[i].identity == that.data.open_ID) {
-						that.setData({
-							isFamilyAdmin: true
-						})
+						if (that.data.family[i].identity == that.data.open_ID) {
+							that.setData({
+								isFamilyAdmin: true
+							})
+						}
+						console.log(that.data)
 					}
-					console.log(that.data)
 				}
 			},
 			fail: function (res) {

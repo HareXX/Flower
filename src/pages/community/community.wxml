@@ -48,7 +48,7 @@
 </van-cell-group></view>
 
 <view class="nav">
-	<van-cell title="终生教育" is-link value="查看更多"/>
+	<van-cell title="终身教育" is-link value="查看更多"/>
 </view>
 
 <van-cell-group>

@@ -1,9 +1,5 @@
-// pages/other_service/other_service.js
 Page({
 
-	/**
-	 * 页面的初始数据
-	 */
 	data: {
 		
 	},

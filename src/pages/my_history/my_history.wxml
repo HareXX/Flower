@@ -3,10 +3,17 @@
     <van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" />
     <van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
     <van-cell-group inset>
-        <van-cell title="详细记录：" value="" />
-        <van-cell title="今日总收益：" value="{{total_income}}" />
-    </van-cell-group>
-    <view wx:for="{{records}}" wx:for-index="idx">
-            <van-cell title="{{records[idx].fundName}}" value="{{records[idx].amount}}" />
+        <view style="font-size: 50rpx; color: rgb(238, 103, 103);">今日总收益： ￥{{total_income}}</view>
+        <view style="font-size: 45rpx;text-align: center;">详细记录</view>
+        <view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+            <van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
         </view>
-</view> 
+        <view style="font-size: 45rpx;text-align: center;">交易记录</view>
+        <view wx:for="{{records}}" wx:for-index="idx">
+            <van-cell title="{{records[idx].fundName}}" label="{{records[idx].category}}" border="{{false}}" value="￥{{records[idx].amount}}" />
+            <!-- <van-cell title="种类：" border="{{false}}" value="{{records[idx].category}}" /> -->
+            <van-cell title="{{records[idx].timeStamp}}" value="{{records[idx].status==0?'买入':'卖出'}}" />
+        </view>
+    </van-cell-group>
+
+</view>

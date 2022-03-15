@@ -12,6 +12,7 @@ Page({
     open_ID: wx.getStorageSync('id'),
     fundsBenefit: [],
     records: [],
+    sale: '买入',
 
     // recordFundName: [1, 2],
     // recordStatus: [0, 0],
@@ -38,9 +39,9 @@ Page({
       success: function (res) {
         console.log('成功')
         that.setData({
-          total_income: res.data[1].benefitsDaySum,
-          fundsBenefit: res.data[1].investedThingsDailyFundBenefits,
-          records: res.data[1].investedThingsRecordList,
+          total_income: res.data[0].benefitsDaySum.toFixed(2),
+          fundsBenefit: res.data[0].investedThingsDailyFundBenefits,
+          records: res.data[0].investedThingsRecordList,
         })
         // console.log(that.data.records)
         // var len = that.data.records.length
@@ -49,10 +50,7 @@ Page({
         // that.data.recordCategory = new Array(len)
         // that.data.recordStatus = new Array(len)
         // for (var i = 0; i < len; ++i) {
-        //   that.data.recordFundName[i] = that.data.records[i].fundName
-        //   that.data.recordAmount[i] = that.data.records[i].amount
-        //   that.data.recordCategory[i] = that.data.records[i].category
-        //   that.data.recordStatus[i] = that.data.records[i].status
+        //   that.data.sale[i] = that.data.records[i].status==0?'买入':'卖出'
         // }
         console.log(that.data)
       },
@@ -60,7 +58,9 @@ Page({
         console.log('失败！')
       }
     })
+
   },
+
   onShow: function () {
 
   },

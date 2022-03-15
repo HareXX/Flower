@@ -56,14 +56,48 @@
 	</view>
 </view>
 
+
+<view wx:for="{{riskActivities}}" wx:for-index="idx">
+
+	<van-dialog
+		use-slot
+		title="风险行为"
+		show="{{ show }}"
+		show-cancel-button
+		confirmButtonText="接受"
+		cancelButtonText="拒绝"
+		bind:confirm="accept"
+		bind:cancel="reject"
+		data-index="{{idx}}"
+	>
+		<view style="width: 90%;margin : 0 auto">
+			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;">风险用户:</view>
+			<view style="display : flex ;justify-content : center;">
+				<image style="width: 85rpx; height: 85rpx; border-radius: 50%;" src="{{riskActivities[idx].avatarUrl}}"></image>
+			</view>
+			
+			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;"> {{riskActivities[idx].userName}}</view>
+			
+			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;">时间: {{riskActivities[idx].timeStamp}}</view>
+			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;">投入资金: {{riskActivities[idx].amount}}</view>
+			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;word-break:break-all">风险行为描述: {{riskActivities[idx].description}}</view>
+
+		</view>
+	</van-dialog>
+</view>
+
+<van-dialog id="van-dialog" />
+
 <view class="pie">
     <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
 </view>
 <view class="line">
     <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+    
 </view>
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
 </view>
+
 
 <view style="height:150rpx;"></view>

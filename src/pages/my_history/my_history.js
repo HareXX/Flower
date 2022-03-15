@@ -29,7 +29,7 @@ Page({
       url: serverUrl + '/asset/history',
       data: {
         identity: that.data.open_ID,
-        timestamp: '2022-03-13',
+        timestamp: '2022-03-15',
       },
       method: 'POST',
       header: {
@@ -60,6 +60,7 @@ Page({
     })
 
   },
+
 
   onShow: function () {
 

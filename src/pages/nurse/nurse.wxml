@@ -1,3 +1,7 @@
+<view style="text-align: center;height: 30rpx;font-size: 32rpx;">
+	时间银行
+</view>
+<van-divider />
 <van-grid column-num="3"  border="{{false}}" >
 	<van-grid-item use-slot="true">
 		<van-button
@@ -37,21 +41,29 @@
 </van-grid>
 
 <view wx:if="{{active == 1}}">
-	<view style="height : 250rpx;">
+	<view style="height : 200rpx;">
 		<van-cell title="服务存入"/>
+		<van-cell-group>
+			<van-cell title="打扫卫生" is-link custom-style="height:150rpx" label="时间报酬：2小时 发起人：Alice" value="报名">
+			</van-cell>
+				
+			<van-cell title="接小孩放学" is-link custom-style="height:150rpx" label="时间报酬：1小时 发起人：Bob" value="报名">
+			</van-cell>
+		</van-cell-group>
+
 	</view>
 
 </view>
 
 <view wx:elif="{{active == 2}}">
 
-	<view style="height : 250rpx;">
+	<view style="height : 200rpx;">
 		<van-cell title="护理寻找"/>
 	</view>
 </view>
 
 <view wx:elif="{{active == 3}}">
-	<view style="height : 250rpx;">
+	<view style="height : 200rpx;">
 		<van-cell title="储蓄余额"/>
 	</view>
 

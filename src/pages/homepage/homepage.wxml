@@ -1,4 +1,3 @@
-
 <view wx:if="{{hasInvestment == false}}">
 	<view class="nav">
 		<view class="search-container">
@@ -7,12 +6,7 @@
 		</view>
 
 		<view class="question-container">
-			<van-icon 
-				name="smile-o" 
-				size="60rpx" 
-				color="grey" 
-				bindtap="navToAI_Query"
-			/>
+			<van-icon name="smile-o" size="60rpx" color="grey" bindtap="navToAI_Query" />
 		</view>
 	</view>
 
@@ -29,17 +23,10 @@
 		<text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
 	</view>
 	<van-divider />
-	<van-button 
-	size="large"
-	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
-	square
-	block
-	type="info"
-	bindtap="navToInvest"
-	>
+	<van-button size="large" custom-style="margin-top:50rpx;width:80%;border-radius:15rpx" square block type="info" bindtap="navToInvest">
 		开启我的专属投资组合
 	</van-button>
-	
+
 </view>
 
 <view wx:else="{{hasInvestment == true}}">
@@ -50,12 +37,7 @@
 		</view>
 
 		<view class="question-container">
-			<van-icon 
-				name="smile-o" 
-				size="60rpx" 
-				color="grey" 
-				bindtap="navToAI_Query"
-			/>
+			<van-icon name="smile-o" size="60rpx" color="grey" bindtap="navToAI_Query" />
 		</view>
 	</view>
 
@@ -106,12 +88,16 @@
 
 <van-dialog id="van-dialog" />
 
-<view class="container">
-	<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas"></canvas>
+<view class="pie">
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
 </view>
-
+<view class="line">
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+    
+</view>
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
 </view>
-<view style="height:150rpx;"></view>
 
+
+<view style="height:150rpx;"></view>

@@ -12,10 +12,11 @@ Page({
 		name : null,
 		age : null,
 		sex : null,
-		sexType : 0,
+		sexType : null,
 		IDCardNumber : null,
 		height : null,
-		weight : null
+		weight : null,
+		hasRecords : true
 	},
 
 	onChange1(event) {
@@ -70,6 +71,71 @@ Page({
 		this.setData({
 			weight : event.detail
 		})
+	},
+
+	confirm1 : function (e) {
+		var that = this
+		if (that.data.name == null || that.data.sex == null || that.data.age == null || that.data.IDCardNumber == null || that.data.height == null || that.data.weight == null)
+		{
+			Dialog.alert({
+				context : this,
+				selector:"#van-dialog",
+				message: '输入不能为空',
+			}).then(() => {
+				// on close
+			});
+		}
+		else
+		{
+			if (that.data.sex != "男" && that.data.sex != "女")
+			{
+				Dialog.alert({
+					context : this,
+					selector:"#van-dialog",
+					message: '请输入正确性别',
+				}).then(() => {
+					// on close
+				});
+			}
+			else
+			{
+				console.log(that.data)
+				wx.request({
+					url : serverUrl + '/health/addBasicInfo',
+					data : {
+						identity : that.data.tarOpen_ID,
+						name : that.data.name,
+						age : that.data.age,
+						sex : that.data.sexType,
+						IDCardNumber : that.data.IDCardNumber,
+						height : that.data.height,
+						weight : that.data.weight
+					},
+					method : "POST",
+					header : {
+						'Content-Type':'application/x-www-form-urlencoded'
+					},
+					success : function (res) {
+						console.log("添加成功")
+						Dialog.alert({
+							context : this,
+							selector:"#van-dialog",
+							message: '添加成功！',
+						}).then(() => {
+							wx.navigateBack({
+								delta: 1,
+							})
+						});
+
+					},
+					fail : function (res) {
+						console.log("添加失败")
+						console.log(res)
+					}
+				})
+			}
+			
+		}
 	},
 
 	confirm  : function (e)
@@ -143,7 +209,6 @@ Page({
 		var Pages = getCurrentPages();
 		var prevPage = Pages[Pages.length - 2];
 
-		console.log(prevPage.data);
 		that.setData({
 			tarOpen_ID : prevPage.data.tarOpen_ID
 		})
@@ -168,7 +233,6 @@ Page({
 					height : res.data.height,
 					weight : res.data.weight
 				})
-				console.log("基础信息:")
 				if (that.data.sexType == 0)
 				{
 					that.setData({
@@ -181,12 +245,20 @@ Page({
 						sex : "女"
 					})
 				}
+				if (that.data.name == null)
+				{
+					that.setData({
+						sex : null,
+						hasRecords : false
+					})
+				}
 			},
 			fail : function (res) {
 				console.log("添加失败")
 				console.log(res)
 			}
 		})
+		console.log(that.data)
 	},
 
 	/**

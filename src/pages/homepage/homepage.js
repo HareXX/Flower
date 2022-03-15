@@ -128,36 +128,8 @@ Page({
 				console.log(res)
 			}
 		})
-	},
 
-	onShow: function (e) {
-		this.getTabBar().init();
-		var windowWidth = 320;
-		try {
-			var res = wx.getSystemInfoSync();
-			windowWidth = res.windowWidth;
-		} catch (e) {
-			console.error('getSystemInfoSync failed!');
-		}
-	},
-	navToAI_Query(e) {
-		wx.navigateTo({
-			url: '../AI_query/AI_query',
-		})
-	},
 
-	navToHistory(e) {
-		wx.navigateTo({
-			url: '../my_history/my_history',
-		})
-	},
-
-	navToInvest(e) {
-		wx.navigateTo({
-			url: '../smart_invest/smart_invest',
-		})
-	},
-	onLoad: function (e) {
 		var windowWidth = 320;
 		try {
 			var res = wx.getSystemInfoSync();
@@ -222,7 +194,36 @@ Page({
                 lineStyle: 'curve'
             }
         });
-    },
+	},
+
+	onShow: function (e) {
+		this.getTabBar().init();
+		var windowWidth = 320;
+		try {
+			var res = wx.getSystemInfoSync();
+			windowWidth = res.windowWidth;
+		} catch (e) {
+			console.error('getSystemInfoSync failed!');
+		}
+	},
+	navToAI_Query(e) {
+		wx.navigateTo({
+			url: '../AI_query/AI_query',
+		})
+	},
+
+	navToHistory(e) {
+		wx.navigateTo({
+			url: '../my_history/my_history',
+		})
+	},
+
+	navToInvest(e) {
+		wx.navigateTo({
+			url: '../smart_invest/smart_invest',
+		})
+	},
+	
     touchHandler: function (e) {
         console.log(lineChart.getCurrentDataIndex(e));
         lineChart.showToolTip(e, {

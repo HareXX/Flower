@@ -86,18 +86,18 @@
 	</van-dialog>
 </view>
 
-<van-dialog id="van-dialog" />
-
-<view class="pie">
-    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
+<view style="width: 80%;height: 6000rpx;">
+    <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
 </view>
-<view class="line">
-    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+<view>
+    <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
     
 </view>
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
 </view>
 
+
+<van-dialog id="van-dialog" />
 
 <view style="height:150rpx;"></view>

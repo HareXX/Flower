@@ -44,10 +44,10 @@
 	<view style="height : 200rpx;">
 		<van-cell title="服务存入"/>
 		<van-cell-group>
-			<van-cell title="打扫卫生" is-link custom-style="height:150rpx" label="时间报酬：2小时 发起人：Alice" value="报名">
+			<van-cell title="打扫房间卫生" is-link custom-style="height:150rpx" label="时间报酬：2小时 发起人：Alice" value="报名">
 			</van-cell>
 				
-			<van-cell title="接小孩放学" is-link custom-style="height:150rpx" label="时间报酬：1小时 发起人：Bob" value="报名">
+			<van-cell title="修剪花草" is-link custom-style="height:150rpx" label="时间报酬：1小时 发起人：Bob" value="报名">
 			</van-cell>
 		</van-cell-group>
 

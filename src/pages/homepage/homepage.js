@@ -130,7 +130,6 @@ Page({
 				console.log(res)
 			}
 		})
-		console.log("$$$$$$$$$$$$$$$$")
 	},
 
 	onShow: function (e) {

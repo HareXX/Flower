@@ -8,10 +8,22 @@ Page({
 		active : 0,
 	},
 
-	onChange(event) {
-		// wx.showToast({
-		// 	title: `切换到标签 ${event.detail.name}`,
-		// 	icon: 'none',
-		// });
+	navToQA(e)
+	{
+		wx.navigateTo({
+		  url: '../business_trainer/QA',
+		})
 	},
+
+	onChange(event) {
+		this.setData({
+			active : event.detail
+		})
+	},
+	onLoad : function(e)
+	{
+		this.setData({
+			active : 0
+		})
+	}
 })

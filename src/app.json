@@ -48,14 +48,6 @@
     "pages/risk/risk",
     "pages/time/time",
     "pages/anticipate_result/anticipate_result",
-<<<<<<< Updated upstream
-    "pages/phone_number/phone_number",
-    "pages/display_card/display_card",
-    "pages/smart_invest/smart_invest",
-    "pages/questionnare/questionnare",
-    "pages/info_improvement/info_improvement",
-    "pages/add_invest/add_invest"
-=======
     "pages/smart_invest/smart_invest",
     "pages/questionnare/questionnare",
     "pages/info_improvement/info_improvement",
@@ -85,7 +77,6 @@
     "pages/health_records_home/health_records",
     "pages/recommendation/recommendation",
     "pages/trading_rule/trading_rule"
->>>>>>> Stashed changes
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -137,12 +128,8 @@
     "van-picker": "@vant/weapp/picker/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-dialog": "@vant/weapp/dialog/index",
-<<<<<<< Updated upstream
-    "van-calendar": "@vant/weapp/calendar/index"
-=======
     "van-calendar": "@vant/weapp/calendar/index",
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index"
->>>>>>> Stashed changes
   }
 }

@@ -13,9 +13,17 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : `0${n}`
 }
-
+const formatDate = date => {
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+  return `${[ month, day].map(DateformatNumber).join('/')}`
+}
+const DateformatNumber = n => {
+  n = n.toString()
+  return `${n}`
+}
 module.exports = {
-  formatTime
+  formatTime,formatDate
 }
 
 //test url : https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?cardNo=6222005865412565805&cardBinCheck=true
@@ -1568,4 +1576,3 @@ function verifyIDCard(id) {
   }
 }
 module.exports.verifyIDCard = verifyIDCard
-

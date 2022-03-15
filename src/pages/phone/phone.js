@@ -1,4 +1,5 @@
 // pages/addsign/addsign.js
+var util = require('../../utils/util');
 Page({
   /**
    * 页面的初始数据

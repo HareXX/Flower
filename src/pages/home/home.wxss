@@ -12,65 +12,19 @@
     margin-top: 15rpx;
 }
 
-.img {
-    display: flex;
-    height: 800rpx;
-    justify-content: center;
-    align-items: center;
+.tree-container{
+	height: 700rpx;
 }
-
-
-/* .nav
-{
-	margin: 5rpx;
-	display: flex;
-	flex-direction: row;
-  	align-items: center;
-  	justify-content: center;
-} */
 
 .navitem {
     width: 20%;
     /*每个元素占20%*/
 }
-
-.pool {
-    /* height: 100rpx;
-	width: 400rpx;
-	margin-top: -50rpx;
-	border-radius: 50%;
-	background-color: orange;
-	border:orange; */
-    display: flex;
+.tree{
+	width : "80%";
+	height : "1200rpx";
+	
 }
-
-.btn {
-    line-height: 40rpx;
-    padding-left: 27rpx;
-    margin-top: 10rpx;
-    border-radius: 12rpx;
-    background-color: #bfbfbf;
-    position: relative;
-    border: none;
-    text-align: center;
-    /* -webkit-transition-duration: 0s; 
-    transition-duration: 0s;
-    text-decoration: none; */
-}
-
-
-/* .btn:after {
-    content: "";
-    background: #ebe5e5;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20rpx!important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-} */
 
 .text {
     line-height: 0%;

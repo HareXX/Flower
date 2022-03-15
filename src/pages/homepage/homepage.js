@@ -9,7 +9,7 @@ Page({
 
 
 	data: {
-		hasInvestment : true,
+		hasInvestment : false,
 		open_ID : null,
 		show: true,
 		isfrozen : false,

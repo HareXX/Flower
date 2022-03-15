@@ -57,7 +57,5 @@
 		
 	<van-cell title="绿植养护" is-link custom-style="height:150rpx" label="距您1.9km" value="报名">
 	</van-cell>
-
-
 </van-cell-group>
 

@@ -48,60 +48,87 @@
 		"pages/risk/risk",
 		"pages/time/time",
 		"pages/anticipate_result/anticipate_result",
+		"pages/smart_invest/smart_invest",
+		"pages/questionnare/questionnare",
+		"pages/info_improvement/info_improvement",
+		"pages/add_invest/add_invest",
+		"pages/add_family_member/add_family_member",
 		"pages/phone_number/phone_number",
 		"pages/display_card/display_card",
-		"pages/smart_invest/smart_invest",
-		"pages/questionnare/questionnare"
-	],
-	"window": {
-		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "Weixin",
-		"navigationBarTextStyle": "black"
-	},
-	"tabBar": {
-		"custom": true,
-		"list": [{
-				"pagePath": "pages/homepage/homepage",
-				"text": "主页"
-			},
-			{
-				"pagePath": "pages/invest/invest",
-				"text": "理财"
-			},
-			{
-				"pagePath": "pages/home/home",
-				"text": "家"
-			},
-			{
-				"pagePath": "pages/other_service/other_service",
-				"text": "服务"
-			},
-			{
-				"pagePath": "pages/me/me",
-				"text": "我的"
-			}
-		]
-	},
-	"sitemapLocation": "sitemap.json",
-	"usingComponents": {
-		"van-search": "@vant/weapp/search/index",
-		"van-icon": "@vant/weapp/icon/index",
-		"van-grid": "@vant/weapp/grid/index",
-		"van-grid-item": "@vant/weapp/grid-item/index",
-		"van-image": "@vant/weapp/image/index",
-		"van-button": "@vant/weapp/button/index",
-		"van-cell": "@vant/weapp/cell/index",
-		"van-cell-group": "@vant/weapp/cell-group/index",
-		"van-slider": "@vant/weapp/slider/index",
-		"van-swipe-cell": "@vant/weapp/swipe-cell/index",
-		"van-divider": "@vant/weapp/divider/index",
-		"van-config-provider": "@vant/weapp/config-provider/index",
-		"van-switch": "@vant/weapp/switch/index",
-		"van-field": "@vant/weapp/field/index",
-		"van-picker": "@vant/weapp/picker/index",
-		"van-popup": "@vant/weapp/popup/index",
-		"van-dialog": "@vant/weapp/dialog/index",
-		"van-calendar": "@vant/weapp/calendar/index"
-	}
+		"pages/add_member/add_member",
+		"pages/senior_helper_user/senior_helper_user",
+		"pages/delete_member/delete_member",
+		"pages/risk_family/risk_family",
+		"pages/business_trainer/business_trainer",
+		"pages/new_health_records/new_health_records",
+		"pages/health_records/health_records",
+		"pages/basic_info/basic_info",
+		"pages/daily_condition/daily_condition",
+		"pages/medicine_records/medicine_records",
+		"pages/illness_records/illness_records",
+		"pages/medicine_records/new_record",
+		"pages/illness_records/new_record",
+		"pages/daily_condition/new_record",
+		"pages/daily_condition/query",
+		"pages/illness_records/query",
+		"pages/medicine_records/query",
+		"pages/health_records_home/health_records_home",
+		"pages/health_records_home/health_user",
+		"pages/health_records_home/health_records"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/invest/invest",
+        "text": "理财"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "家"
+      },
+      {
+        "pagePath": "pages/other_service/other_service",
+        "text": "服务"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-config-provider": "@vant/weapp/config-provider/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-tab": "@vant/weapp/tab/index",
+		"van-tabs": "@vant/weapp/tabs/index"
+  }
 }

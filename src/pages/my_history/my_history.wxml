@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--pages/my_history.wxml-->
 <view class="=dateR">
     <van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" />
@@ -17,3 +18,7 @@
     </van-cell-group>
 
 </view>
+=======
+<!--pages/my_history/my_history.wxml-->
+<text>pages/my_history/my_history.wxml</text>
+>>>>>>> 19cd9c3b52d20ccc31a3d175f7749e19aa15f4b6

@@ -26,11 +26,33 @@ Page({
 		numOfFamily: 2,
 	},
 
-	// "lazyCodeLoading": "requiredComponents",
-	navToAI_Query(e) {
+
+	navToHealth(e)
+	{
+		wx.navigateTo({
+			url: '../health_records_home/health_records_home',
+		})
+	},
+
+	navToAI_Query(e){
 		wx.navigateTo({
 			url: '../AI_query/AI_query',
 		})
+	},
+	
+	navToBusinessTrainer(e)
+	{
+		wx.navigateTo({
+			url: '../business_trainer/business_trainer',
+		})
+	},
+
+	navToRisk(e)
+	{
+		wx.navigateTo({
+		  url: '../risk_family/risk_family',
+		})
+
 	},
 
 	navToTree(e) {
@@ -56,9 +78,7 @@ Page({
 			url: '../senior-helper/senior-helper',
 		})
 	},
-	/**
-	 * 生命周期函数--监听页面加载
-	 */
+
 	onLoad: function (options) {
 		var that = this
 		var serverUrl = app.globalData.serverUrl
@@ -84,18 +104,23 @@ Page({
 			success: function (res) {
 				console.log("现在是" + i)
 				console.log("获取户主成功")
-				if (res.data == true) {
-					console.log(i)
-					console.log(that.data.family[i])
+				if (res.data == true)
+				{
 					that.setData({
 						FamilyAdminOpen_ID: that.data.family[i].identity
 					})
-					if (that.data.family[i].identity == that.data.open_ID) {
-						that.setData({
-							isFamilyAdmin: true
-						})
+					if (that.data.family[i].identity == that.data.open_ID)
+					{
+						console.log("testinfo")
+						console.log(that.data.family[i].identity)
+						console.log(that.data.family[i])
+						if (that.data.family[i].identity == that.data.open_ID) {
+							that.setData({
+								isFamilyAdmin: true
+							})
+						}
+						console.log(that.data)
 					}
-					console.log(that.data)
 				}
 			},
 			fail: function (res) {
@@ -224,39 +249,4 @@ Page({
 		console.log(that.data.isInFamily)
 
 	},
-
-	/**
-	 * 生命周期函数--监听页面隐藏
-	 */
-	onHide: function () {
-
-	},
-
-	/**
-	 * 生命周期函数--监听页面卸载
-	 */
-	onUnload: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
-	},
-
-	/**
-	 * 页面上拉触底事件的处理函数
-	 */
-	onReachBottom: function () {
-
-	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-	onShareAppMessage: function () {
-
-	}
 })

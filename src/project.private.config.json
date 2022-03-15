@@ -81,8 +81,8 @@
           "name": "",
           "pathName": "pages/recommendation/recommendation",
           "query": "",
-          "scene": null,
-          "launchMode": "default"
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

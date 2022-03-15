@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <!--pages/my_history.wxml-->
 <view class="=dateR">
     <van-cell title="选择查看日期：" value="{{ date }}" bind:click="onDisplay" />
     <van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
     <van-cell-group inset>
         <view style="font-size: 50rpx; color: rgb(238, 103, 103);">今日总收益： ￥{{total_income}}</view>
-        <view style="font-size: 45rpx;text-align: center;">详细记录</view>
+        <view style="font-size: 45rpx;text-align: center;">收益记录</view>
         <view wx:for="{{fundsBenefit}}" wx:for-index="idx">
             <van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
         </view>
@@ -18,7 +17,3 @@
     </van-cell-group>
 
 </view>
-=======
-<!--pages/my_history/my_history.wxml-->
-<text>pages/my_history/my_history.wxml</text>
->>>>>>> 19cd9c3b52d20ccc31a3d175f7749e19aa15f4b6

@@ -1,11 +1,14 @@
 // pages/my_history/my_history.js
+var util = require('../../utils/util');
+var date = util.formatDate(new Date());
+const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-<<<<<<< HEAD
     date: date,
     show: false,
     minDate: new Date(2022, 0, 1).getTime(),
@@ -31,7 +34,7 @@ Page({
       url: serverUrl + '/asset/history',
       data: {
         identity: that.data.open_ID,
-        timestamp: '2022-03-13',
+        timestamp: '2022-03-15',
       },
       method: 'POST',
       header: {
@@ -60,23 +63,6 @@ Page({
         console.log('失败！')
       }
     })
-=======
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
->>>>>>> 19cd9c3b52d20ccc31a3d175f7749e19aa15f4b6
   },
 
   /**

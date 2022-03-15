@@ -39,7 +39,7 @@ Page({
                     console.log('2'+userName)
                     console.log('3'+avatarUrl)
                     wx.request({
-                      url: 'http://localhost:9001/user/login',
+                      url: 'http://47.113.191.64:9001/user/login',
                       data: {
                         identity:identity,
                         userName:userName,

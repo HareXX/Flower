@@ -216,6 +216,7 @@ Page({
     if(c<=0.935&&c>0.922) console.log("强时间偏好者，更喜欢及时收益")
     if(c>0.935&&c<=0.949) console.log("中等时间偏好者")
     if(c>0.949&&c<=0.962) console.log("弱时间偏好者，更喜欢未来收益")
+    wx.setStorageSync('beta',c)
     wx.redirectTo({
       url: '../questionnare/questionnare',
     })

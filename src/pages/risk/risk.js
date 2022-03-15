@@ -481,6 +481,9 @@ Page({
     if(x>=64&&x<=83) console.log("中庸型")
     if(x>=84&&x<=94) console.log("中庸进取型")
     if(x>=95&&x<=105) console.log("进取型")
+    var that=this
+    var tempid=wx.getStorageSync('id')
+    wx.setStorageSync('alpha',x)
     wx.redirectTo({
       url: '../questionnare/questionnare',
     })

@@ -60,6 +60,20 @@
           "name": "",
           "pathName": "pages/invest/invest",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/add_invest/add_invest",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/phone/phone",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

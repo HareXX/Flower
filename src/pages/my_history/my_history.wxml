@@ -4,7 +4,7 @@
     <van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onClose" bind:confirm="onConfirm" />
     <van-cell-group inset>
         <view style="font-size: 50rpx; color: rgb(238, 103, 103);">今日总收益： ￥{{total_income}}</view>
-        <view style="font-size: 45rpx;text-align: center;">详细记录</view>
+        <view style="font-size: 45rpx;text-align: center;">收益记录</view>
         <view wx:for="{{fundsBenefit}}" wx:for-index="idx">
             <van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
         </view>

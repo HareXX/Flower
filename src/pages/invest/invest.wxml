@@ -38,3 +38,10 @@
     </view>
   </view>
 </view>
+
+
+<view class='add_btn'>
+    <button class='btn' bindtap="complete">
+        追加投资
+    </button>
+</view>

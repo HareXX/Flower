@@ -1,4 +1,4 @@
-// pages/smart_invest/smart_invest.js
+// pages/trading_rule/trading_rule.js
 Page({
 
   /**
@@ -62,18 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  toquestionnare: function (options) {
-    wx.redirectTo({
-          url: '../questionnare/questionnare'
-    })  
-  },
-
-  torecommendation: function (options) {
-    wx.redirectTo({
-          url: '../recommendation/recommendation'
-    })  
   }
-
 })

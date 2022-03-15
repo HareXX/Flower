@@ -46,6 +46,15 @@
     "useStaticServer": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
+<<<<<<< Updated upstream
     "minifyWXML": true
   }
+=======
+    "minifyWXML": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "useIsolateContext": true
+  },
+  "condition": {}
+>>>>>>> Stashed changes
 }

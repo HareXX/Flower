@@ -74,6 +74,13 @@
           "name": "",
           "pathName": "pages/phone/phone",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/recommendation/recommendation",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

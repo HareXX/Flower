@@ -118,5 +118,16 @@ page{/*页面背景—————统一浅灰*/
   vertical-align: middle;
   margin-right: -2000rpx; /*  影响一行存放的内容长度 */
   display: inline-block;
-
+}
+.add_btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn{
+  margin-top: 100rpx;
+  width: 600rpx;
+  background: #14a1fd;
+  color: #fff;
+  width: 50%;
 }

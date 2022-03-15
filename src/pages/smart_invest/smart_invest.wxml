@@ -22,7 +22,7 @@
     <button class='btn' bindtap="toquestionnare">
         问卷测评
     </button>
-    <button class='btn'>
+    <button class='btn' bindtap="torecommendation">
         智能推荐
     </button>
 </view>

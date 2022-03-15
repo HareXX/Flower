@@ -1,0 +1,17 @@
+<!--pages/recommendation/recommendation.wxml-->
+<view class='common-page-list'>
+    <view class='common-page-list-left'>
+      <text>您的专属基金组合</text>
+      <text>\n</text>
+      <text>\n</text>
+      <text>最佳投资组合</text>
+      <text>\n</text>
+      <text>\n</text>
+      <view wx:for="{{array}}">{{item}}</view>
+      <view class='add_btn'>
+        <button class='btn' bindtap="torule">
+            查看交易规则
+        </button>
+      </view>
+    </view>
+</view>

@@ -1,5 +1,4 @@
 /* pages/questionnare/questionnare.wxss */
-
 .add_btn{
   display: flex;
   flex-direction: column;

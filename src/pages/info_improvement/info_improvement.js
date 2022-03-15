@@ -214,7 +214,7 @@ Page({
     console.log(M)
     console.log(s)
     wx.request({
-      url: 'http://localhost:9001/model/suggest',
+      url: 'http://47.113.191.64:9001/model/suggest',
       data: {
         alpha:alpha,
         beta:beta,
@@ -228,8 +228,13 @@ Page({
     // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
     header: {'content-type': 'application/json;charset=UTF-8'},
        success: function (res) {
+         console.log(res)
          console.log("success!")
-     }
+     },
+     fail: function (res) {
+      console.log("fail!")
+  }
+     
     })
   },
 })

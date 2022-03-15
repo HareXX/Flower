@@ -48,12 +48,44 @@
     "pages/risk/risk",
     "pages/time/time",
     "pages/anticipate_result/anticipate_result",
+<<<<<<< Updated upstream
     "pages/phone_number/phone_number",
     "pages/display_card/display_card",
     "pages/smart_invest/smart_invest",
     "pages/questionnare/questionnare",
     "pages/info_improvement/info_improvement",
     "pages/add_invest/add_invest"
+=======
+    "pages/smart_invest/smart_invest",
+    "pages/questionnare/questionnare",
+    "pages/info_improvement/info_improvement",
+    "pages/add_invest/add_invest",
+    "pages/add_family_member/add_family_member",
+    "pages/phone_number/phone_number",
+    "pages/display_card/display_card",
+    "pages/add_member/add_member",
+    "pages/senior_helper_user/senior_helper_user",
+    "pages/delete_member/delete_member",
+    "pages/risk_family/risk_family",
+    "pages/business_trainer/business_trainer",
+    "pages/new_health_records/new_health_records",
+    "pages/health_records/health_records",
+    "pages/basic_info/basic_info",
+    "pages/daily_condition/daily_condition",
+    "pages/medicine_records/medicine_records",
+    "pages/illness_records/illness_records",
+    "pages/medicine_records/new_record",
+    "pages/illness_records/new_record",
+    "pages/daily_condition/new_record",
+    "pages/daily_condition/query",
+    "pages/illness_records/query",
+    "pages/medicine_records/query",
+    "pages/health_records_home/health_records_home",
+    "pages/health_records_home/health_user",
+    "pages/health_records_home/health_records",
+    "pages/recommendation/recommendation",
+    "pages/trading_rule/trading_rule"
+>>>>>>> Stashed changes
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -105,6 +137,12 @@
     "van-picker": "@vant/weapp/picker/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-dialog": "@vant/weapp/dialog/index",
+<<<<<<< Updated upstream
     "van-calendar": "@vant/weapp/calendar/index"
+=======
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+>>>>>>> Stashed changes
   }
 }

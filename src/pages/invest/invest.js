@@ -89,5 +89,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  complete :function(){
+    wx.navigateTo({
+      url: '../add_invest/add_invest',
+    })
   }
 })

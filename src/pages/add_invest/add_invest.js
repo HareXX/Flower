@@ -94,12 +94,14 @@ Page({
     var amount=e.detail.value.money
     console.log(amount)
     var tempid=wx.getStorageSync('id')
+    var flag=true;
     console.log(tempid)
     wx.request({
       url: 'http://localhost:9001/invest/add',
       data: {
         identity:tempid,
-        amount:amount
+        amount:amount,
+        confirmed:flag
       }, 
       method: 'POST',
       header: {'content-type': 'application/json;charset=UTF-8'},

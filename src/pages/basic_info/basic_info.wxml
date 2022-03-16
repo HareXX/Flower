@@ -71,17 +71,33 @@
 		round
 		center
 		custom-style="width : 90%; margin : 0 auto;"
-	  />		
-	<van-button
-		size="large"
-		custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
-		square
-		block
-		type="info"
-		bindtap="confirm"
-	>
-		确认修改
-	</van-button>
+	  />
+	<view wx:if="{{hasRecords == false}}">
+		<van-button
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="confirm1"
+		>
+			确认修改
+		</van-button>
+	</view>		
+	
+	<view wx:else>
+		<van-button
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+			square
+			block
+			type="info"
+			bindtap="confirm"
+		>
+			确认修改
+		</van-button>
+	</view>		
+
 </van-cell-group>
 </view>
 <van-dialog id="van-dialog" />

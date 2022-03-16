@@ -15,7 +15,7 @@
   </image>
 </view>
 
-<view class='add_btn'>
+<!-- <view class='add_btn'>
     <button class='btn'>
         惠投简介
     </button>
@@ -25,4 +25,41 @@
     <button class='btn' bindtap="torecommendation">
         智能推荐
     </button>
-</view>
+</view> -->
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+	bindtap="navToHealth"
+	color="#1597ef"
+>
+	惠投简介
+
+</van-button>
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	square
+	block
+	type="info"
+	bindtap="navToCommunity"
+>
+	问卷测评
+</van-button>
+
+
+<van-button 
+	size="large"
+	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
+	block
+	type="info"
+	bindtap="navToNurse"
+>
+	智能推荐
+</van-button>
+
+

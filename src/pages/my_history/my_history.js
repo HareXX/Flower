@@ -39,9 +39,9 @@ Page({
       success: function (res) {
         console.log('成功')
         that.setData({
-          total_income: res.data[0].benefitsDaySum.toFixed(2),
-          fundsBenefit: res.data[0].investedThingsDailyFundBenefits,
-          records: res.data[0].investedThingsRecordList,
+          total_income: res.data[3].benefitsDaySum.toFixed(2),
+          fundsBenefit: res.data[3].investedThingsDailyFundBenefits,
+          records: res.data[3].investedThingsRecordList,
         })
         // console.log(that.data.records)
         // var len = that.data.records.length

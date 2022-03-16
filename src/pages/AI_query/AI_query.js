@@ -5,6 +5,8 @@ var app = getApp(),
 
 Page({
     data: {
+		active: 1,
+		value : '',
         question_list: [{
                 id: 1,
                 text: "什么是家庭关联账户"
@@ -88,10 +90,31 @@ Page({
         errMsg: '',
         user: []
     },
-    navigate_page(e) {
-        const id = e.currentTarget.dataset.operation;
+    navigate_page1(e) {
         wx.navigateTo({
-            url: "./answers/" + id
+            url: "./answers/" + 1
         });
-    }
+	},
+	navigate_page2(e) {
+        wx.navigateTo({
+            url: "./answers/" + 2
+        });
+	},
+	
+	onChange(e)
+	{
+		console.log(e)
+		this.setData({
+			active : e.detail.index
+		})
+	},
+
+	search(e)
+	{
+		console.log(this.data.value)
+		console.log(e)
+		this.setData({
+			value : e.detail
+		})
+	}
 })

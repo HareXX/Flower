@@ -5,7 +5,6 @@
 		custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
 		square
 		type="info"
-		color="#59b9c6"
 		>
 			<text style="font-size: 40rpx;">预约挂号</text>
 		</van-button>
@@ -16,7 +15,6 @@
 		custom-style="height:240rpx;width:240rpx;border-radius:50rpx;"
 		square
 		type="primary"
-		color="#2ca9e1"
 		>
 		<text style="font-size: 40rpx;">在线问诊</text>
 
@@ -27,7 +25,7 @@
 		<van-button
 		custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
 		square
-		color="#5383c3"
+		color="#ffa900"
 		>
 		<text style="font-size: 40rpx;">健康咨询</text>
 		</van-button>
@@ -39,7 +37,7 @@
 		square
 		type="warning"
 		bindtap="navToPE"
-		color="#88aea3"
+
 		>
 			<text style="font-size: 40rpx;">体检检查</text>
 
@@ -62,6 +60,7 @@
 			block
 			type="info"
 			bindtap="navtoHealthRecords"
+			color="#26499d"
 		>
 			查看我的健康档案
 		</van-button>
@@ -74,6 +73,8 @@
 			block
 			type="info"
 			bindtap="navToCreateHealthRecords"
+			color="#26499d"
+
 		>
 			新建健康档案
 		</van-button>

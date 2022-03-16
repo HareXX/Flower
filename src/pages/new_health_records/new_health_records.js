@@ -82,9 +82,6 @@ Page({
 	confirm  : function (e)
 	{
 		var that = this
-		console.log(that.data)
-		console.log(that.data.name == null || that.data.sex == null || that.data.age == null 
-			|| that.data.IDCardNumber == null || that.data.height == null || that.data.weight == null)
 		if (that.data.name == null || that.data.sex == null || that.data.age == null || that.data.IDCardNumber == null || that.data.height == null || that.data.weight == null)
 		{
 			Dialog.alert({

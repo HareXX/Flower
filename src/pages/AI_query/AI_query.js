@@ -90,10 +90,14 @@ Page({
         errMsg: '',
         user: []
     },
-    navigate_page(e) {
-        const id = e.currentTarget.dataset.operation;
+    navigate_page1(e) {
         wx.navigateTo({
-            url: "./answers/" + id
+            url: "./answers/" + 1
+        });
+	},
+	navigate_page2(e) {
+        wx.navigateTo({
+            url: "./answers/" + 2
         });
 	},
 	

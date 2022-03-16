@@ -1,4 +1,4 @@
-<view wx:if="{{hasInvestment == false}}">
+<view wx:if="{{hasInvestment == true}}">
 	<view class="nav">
 		<view class="search-container">
 			<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">
@@ -88,13 +88,13 @@
 	</van-dialog>
 </view>
 
-<!-- <view style="width: 80%;height: 6000rpx;">
+<view >
     <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
 </view>
 <view>
     <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
     
-</view> -->
+</view>
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
 </view> 

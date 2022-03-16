@@ -46,7 +46,7 @@
 	square
 	block
 	type="info"
-	bindtap="navToCommunity"
+	bindtap="toquestionnare"
 >
 	问卷测评
 </van-button>
@@ -57,7 +57,7 @@
 	custom-style="margin-top:50rpx;width:80%;border-radius:15rpx"
 	block
 	type="info"
-	bindtap="navToNurse"
+	bindtap="torecommendation"
 >
 	智能推荐
 </van-button>

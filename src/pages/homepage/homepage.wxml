@@ -56,6 +56,20 @@
 			</van-grid-item>
 		</van-grid>
 	</view>
+	<view class="pie">
+    <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
+	
+</view>
+
+<view class="line">
+    <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
+	
+</view>
+
+
+<view class="history">
+	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
+</view> 
 </view>
 
 
@@ -88,16 +102,7 @@
 	</van-dialog>
 </view>
 
-<view >
-    <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
-</view>
-<view>
-    <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
-    
-</view>
-<view class="history">
-	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
-</view> 
+
 
 
 <van-dialog id="van-dialog" />

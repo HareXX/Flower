@@ -7,7 +7,10 @@ var lineChart = null;
 var pieChart = null;
 Page({
 	data: {
-		hasInvestment : false,
+		myasset:'',
+    yester:'',
+    sumasset:'',
+		hasInvestment : true,
 		open_ID : null,
 		show: true,
 		isfrozen : false,
@@ -83,7 +86,30 @@ Page({
 
 	onLoad : function(e)
 	{
-		var that = this
+		var that=this
+		var tempid=wx.getStorageSync('id')
+		wx.request({
+			url: 'http://localhost:9001/asset/financial',
+			data: {
+				identity:tempid,
+			}, 
+			method: 'POST',
+		// 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+		header: {'content-type': 'application/x-www-form-urlencoded'},
+			 success: function (res) {
+			console.log(res.data.assets)
+			console.log(res.data.benefitsSum)
+			console.log(res.data.benefitsYesterday)
+		 var myasset=res.data.assets
+		 var sumasset=res.data.benefitsSum
+		 var yester=res.data.benefitsYesterday
+		 that.setData({
+			myasset:myasset,
+			yester:yester,
+			sumasset:sumasset
+		})
+		 }
+		})
 		that.data.open_ID = wx.getStorageSync('id')
 		wx.request({
 			url: serverUrl + '/risk/process',

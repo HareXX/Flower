@@ -1,6 +1,8 @@
 // pages/wx_login/wx_login.js
 
-
+const app = getApp()
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+var serverUrl = app.globalData.serverUrl
 Page({
   data:{
   },
@@ -39,7 +41,7 @@ Page({
                     console.log('2'+userName)
                     console.log('3'+avatarUrl)
                     wx.request({
-                      url: 'http://47.113.191.64:9001/user/login',
+                      url: serverUrl + '/user/login',
                       data: {
                         identity:identity,
                         userName:userName,

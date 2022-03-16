@@ -1,2 +1,7 @@
 <!-- pages/AI_query/answers/1.wxml -->
-<text>家庭关联账户将在本平台的同一家庭的账户相互关联，可以实现 “长辈协助”“风险管控”等功能，并设置相关家庭积分等激励措施促进账户互联互通。</text>
+
+<view style="border: 5rpx solid #26499d; width: 80%; border-radius: 30rpx ; margin : 0 auto; height: 450rpx; margin-top: 300rpx; padding-top: 100rpx;" >
+<view style="width: 80%; margin: 0 auto; font-size: 40rpx;">
+	家庭关联账户将在本平台的同一家庭的账户相互关联，可以实现 “长辈协助”“风险管控”等功能，并设置相关家庭积分等激励措施促进账户互联互通。
+</view>
+</view>

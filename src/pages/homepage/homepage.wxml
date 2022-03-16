@@ -63,12 +63,12 @@
 		<van-grid column-num="2">
 			<van-grid-item use-slot="true">
 				<text>我的资产(元)</text>
-				<text>xxxx</text>
+				<text>{{myasset}}</text>
 			</van-grid-item>
 
 			<van-grid-item use-slot="true">
 				<text>昨日收益(元)</text>
-				<text>xxxx</text>
+				<text>{{yester}}</text>
 			</van-grid-item>
 		</van-grid>
 	</view>

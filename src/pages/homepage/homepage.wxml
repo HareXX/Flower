@@ -10,22 +10,24 @@
 		</view>
 	</view>
 
-	<view style="margin-top: 50rpx; width: 80%; margin : 0 auto">
+	<view style="margin-top: 50rpx; width: 80%; margin : 0 auto; margin-top: 40rpx;font-weight: bolder; font-size: 40rpx;">
 		<text style="display: block;">您还没有开始您的投资，</text>
 		<text style="display: block;">快来创建自己的投资组合吧！</text>
 	</view>
 
-	<van-divider />
-	<view style="width: 80%;margin : 0 auto">
-		<text style="display:block;size: 40rpx;">本平台投资优势</text>
-		<view style="display: block;"></view>
-		<text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
-		<text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
+	<view style="border: 5rpx solid #26499d; width: 80%; border-radius: 30rpx ; margin : 0 auto; height: 500rpx; margin-top: 50rpx; padding-top: 50rpx;">
+
+		<view style="width: 80%;margin : 0 auto">
+			<text style="display:block;font-size: 40rpx;font-weight: bolder;">本平台投资优势</text>
+			<view style="display: block;"></view>
+			<text style="display: block;font-size: 32rpx;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
+			<!-- <text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text> -->
+		</view>
+		<van-button size="large" custom-style="margin-top:120rpx;width:80%;border-radius:15rpx" square block type="info" bindtap="navToInvest">
+			开启我的专属投资组合
+		</van-button>
 	</view>
-	<van-divider />
-	<van-button size="large" custom-style="margin-top:50rpx;width:80%;border-radius:15rpx" square block type="info" bindtap="navToInvest">
-		开启我的专属投资组合
-	</van-button>
+	
 
 </view>
 
@@ -86,16 +88,16 @@
 	</van-dialog>
 </view>
 
-<view style="width: 80%;height: 6000rpx;">
+<!-- <view style="width: 80%;height: 6000rpx;">
     <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
 </view>
 <view>
     <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
     
-</view>
+</view> -->
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
-</view>
+</view> 
 
 
 <van-dialog id="van-dialog" />

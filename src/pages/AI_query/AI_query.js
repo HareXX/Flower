@@ -5,6 +5,8 @@ var app = getApp(),
 
 Page({
     data: {
+		active: 1,
+		value : '',
         question_list: [{
                 id: 1,
                 text: "什么是家庭关联账户"
@@ -93,5 +95,22 @@ Page({
         wx.navigateTo({
             url: "./answers/" + id
         });
-    }
+	},
+	
+	onChange(e)
+	{
+		console.log(e)
+		this.setData({
+			active : e.detail.index
+		})
+	},
+
+	search(e)
+	{
+		console.log(this.data.value)
+		console.log(e)
+		this.setData({
+			value : e.detail
+		})
+	}
 })

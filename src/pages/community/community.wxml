@@ -1,7 +1,7 @@
 <van-grid column-num="3"  border="{{false}}" >
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;font-size : 32rpx"
 		square
 		type="info"
 		>
@@ -11,7 +11,7 @@
 	
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;font-size : 32rpx"
 		square
 		type="primary"
 		>
@@ -21,7 +21,7 @@
 	
 	<van-grid-item use-slot="true">
 		<van-button
-		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;"
+		custom-style="height:200rpx;width:200rpx;border-radius:20rpx;font-size : 32rpx"
 		square
 		type="warning"
 		color="#ffa900"
@@ -32,7 +32,7 @@
 	
 </van-grid>
 
-<view class="nav">
+<view style="margin-top: 30rpx;">
 	<van-cell title="社区活动" is-link value="查看更多"/>
 </view>
 
@@ -47,8 +47,8 @@
 
 </van-cell-group></view>
 
-<view class="nav">
-	<van-cell title="终身教育" is-link value="查看更多"/>
+<view style="margin-top: -30rpx;">
+	<van-cell title="终身教育" is-link value="查看更多" border="{{true}}"/>
 </view>
 
 <van-cell-group>

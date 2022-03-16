@@ -1,10 +1,11 @@
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
 Page({
 	data: {
-		radio1: 0,
-		radio2: 0,
-		radio3: 0,
-		radio4: 0,
-		radio5: 0,
+		ratio1: 0,
+		ratio2: 0,
+		ratio3: 0,
+		ratio4: 0,
+		ratio5: 0,
 		score : 0,
 		active : 0,
 		q : [ 
@@ -60,17 +61,15 @@ Page({
 	},
 	submit(e)
 	{
+		console.log("##################")
 		var that = this
 		that.setData({
 			score : 0
 		})
-		console.log(this)
-		console.log("分数")
-		console.log(this.data)
-		console.log(this.data.q)
+
+
 		if (this.data.ratio1 == this.data.q[0].answer)
 		{
-			console.log("yes")
 			that.setData({
 				score : that.data.score + 1
 			})
@@ -78,17 +77,15 @@ Page({
 
 		if (this.data.ratio2 == this.data.q[1].answer)
 		{
-			console.log("yes")
-
 			that.setData({
 				score : that.data.score + 1
 			})
+			console.log(this.data)
+
 		}
 
 		if (this.data.ratio3 == this.data.q[2].answer)
 		{
-			console.log("yes")
-
 			that.setData({
 				score : that.data.score + 1
 			})
@@ -96,8 +93,6 @@ Page({
 
 		if (this.data.ratio4 == this.data.q[3].answer)
 		{
-			console.log("yes")
-
 			that.setData({
 				score : that.data.score + 1
 			})
@@ -105,95 +100,51 @@ Page({
 
 		if (this.data.ratio5 == this.data.q[4].answer)
 		{
-			console.log("yes")
-
 			that.setData({
 				score : that.data.score + 1
 			})
 		}
-		console.log("final分数")
-		console.log(that.data.score)
+		
+		Dialog.alert({
+			context : this,
+			selector:"#van-dialog",
+			message: "您的最终得分为：" + `${that.data.score}` + "分",
+		}).then(() => {
+			wx.navigateBack({
+			  delta: 1,
+			})
+		});
 	},
 
 	onChange1(event) {
 		var that = this
-		console.log(event.detail)
-		if (event.detail == '1')
-		{
-			console.log("yes")
-			that.setData({
-				radio1: '1',
-			});
-		}
-		else
-		{
-			console.log("no")
-			that.setData({
-				ratio1 : '2'
-			})
-		}
-		console.log(this)
-		console.log(this.data.radio1)
+		that.setData({
+			ratio1 : event.detail
+		})
 	},
 	onChange2(event) {
 		var that = this
-		if (event.detail == '1')
-		{
-			that.setData({
-				radio2 : '1',
-			});
-		}
-		else
-		{
-			that.setData({
-				ratio2 : '2'
-			})
-		}
+		that.setData({
+			ratio2 : event.detail
+		})
 	},
 	onChange3(event) {
 		var that = this
-		if (event.detail == '1')
-		{
-			that.setData({
-				radio3 : '1',
-			});
-		}
-		else
-		{
-			that.setData({
-				ratio3 : '2'
-			})
-		}
+		that.setData({
+			ratio3 : event.detail
+		})
 	},
 	onChange4(event) {
 		var that = this
-		if (event.detail == '1')
-		{
-			that.setData({
-				radio4: '1',
-			});
-		}
-		else
-		{
-			that.setData({
-				ratio4 : '2'
-			})
-		}
+		that.setData({
+			ratio4 : event.detail
+		})
 	},
 	onChange5(event) {
 		var that = this
-		if (event.detail == '1')
-		{
-			that.setData({
-				radio5: '1',
-			});
-		}
-		else
-		{
-			that.setData({
-				ratio5 : '2'
-			})
-		}
+		that.setData({
+			ratio5 : event.detail
+		})
 	},
 	last(e)
 	{

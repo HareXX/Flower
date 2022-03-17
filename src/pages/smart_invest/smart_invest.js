@@ -14,8 +14,15 @@ Page({
   },
 
   toquestionnare: function (options) {
-    wx.redirectTo({
+    wx.navigateTo({
           url: '../questionnare/questionnare'
     })  
+  },
+
+  torecommendation: function (options) {
+    wx.navigateTo({
+          url: '../anticipate_result/anticipate_result'
+    })  
   }
+
 })

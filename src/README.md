@@ -10,3 +10,7 @@ phone:用户登陆时输入的手机号
 bankphone：用户绑定银行卡时候输入的手机号
 bankid:银行卡号
 bankname:用户绑定银行卡时输入的名字
+alpha:风险
+beta:时间
+list:基金
+size:基金支数

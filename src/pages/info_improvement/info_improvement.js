@@ -11,7 +11,7 @@ Page({
       {
         "type": "SAQ",
         "content": {
-          "description": "您的年龄?",
+          "description": "您的退休年份?",
           "answer": ""
         }
       },
@@ -193,9 +193,56 @@ Page({
   },
 
   complete :function(){
-    console.log(this.data.questionnaireArray);
-    wx.navigateTo({
-      url: '../questionnare/questionnare',
+    console.log(this.data.questionnaireArray[0].content.answer);
+    console.log(this.data.questionnaireArray[1].content.answer);
+    console.log(this.data.questionnaireArray[2].content.answer);
+    console.log(this.data.questionnaireArray[3].content.answer);
+    var sex=wx.getStorageSync('sex')
+    var alpha=wx.getStorageSync('alpha')
+    var beta=wx.getStorageSync('beta')
+    var retire_year=this.data.questionnaireArray[0].content.answer
+    var M=this.data.questionnaireArray[1].content.answer
+    var c=this.data.questionnaireArray[2].content.answer
+    var s=this.data.questionnaireArray[3].content.answer
+    console.log(alpha)
+    console.log(beta)
+    console.log(retire_year)
+    console.log(c)
+    if(sex==0) sex='Male'
+    else sex='Female'
+    console.log(sex)
+    console.log(M)
+    console.log(s)
+    wx.request({
+      url: 'http://47.113.191.64:9001/model/suggest',
+      data: {
+        alpha:alpha,
+        beta:beta,
+        retire_year:retire_year,
+        c:c,
+        gender:sex,
+        M:M,
+        s:s
+      }, 
+      method: 'POST',
+    // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+    header: {'content-type': 'application/json;charset=UTF-8'},
+       success: function (res) {
+         console.log(res.data)
+         console.log(res.data.length)
+         wx.setStorageSync('size', res.data.length)
+         console.log(res.data[0].fundName)
+         console.log("success!")
+         var list=new Array()
+         for(var i=0;i<res.data.length;i++)
+         {
+            list.push(res.data[i].fundName)
+         }
+         console.log(list)
+         wx.setStorageSync('list', list)
+
+     },
+     
     })
   },
 })

@@ -1,44 +1,18 @@
+// pages/recommendation/recommendation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    array:[],
-    myasset:'',
-    yester:'',
-    sumasset:'',
+    array:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that=this
-			var tempid=wx.getStorageSync('id')
-			wx.request({
-				url: 'http://localhost:9001/asset/financial',
-				data: {
-					identity:tempid,
-				}, 
-				method: 'POST',
-			// 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
-			header: {'content-type': 'application/x-www-form-urlencoded'},
-				 success: function (res) {
-				console.log(res.data.assets)
-				console.log(res.data.benefitsSum)
-				console.log(res.data.benefitsYesterday)
-       var myasset=res.data.assets
-       var sumasset=res.data.benefitsSum
-       var yester=res.data.benefitsYesterday
-       that.setData({
-        myasset:myasset,
-      	yester:yester,
-        sumasset:sumasset
-      })
-       }
-      })
-      var fundA1=new Array("21铁投01 6.66%", "20际华01 6.65%", "19长城 6.59%", "19广发 6.59%", "21国君 6.59%")
+    var fundA1=new Array("21铁投01 6.66%", "20际华01 6.65%", "19长城 6.59%", "19广发 6.59%", "21国君 6.59%")
     var fundA2=new Array("21附息 52.55%", "21附息 26.45%", "21进出 7.84%", "20附息 5.24%", "19国开 5.23%")
     var fundA3=new Array("21南京银行CD109 3.09%", "21宁波银行CD358 1.84% ", "21民生银行CD370 1.22%", "21渤海银行CD491 1.22%", "21徽商银行CD159 1.10%")
     var fundA4=new Array("19南建02 1.81%", "19武管廊 1.63%", "17苏新02 1.51%", "20明城02 1.51%", "19椒江01 1.37%")
@@ -48,18 +22,36 @@ Page({
     var fundB3=new Array("杉杉股份 4.68%", "天合光能 4.56%", "天齐锂业 4.51%", "诺德股份 4.03%", "鹏辉能源 3.65%", "宁德时代 3.35%", "捷佳伟创 3.18%", "德业股份 3.00%", "晶澳科技 2.93%", "阳光电源 2.60%")
     var fundB4=new Array("宁德时代 22.20%", "东方财富 9.62%", "迈瑞医疗 5.26%", "亿纬锂能 4.81%", "阳光电源 4.61%", "汇川技术 3.86%", "爱尔眼科 3.17%", "智飞生物 2.96%", "沃森生物 2.93%", "先导智能 2.42%")
     var fundB5=new Array("贵州茅台 15.33%", "招商银行 7.40%", "中国平安 6.69%", "隆基股份 4.59%", "兴业银行 3.39%", "长江电力 3.16%", "伊利股份 3.11%", "药明康德 3.00%", "药明康德 2.77%", "中信证券 2.75%")
-    this.setData({
-      ['array[0]']: '21铁投01 6.66%',
-      ['array[1]']: '20际华01 6.65%',
-      ['array[2]']: '19长城 6.59%',
-      ['array[3]']: '19广发 6.59%',
-      ['array[4]']: '21国君 6.59%'
-    })
+    var list=wx.getStorageSync('list')
+    console.log(list)
+    var size=wx.getStorageSync('size')
+    console.log(size)
+    for(var i=0;i<size;i++)
+    {
+      console.log(i)
+        this.setData({
+        ['array[0]']: '21铁投01 6.66%',
+        ['array[1]']: '20际华01 6.65%',
+        ['array[2]']: '19长城 6.59%',
+        ['array[3]']: '19广发 6.59%',
+        ['array[4]']: '21国君 6.59%'
+      })
+    }
+  
   },
 
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
 
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
   onShow: function () {
-	this.getTabBar().init();
+
   },
 
   /**
@@ -97,15 +89,9 @@ Page({
 
   },
 
-  complete :function(){
-    wx.navigateTo({
-      url: '../add_invest/add_invest',
-    })
-  },
-
-  another :function(){
-    wx.navigateTo({
-      url: '../sell_invest/sell_invest',
-    })
+  torule: function (options) {
+    wx.redirectTo({
+          url: '../trading_rule/trading_rule'
+    })  
   }
 })

@@ -7,130 +7,138 @@ var lineChart = null;
 var pieChart = null;
 Page({
 	data: {
-		hasInvestment : false,
-		open_ID : null,
+		myasset: '',
+		yester: '',
+		sumasset: '',
+		hasInvestment: true,
+		open_ID: null,
 		show: true,
-		isfrozen : false,
-		riskActivities : [],
-		redNum : 0
+		isfrozen: false,
+		riskActivities: [],
+		redNum: 0
 	},
 
-	accept(e)
-	{
+	accept(e) {
 		var that = this
 		console.log(e.currentTarget.dataset.index)
 		wx.request({
-			url : serverUrl + '/risk/response',
-			data : {
-				fromIdentity : that.data.open_ID,
-				toIdentity : that.data.riskActivities[e.currentTarget.dataset.index].identity,
-				actionType : 1
+			url: serverUrl + '/risk/response',
+			data: {
+				fromIdentity: that.data.open_ID,
+				toIdentity: that.data.riskActivities[e.currentTarget.dataset.index].identity,
+				actionType: 1
 			},
-			method : "POST",
-			header : {
-				'Content-Type':'application/json;charset=utf-8'
+			method: "POST",
+			header: {
+				'Content-Type': 'application/json;charset=utf-8'
 			},
-			success : function (res) {
+			success: function (res) {
 				console.log("获取成功")
 				console.log("66666666")
 			},
-			fail : function (res) {
+			fail: function (res) {
 				console.log("获取失败")
 				console.log(res)
 			}
 		})
 	},
 
-	reject(e)
-	{
+	reject(e) {
 		var that = this
 		console.log(e.currentTarget.dataset.index)
 		wx.request({
-			url : serverUrl + '/risk/response',
-			data : {
-				fromIdentity : that.data.open_ID,
-				toIdentity : that.data.riskActivities[e.currentTarget.dataset.index].identity,
-				actionType : 0
+			url: serverUrl + '/risk/response',
+			data: {
+				fromIdentity: that.data.open_ID,
+				toIdentity: that.data.riskActivities[e.currentTarget.dataset.index].identity,
+				actionType: 0
 			},
-			method : "POST",
-			header : {
-				'Content-Type':'application/json;charset=utf-8'
+			method: "POST",
+			header: {
+				'Content-Type': 'application/json;charset=utf-8'
 			},
-			success : function (res) {
+			success: function (res) {
 				console.log("获取成功")
 				console.log("66666666")
 			},
-			fail : function (res) {
+			fail: function (res) {
 				console.log("获取失败")
 				console.log(res)
 			}
 		})
 	},
 
-	createSimulationData: function () {
-		var categories = [];
-		var data = [];
-		for (var i = 0; i < 10; i++) {
-			categories.push('2016-' + (i + 1));
-			data.push(Math.random() * (20 - 10) + 10);
-		}
-		// data[4] = null;
-		return {
-			categories: categories,
-			data: data
-		}
-	},
-
-	onLoad : function(e)
-	{
+	onLoad: function (e) {
 		var that = this
+		var tempid = wx.getStorageSync('id')
+		wx.request({
+			url: 'http://localhost:9001/asset/financial',
+			data: {
+				identity: tempid,
+			},
+			method: 'POST',
+			// 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
+			header: {
+				'content-type': 'application/x-www-form-urlencoded'
+			},
+			success: function (res) {
+				console.log(res.data.assets)
+				console.log(res.data.benefitsSum)
+				console.log(res.data.benefitsYesterday)
+				var myasset = res.data.assets
+				var sumasset = res.data.benefitsSum
+				var yester = res.data.benefitsYesterday
+				that.setData({
+					myasset: myasset,
+					yester: yester,
+					sumasset: sumasset
+				})
+			}
+		})
 		that.data.open_ID = wx.getStorageSync('id')
 		wx.request({
 			url: serverUrl + '/risk/process',
-			data : {
-				identity : that.data.open_ID,
+			data: {
+				identity: that.data.open_ID,
 			},
-			method : "GET",
-			header : {
-				'Content-Type':'text/plain;charset:utf-8;'
+			method: "GET",
+			header: {
+				'Content-Type': 'text/plain;charset:utf-8;'
 			},
 
-			success : function (res) {
+			success: function (res) {
 				console.log("获取风险信息成功")
 				console.log(res)
 				that.setData({
-					isfrozen : res.data.frozen,
-					redNum : res.data.redNum,
-					riskActivities : res.data.riskActVoList
+					isfrozen: res.data.frozen,
+					redNum: res.data.redNum,
+					riskActivities: res.data.riskActVoList
 				})
 
 				console.log(res)
-				if (that.data.isfrozen)
-				{
+				if (that.data.isfrozen) {
 					console.log(that.data)
 					Dialog.alert({
-						context : this,
-						selector:"#van-dialog",
+						context: this,
+						selector: "#van-dialog",
 						message: '您的账户已被冻结，请等待三天自动解冻',
 					}).then(() => {
 						wx.exitMiniProgram()
 					});
-				}
-				else
-				{
+				} else {
 					// that.data.redNum = 2
 					// that.data.riskActivities=[1,2]
 					// console.log(that.data)
 				}
 			},
-			fail : function (res) {
+			fail: function (res) {
 				console.log("获取授权关系失败")
 				console.log(res)
 			}
 		})
 
 
-		var windowWidth = 320;
+		var windowWidth = 360;
 		try {
 			var res = wx.getSystemInfoSync();
 			windowWidth = res.windowWidth;
@@ -153,47 +161,47 @@ Page({
 				data: 8000,
 			}, ],
 			width: windowWidth,
-			height: 300,
-			dataLabel: true,
-        });
-        var simulationData = this.createSimulationData();
-        lineChart = new wxCharts({
-            canvasId: 'lineCanvas',
-            type: 'line',
-            categories: simulationData.categories,
-            animation: true,
-            // background: '#f5f5f5',
-            series: [{
-                name: '股票',
-                data: simulationData.data,
-                format: function (val, name) {
-                    return val.toFixed(2) + '万';
-                }
-            }, {
-                name: '债券',
-                data: [2, 0, 0, 3, 5, 4, 4, 5, 6, 5],
-                format: function (val, name) {
-                    return val.toFixed(2) + '万';
-                }
-            }],
-            xAxis: {
-                disableGrid: true
-            },
-            yAxis: {
-                title: '收益金额 (万元)',
-                format: function (val) {
-                    return val.toFixed(2);
-                },
-                min: 0
-            },
-            width: windowWidth,
-            height: 200,
-            dataLabel: false,
-            dataPointShape: true,
-            extra: {
-                lineStyle: 'curve'
-            }
-        });
+			height: 140,
+			dataLabel: false,
+		});
+		var simulationData = this.createSimulationData();
+		lineChart = new wxCharts({
+			canvasId: 'lineCanvas',
+			type: 'line',
+			categories: simulationData.categories,
+			animation: true,
+			// background: '#f5f5f5',
+			series: [{
+				name: '股票',
+				data: simulationData.data,
+				format: function (val, name) {
+					return val.toFixed(2) + '万';
+				}
+			}, {
+				name: '债券',
+				data: [2, 0, 0, 3, 5, 4, 4, 5, 6, 5],
+				format: function (val, name) {
+					return val.toFixed(2) + '万';
+				}
+			}],
+			xAxis: {
+				disableGrid: true
+			},
+			yAxis: {
+				title: '收益金额 (万元)',
+				format: function (val) {
+					return val.toFixed(2);
+				},
+				min: 0
+			},
+			width: windowWidth,
+			height: 140,
+			dataLabel: false,
+			dataPointShape: true,
+			extra: {
+				lineStyle: 'curve'
+			}
+		});
 	},
 
 	onShow: function (e) {
@@ -223,42 +231,42 @@ Page({
 			url: '../smart_invest/smart_invest',
 		})
 	},
-	
-    touchHandler: function (e) {
-        console.log(lineChart.getCurrentDataIndex(e));
-        lineChart.showToolTip(e, {
-            // background: '#7cb5ec',
-            format: function (item, category) {
-                return category + ' ' + item.name + ':' + item.data 
-            }
-        });
-    },    
-    createSimulationData: function () {
-        var categories = [];
-        var data = [];
-        for (var i = 0; i < 10; i++) {
-            categories.push('2016-' + (i + 1));
-            data.push(Math.random()*(20-10)+10);
-        }
-        // data[4] = null;
-        return {
-            categories: categories,
-            data: data
-        }
-    },
-    updateData: function () {
-        var simulationData = this.createSimulationData();
-        var series = [{
-            name: '成交量1',
-            data: simulationData.data,
-            format: function (val, name) {
-                return val.toFixed(2) + '万';
-            }
-        }];
-        lineChart.updateData({
-            categories: simulationData.categories,
-            series: series
-        });
-    },
+
+	touchHandler: function (e) {
+		console.log(lineChart.getCurrentDataIndex(e));
+		lineChart.showToolTip(e, {
+			// background: '#7cb5ec',
+			format: function (item, category) {
+				return category + ' ' + item.name + ':' + item.data
+			}
+		});
+	},
+	createSimulationData: function () {
+		var categories = [];
+		var data = [];
+		for (var i = 0; i < 10; i++) {
+			categories.push('2016-' + (i + 1));
+			data.push(Math.random() * (20 - 10) + 10);
+		}
+		// data[4] = null;
+		return {
+			categories: categories,
+			data: data
+		}
+	},
+	updateData: function () {
+		var simulationData = this.createSimulationData();
+		var series = [{
+			name: '成交量1',
+			data: simulationData.data,
+			format: function (val, name) {
+				return val.toFixed(2) + '万';
+			}
+		}];
+		lineChart.updateData({
+			categories: simulationData.categories,
+			series: series
+		});
+	},
 
 })

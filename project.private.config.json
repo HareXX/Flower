@@ -21,17 +21,17 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/questionnare/questionnare",
+                    "pathName": "pages/chartTest/chartTest.js",
                     "query": "",
-                    "launchMode": "default",
-                    "scene": null
+                    "scene": null,
+                    "launchMode": "default"
                 },
                 {
                     "name": "",
                     "pathName": "pages/homepage/homepage",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

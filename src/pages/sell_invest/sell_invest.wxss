@@ -1,4 +1,4 @@
-/* pages/add_invest/add_invest.wxss */
+/* pages/sell_invest/sell_invest.wxss */
 .common-page-list {
   display: flex;
   flex-direction: row;

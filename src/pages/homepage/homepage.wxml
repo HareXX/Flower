@@ -1,4 +1,4 @@
-<view wx:if="{{hasInvestment == true}}">
+<view wx:if="{{hasInvestment == false}}">
 	<view class="nav">
 		<view class="search-container">
 			<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">
@@ -31,7 +31,7 @@
 
 </view>
 
-<view wx:else="{{hasInvestment == true}}">
+<view wx:else>
 	<view class="nav">
 		<view class="search-container">
 			<van-search value="{{ value }}" placeholder="请输入搜索关键词" shape="round" right-icon="close">

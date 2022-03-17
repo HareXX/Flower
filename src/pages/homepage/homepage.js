@@ -15,7 +15,8 @@ Page({
 		show: true,
 		isfrozen: false,
 		riskActivities: [],
-		redNum: 0
+		redNum: 0,
+		investList: []
 	},
 
 	accept(e) {
@@ -85,14 +86,29 @@ Page({
 				console.log(res.data.assets)
 				console.log(res.data.benefitsSum)
 				console.log(res.data.benefitsYesterday)
+				console.log(res.data.investedThingsList)
 				var myasset = res.data.assets
 				var sumasset = res.data.benefitsSum
 				var yester = res.data.benefitsYesterday
+				var investList = res.data.investedThingsList
+				console.log(investList.length)
 				that.setData({
 					myasset: myasset,
 					yester: yester,
-					sumasset: sumasset
+					sumasset: sumasset,
+					investList: investList,
 				})
+				
+				if (investList.length == 0) {
+					that.setData({
+						hasInvestment: false
+					})
+				} else {
+					that.setData({
+						hasInvestment: true
+					})
+				}
+				console.log(that.data.hasInvestment)
 			}
 		})
 		that.data.open_ID = wx.getStorageSync('id')
@@ -136,8 +152,9 @@ Page({
 				console.log(res)
 			}
 		})
+		//请求投资组合
 
-
+		//绘图
 		var windowWidth = 360;
 		try {
 			var res = wx.getSystemInfoSync();
@@ -202,6 +219,8 @@ Page({
 				lineStyle: 'curve'
 			}
 		});
+		console.log("##############")
+		console.log(this.data.hasInvestment)
 	},
 
 	onShow: function (e) {

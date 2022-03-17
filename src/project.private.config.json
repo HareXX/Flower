@@ -16,13 +16,6 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/account_security/account_security",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
           "pathName": "pages/homepage/homepage",
           "query": "",
           "launchMode": "default",
@@ -31,20 +24,6 @@
         {
           "name": "",
           "pathName": "pages/smart_invest/smart_invest",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/risk/risk",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/time/time",
           "query": "",
           "launchMode": "default",
           "scene": null
@@ -72,17 +51,24 @@
         },
         {
           "name": "",
-          "pathName": "pages/phone/phone",
+          "pathName": "pages/recommendation/recommendation",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "pages/recommendation/recommendation",
+          "pathName": "pages/sell_invest/sell_invest",
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/anticipate_result/anticipate_result",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }

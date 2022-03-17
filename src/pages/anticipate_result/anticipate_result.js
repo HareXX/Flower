@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    riskdata:'',
+    timedata:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var riskdata=wx.getStorageSync('alpha')
+    var timedata=wx.getStorageSync('beta')
+    console.log(riskdata)
+    console.log(timedata)
+    this.setData({
+      riskdata:riskdata,
+      timedata:timedata
+    })
   },
 
   /**
@@ -62,5 +70,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onSubmit: function(e){
+    var amount=e.detail.value.money
+    console.log(amount)
+    var tempid=wx.getStorageSync('id')
+    var flag=true;
+    console.log(tempid)
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 1000
+        })
+        setTimeout(function(){
+          wx.navigateTo({
+            url: '../recommendation/recommendation'
+          })  
+        },1000)
   }
 })

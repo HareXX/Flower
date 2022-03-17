@@ -40,8 +40,18 @@
 </view>
 
 
+<view wx:for="{{array}}">
+  <view>{{item}}</view>
+</view>
+
 <view class='add_btn'>
     <button class='btn' bindtap="complete">
         追加投资
+    </button>
+</view>
+
+<view class='add_btn'>
+    <button class='btn' bindtap="another">
+        卖出基金
     </button>
 </view>

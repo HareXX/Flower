@@ -29,12 +29,18 @@ Page({
 		})
 	},
 
+	navTo2 : function (e) {
+		wx.navigateToMiniProgram({
+			appId: 'wxde8ac0a21135c07d',
+		})
+	},
 	navTo1: function(e)
 	{
 		wx.navigateToMiniProgram({
 		  appId: 'wx56f4459e89f63e7a',
 		})
 	},
+	
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

@@ -15,18 +15,20 @@
 		<text style="display: block;">快来创建自己的投资组合吧！</text>
 	</view>
 
-	<view style="border: 5rpx solid #26499d; width: 80%; border-radius: 30rpx ; margin : 0 auto; height: 500rpx; margin-top: 50rpx; padding-top: 50rpx;">
+	<view style="border: 5rpx solid #26499d; width: 80%; border-radius: 30rpx ; margin : 0 auto; height: 600rpx; margin-top: 50rpx; padding-top: 50rpx;">
 
 		<view style="width: 80%;margin : 0 auto">
 			<text style="display:block;font-size: 40rpx;font-weight: bolder;">本平台投资优势</text>
 			<view style="display: block;"></view>
-			<text style="display: block;font-size: 32rpx;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text>
-			<!-- <text style="display: block;">我们将根据你的风险偏好以及个人收入为你规划个性化投资组合，实现收益性、匹配性的完美结合，为你打造专属的投资理财方式。</text> -->
+			<text style="display: block;font-size: 32rpx;">我们将根据您的时间与风险偏好为您规划个性化的基金组合推荐，并且绘制出属于您的随时间动态变化的风险资产下滑曲线，实现安全性和盈利性的完美结合。</text>
+
+			<text style="display: block;margin-top: 30rpx;">开启投资组合后，您不仅可以享受到丰厚的投资收益，还可以享受到平台的养老服务。在您建立家庭关联账户后，可以通过家庭内部互助进一步增强您财富管理安全性和便利性。</text>
 		</view>
-		<van-button size="large" custom-style="margin-top:120rpx;width:80%;border-radius:15rpx" square block type="info" bindtap="navToInvest">
-			开启我的专属投资组合
-		</van-button>
+		
 	</view>
+	<van-button size="large" custom-style="margin-top:80rpx;width:80%;border-radius:15rpx" square block type="info" bindtap="navToInvest" color="#02499d">
+		开启我的专属投资组合
+	</van-button>
 	
 
 </view>
@@ -68,7 +70,7 @@
 
 
 <view class="history">
-	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory">查询历史记录</van-button>
+	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory" color="#26499d">查询历史记录</van-button>
 </view> 
 </view>
 

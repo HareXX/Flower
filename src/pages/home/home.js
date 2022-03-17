@@ -27,7 +27,19 @@ Page({
 		numOfFamily: 2,
 	},
 
+	navToEarnings(e)
+	{
+		wx.navigateTo({
+			url: '../earnings_home/earnings_home',
+		})
+	},
 
+	navToHistory(e)
+	{
+		wx.navigateTo({
+		  url: '../history_home/history_home',
+		})
+	},
 	navToHealth(e)
 	{
 		wx.navigateTo({

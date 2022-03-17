@@ -43,6 +43,7 @@
 		square
 		block
 		type="info"
+		color="#26499d"
 	>
 		家庭昵称修改
 	</van-button>
@@ -64,6 +65,7 @@
 		block
 		type="info"
 		bindtap="navToAddFamilyMember"
+		color="#26499d"
 	>
 		授权管理
 	</van-button>
@@ -76,6 +78,7 @@
 			block
 			type="info"
 			bindtap="navToDelMember"
+			color="#26499d"
 		>
 			移除成员
 		</van-button>

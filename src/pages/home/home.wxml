@@ -60,6 +60,7 @@
 			<van-image
 				width="160rpx"
 				height="160rpx"
+				bindtap="navToEarnings"
 				src="/images/实时收益.png"
 			/>
 		</van-grid-item>
@@ -68,6 +69,7 @@
 			<van-image
 				width="165rpx"
 				height="165rpx"
+				bindtap="navToHistory"
 				src="/images/历史记录.png"
 			/>
 		</van-grid-item>

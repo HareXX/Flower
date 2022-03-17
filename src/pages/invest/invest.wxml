@@ -40,9 +40,12 @@
 </view>
 
 
-<view wx:for="{{array}}">
-  <view>{{item}}</view>
+<view>
+	<view wx:for="{{array}}" style="width: 100%;background-color: white; margin: 0 auto; text-align: center;">
+		<view>{{item}}</view>
+	</view>
 </view>
+
 
 <view class='add_btn'>
     <button class='btn' bindtap="complete">

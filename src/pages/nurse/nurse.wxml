@@ -105,6 +105,7 @@
 		round
 		type="info"
 		block
+		bindtap="navTo2"
 		>
 			上门送药
 		</van-button>

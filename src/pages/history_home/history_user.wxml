@@ -1,0 +1,5 @@
+<view wx:for="{{records}}" wx:for-index="idx">
+	<van-cell title="{{records[idx].fundName}}" label="{{records[idx].category}}" border="{{false}}" value="￥{{records[idx].amount}}" size="large" title-style="font-size : 35rpx" title-width="400rpx"/>
+	<!-- <van-cell title="种类：" border="{{false}}" value="{{records[idx].category}}" /> -->
+	<van-cell title="{{records[idx].timeStamp}}" value="{{records[idx].status==0?'买入':'卖出'}}" size="large" />
+</view>

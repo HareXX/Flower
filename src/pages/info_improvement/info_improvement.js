@@ -228,12 +228,20 @@ Page({
     // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
     header: {'content-type': 'application/json;charset=UTF-8'},
        success: function (res) {
-         console.log(res)
+         console.log(res.data)
+         console.log(res.data.length)
+         wx.setStorageSync('size', res.data.length)
+         console.log(res.data[0].fundName)
          console.log("success!")
+         var list=new Array()
+         for(var i=0;i<res.data.length;i++)
+         {
+            list.push(res.data[i].fundName)
+         }
+         console.log(list)
+         wx.setStorageSync('list', list)
+
      },
-     fail: function (res) {
-      console.log("fail!")
-  }
      
     })
   },

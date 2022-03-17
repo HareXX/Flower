@@ -65,14 +65,14 @@ Page({
   },
 
   toquestionnare: function (options) {
-    wx.redirectTo({
+    wx.navigateTo({
           url: '../questionnare/questionnare'
     })  
   },
 
   torecommendation: function (options) {
-    wx.redirectTo({
-          url: '../recommendation/recommendation'
+    wx.navigateTo({
+          url: '../anticipate_result/anticipate_result'
     })  
   }
 

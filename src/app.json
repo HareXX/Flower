@@ -9,7 +9,6 @@
 		"pages/me/me",
 		"pages/senior-helper/senior-helper",
 		"pages/family_members/family_members",
-		"pages/members_detail/members_detail",
 		"custom-tab-bar/index",
 		"pages/personal_card/personal_card",
 		"pages/account_security/account_security",

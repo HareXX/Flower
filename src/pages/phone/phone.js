@@ -10,7 +10,8 @@ Page({
     sex: 0,
     phone: '',
     show: false,
-    currentChoose: ''
+	currentChoose: '',
+	name : ''
   },
   //日期选择器的处理
   openPicker() {
@@ -57,7 +58,13 @@ Page({
   },
   setInput: function(e) {
     console.log(e.detail.value)
-    wx.setStorageSync('phone', e.detail.value)
+	wx.setStorageSync('phone', e.detail.value)
+  },
+  setInput2: function(e) {
+    console.log(e.detail.value)
+	this.setData({
+		name : e.detail.value
+	})
   },
   confirmPublish: function() {
       var that = this;
@@ -84,7 +91,7 @@ Page({
       else {
         var tempsex=wx.getStorageSync('sex')
         var tempphone=wx.getStorageSync('phone')
-        var tempname=wx.getStorageSync('username')
+        var tempname=that.data.name
         var tempimage=wx.getStorageSync('userimage')
         var tempid=wx.getStorageSync('id')
         console.log(tempid)

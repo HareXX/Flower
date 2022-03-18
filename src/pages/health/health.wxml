@@ -36,7 +36,7 @@
 		custom-style="height:250rpx;width:250rpx;border-radius:50rpx;"
 		square
 		type="warning"
-		bindtap="navToPE"
+		bindtap="navTo3"
 
 		>
 			<text style="font-size: 40rpx;">体检检查</text>

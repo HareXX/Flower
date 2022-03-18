@@ -19,10 +19,13 @@
 				
 			</view>
 			<view style="margin-right: 150rpx;">
+				<view>
 					<image
 						style="width: 85rpx;height: 85rpx;border-radius: 50%;"
 						src="{{family[idx].avatarUrl}}"
 					/>
+				</view>
+					
 					<view>{{family[idx].userName}}</view>
 				
 			</view>

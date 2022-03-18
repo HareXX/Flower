@@ -7,6 +7,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
+		pattern : true,
 		open_ID: null,
 		isInFamily: false,
 		isFamilyAdmin: false,
@@ -26,7 +27,19 @@ Page({
 		numOfFamily: 2,
 	},
 
+	navToEarnings(e)
+	{
+		wx.navigateTo({
+			url: '../earnings_home/earnings_home',
+		})
+	},
 
+	navToHistory(e)
+	{
+		wx.navigateTo({
+		  url: '../history_home/history_home',
+		})
+	},
 	navToHealth(e)
 	{
 		wx.navigateTo({
@@ -80,6 +93,10 @@ Page({
 	},
 
 	onLoad: function (options) {
+		var tmp = app.globalData.pattern
+		this.setData({
+			pattern : tmp
+		})
 		var that = this
 		var serverUrl = app.globalData.serverUrl
 		console.log(wx.getStorageSync('id'))

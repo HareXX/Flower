@@ -1,0 +1,3 @@
+<view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+	<van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
+</view>

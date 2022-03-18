@@ -17,7 +17,9 @@
 		<view style="margin-top: 50rpx;">
 			<van-tabs active="{{ active }}" bind:change="onChange" border="{{true}}">
 			<van-tab title="收益记录" title-style="font-size: 32rpx;" border="{{true}}">
-				
+				<view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+					<van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
+				</view>
 			</van-tab>
 			
 			<van-tab title="交易记录"  title-style="font-size: 32rpx;" border="{{true}}">

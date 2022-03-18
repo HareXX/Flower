@@ -11,6 +11,11 @@ Page({
 		tarOpen_ID : ''
 	},
 
+	navTo3 : function (e) {
+		wx.navigateToMiniProgram({
+			appId: 'wxd912763a5a92ea33',
+		})
+	},
 	navToPE: function(e)
 	{
 		// wx.navigateTo({

@@ -77,7 +77,8 @@
     "pages/health_records_home/health_records",
     "pages/recommendation/recommendation",
     "pages/trading_rule/trading_rule",
-    "pages/sell_invest/sell_invest"
+    "pages/sell_invest/sell_invest",
+    "pages/business_trainer/QA"
   ],
   "window": {
     "backgroundTextStyle": "light",

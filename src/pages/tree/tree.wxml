@@ -133,6 +133,7 @@
 			square
 			block
 			type="info"
+			color="#02499d"
 			bindtap="createFamily"
 		>
 			创建家庭

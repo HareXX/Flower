@@ -48,7 +48,17 @@
 	</van-tab>
 
 	<van-tab title="模拟投资训练">
-
+		<van-button 
+			size="large"
+			custom-style="margin-top:50rpx;width:80%;border-radius:15rpx;margin-top : 500rpx"
+			square
+			block
+			type="info"
+			bindtap="navToInvest"
+			color="#1597ef"
+		>
+			开始模拟投资训练
+		</van-button>
 	</van-tab>
 
 </van-tabs>

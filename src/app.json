@@ -81,8 +81,8 @@
 		"pages/earnings_home/earnings_user",
 		"pages/history_home/history_home",
 		"pages/history_home/history_user",
-		"pages/business_trainer/QA"
-		
+		"pages/business_trainer/QA",
+		"pages/business_trainer/invest"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

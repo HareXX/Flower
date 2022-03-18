@@ -14,6 +14,12 @@ Page({
 		  url: '../business_trainer/QA',
 		})
 	},
+	navToInvest(e)
+	{
+		wx.navigateTo({
+		  url: '../business_trainer/invest',
+		})
+	},
 
 	onChange(event) {
 		this.setData({

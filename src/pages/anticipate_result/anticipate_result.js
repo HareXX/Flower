@@ -13,9 +13,37 @@ Page({
     var timedata=wx.getStorageSync('beta')
     console.log(riskdata)
     console.log(timedata)
+    if(timedata>0.922&&timedata<=0.935)
     this.setData({
-      riskdata:riskdata,
-      timedata:timedata
+      timedata:"强时间偏好者"
+    })
+    if(timedata>0.935&&timedata<=0.949)
+    this.setData({
+      timedata:"中等时间偏好者"
+    })
+    if(timedata>0.949&&timedata<=0.962)
+    this.setData({
+      timedata:"弱时间偏好者"
+    })
+    if(riskdata>=17&&riskdata<=42)
+    this.setData({
+      riskdata:"保守型"
+    })
+    if(riskdata>=43&&riskdata<=55)
+    this.setData({
+      riskdata:"中庸保守型"
+    })
+    if(riskdata>=56&&riskdata<=70)
+    this.setData({
+      riskdata:"中庸型"
+    })
+    if(riskdata>=71&&riskdata<=84)
+    this.setData({
+      riskdata:"中庸进取型"
+    })
+    if(riskdata>=85&&riskdata<=95)
+    this.setData({
+      riskdata:"进取型"
     })
     //下面是图表一显示的数据，只需替换掉数据折现就会发生变化实现动态生成
     var x_data=["2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030", "2031"]
@@ -69,7 +97,7 @@ Page({
       animation: true,  //是否开启动画
      
       series: [{
-        name: "高风险投资占比",
+        name: "高风险资产占比",
         data: y_data,
         format: function (val, name) {
           return val + '%';

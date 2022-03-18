@@ -1,4 +1,7 @@
-// pages/add_invest/add_invest.js
+const app = getApp()
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+var serverUrl = app.globalData.serverUrl
+
 Page({
 
   /**
@@ -41,58 +44,30 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
 
   onSubmit: function(e){
     var amount=e.detail.value.money
-    console.log(amount)
+    if (amount > 50000)
+    {
+      Dialog.alert({
+				context : this,
+				selector:"#van-dialog",
+				message: '操作存在风险，您的账户已被冻结',
+			}).then(() => {
+				wx.reLaunch({
+          url: '../homepage/homepage',
+        })
+			});
+    }
+    else
+    {
+      console.log(amount)
     var tempid=wx.getStorageSync('id')
     var flag=true;
     console.log(tempid)
@@ -119,5 +94,7 @@ Page({
         },1000)
       },
     })
+    }
+    
   }
 })

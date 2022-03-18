@@ -53,24 +53,24 @@ page{/*页面背景—————统一浅灰*/
 
 .userInformation-nickname {/*昵称*/
   color: #000000;
-  font-size: 22px;
+  font-size: 22rpx;
   font-weight: bold;
-  width: 320px;
-  height: 20px;
-  line-height: 120px;
+  width: 320rpx;
+  height: 20rpx;
+  line-height: 120rpx;
 }
 .whitedivide {/*白色分割线*/
-  height: 1px;
+  height: 10rpx;
   background-color: #ffffff;
-  width: 56px;
+  width: 80rpx;
   position:relative;
-  top: 0px;
+  top: 0rpx;
 }
 .graydivide {/*灰色分割条*/
-  height: 10px;
+  height: 50rpx;
   background-color: #ededed;
   position:relative;
-  top: 0px;
+  top: 0rpx;
 }
 .function {
   width: 100%;
@@ -84,20 +84,20 @@ page{/*页面背景—————统一浅灰*/
 }
 .left-icon {
   display: flex;
-  margin: 14px;
+  margin: 20rpx;
 }
 .icon-picture {/*图标*/
   display: flex;
-  width: 28px;
-  height: 28px;
+  width: 60rpx;
+  height: 60rpx;
 }
 .text {/*文字*/
-  font-size: 15px;
+  font-size: 40rpx;
   font-style: normal;
   font-weight: normal;
-  width: 68px;
+  width: 60rpx;
   position: relative;
-  left: 0px;
+  left: 0rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,9 +109,9 @@ page{/*页面背景—————统一浅灰*/
 }
 .right-icon {/*右边图片*/
   display: flex;
-  margin: 14px;
+  margin: 14rpx;
   position: absolute;
-  right: 14px;
+  right: 14rpx;
 }
 .font{
   font-weight: 900;        /*取值范围是100~900*/
@@ -137,9 +137,9 @@ page{/*页面背景—————统一浅灰*/
 /* pages/input/input.wxss */
 .input1{
   height: 35px;
-  border: 1px solid black; border-radius: 5px;
+  border: 1rpx solid black; border-radius: 5px;
   /*设置边框及圆角*/
-  margin-top: 10px;
+  margin-top: 10rpx;
   width: 50%;
   display: block;
   margin: 0 auto;
@@ -153,7 +153,7 @@ page{/*页面背景—————统一浅灰*/
 }
 
 .btn1{
-  margin-top: 20px;
+  margin-top: 20rpx;
   width: 50%;
 }
 
@@ -177,7 +177,7 @@ page{/*页面背景—————统一浅灰*/
   height: 90%;
   bottom: 10%;
   text-align: center;
-  font-size: 14px;
+  font-size: 14rpx;
 }
 .canvas2_button{
   position: absolute;
@@ -193,5 +193,5 @@ page{/*页面背景—————统一浅灰*/
   height: 90%;
   bottom: 10%;
   text-align: center;
-  font-size: 14px;
+  font-size: 14rpx;
 }

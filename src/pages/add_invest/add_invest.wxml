@@ -21,3 +21,4 @@
       <button class="btn1" type="primary" form-type="submit">确认</button>
    </form>
 </view>
+<van-dialog id="van-dialog"/>

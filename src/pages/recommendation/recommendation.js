@@ -139,7 +139,7 @@ Page({
     var size=wx.getStorageSync('size')
     var money=wx.getStorageSync('investmoney')
     var tempid=wx.getStorageSync('id')
-    
+    var weight=wx.getStorageSync('weight')
     for(var i=0;i<size;i++)
     {
         if(list[i]=='南方金利A'){
@@ -149,8 +149,8 @@ Page({
               identity:tempid,
               fundName:"南方金利A",
               category:"债券",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -167,8 +167,8 @@ Page({
               identity:tempid,
               fundName:"泰信增强收益A",
               category:"债券",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -184,8 +184,8 @@ Page({
               identity:tempid,
               fundName:"华安日日鑫货币H",
               category:"债券",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -201,8 +201,8 @@ Page({
               identity:tempid,
               fundName:"海富通上证城投债ETF",
               category:"债券",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -218,8 +218,8 @@ Page({
               identity:tempid,
               fundName:"国泰上证5年期国债ETF",
               category:"债券",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -235,8 +235,8 @@ Page({
               identity:tempid,
               fundName:"富国中证煤炭A",
               category:"股票",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -252,8 +252,8 @@ Page({
               identity:tempid,
               fundName:"嘉实原油",
               category:"股票",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -269,8 +269,8 @@ Page({
               identity:tempid,
               fundName:"工银瑞信生态环境",
               category:"股票",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -286,8 +286,8 @@ Page({
               identity:tempid,
               fundName:"华安创业板50ETF",
               category:"股票",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},
@@ -303,8 +303,8 @@ Page({
               identity:tempid,
               fundName:"万家上证50ETF",
               category:"股票",
-              value:money/size,
-              proportion:1/size
+              value:money*weight[i],
+              proportion:weight[i]
             }, 
             method: 'POST',
             header: {'content-type': 'application/json;charset=utf-8'},

@@ -233,13 +233,16 @@ Page({
          wx.setStorageSync('size', res.data.length)
          console.log(res.data[0].fundName)
          console.log("success!")
+         var weight=new Array()
          var list=new Array()
          for(var i=0;i<res.data.length;i++)
          {
+           weight.push(res.data[i].weight)
             list.push(res.data[i].fundName)
          }
          console.log(list)
          wx.setStorageSync('list', list)
+         wx.setStorageSync('weight', weight)
          wx.request({
           url: 'http://47.113.191.64:9001/model/glide',
           data: {
@@ -255,6 +258,7 @@ Page({
           header: {'content-type': 'application/json;charset=UTF-8'},
            success: function (res) {
              var code=new Array();
+             console.log(res.data)
              for(var i=0;i<=9;i++)
              {
                 code.push(res.data[i]*100)

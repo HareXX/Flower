@@ -16,3 +16,4 @@ list:基金
 size:基金支数
 array:生命周期函数
 investmoney:投资资金
+weight:比例

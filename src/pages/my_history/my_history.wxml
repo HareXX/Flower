@@ -16,6 +16,7 @@
 
 		<view style="margin-top: 50rpx;">
 			<van-tabs active="{{ active }}" bind:change="onChange" border="{{true}}">
+<<<<<<< HEAD
 				<van-tab title="收益记录" title-style="font-size: 32rpx;" border="{{true}}">
 					<view wx:for="{{fundsBenefit}}" wx:for-index="idx">
 						<van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" size="large"  title-style="font-size : 35rpx"/>
@@ -30,6 +31,22 @@
 					</view>
 				</van-tab>
 			</van-tabs>
+=======
+			<van-tab title="收益记录" title-style="font-size: 32rpx;" border="{{true}}">
+				<view wx:for="{{fundsBenefit}}" wx:for-index="idx">
+					<van-cell title="{{fundsBenefit[idx].fundName}}" value="￥{{fundsBenefit[idx].benefit}}" />
+				</view>
+			</van-tab>
+			
+			<van-tab title="交易记录"  title-style="font-size: 32rpx;" border="{{true}}">
+				<view wx:for="{{records}}" wx:for-index="idx">
+					<van-cell title="{{records[idx].fundName}}" label="{{records[idx].category}}" border="{{false}}" value="￥{{records[idx].amount}}" size="large" title-style="font-size : 35rpx" title-width="400rpx"/>
+					<!-- <van-cell title="种类：" border="{{false}}" value="{{records[idx].category}}" /> -->
+					<van-cell title="{{records[idx].timeStamp}}" value="{{records[idx].status==0?'买入':'卖出'}}" size="large" />
+				</view>
+			</van-tab>
+		</van-tabs>
+>>>>>>> 723434ea7cf2df9934c8ebac333efe44813bb5ad
 		</view>
 
 		<!-- <view style="font-size: 45rpx;text-align: center;">收益记录</view>

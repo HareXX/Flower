@@ -13,6 +13,14 @@
   color: #333;
   font-weight: 500;
   margin: auto;
+  text-align: center;
+}
+.common-page-list-right {
+  font-size: 40rpx;
+  color: #333;
+  font-weight: 500;
+  margin: auto;
+  text-align: center;
 }
 .add_btn{
   display: flex;

@@ -264,6 +264,10 @@ Page({
            }
         })
       }
-    })
+	})
+	wx.navigateTo({
+	  url: '../anticipate_result/anticipate_result',
+	})({
+	})
   }
 })

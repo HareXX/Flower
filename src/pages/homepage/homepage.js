@@ -202,7 +202,8 @@ Page({
 				}
 			}],
 			xAxis: {
-				disableGrid: true
+				disableGrid: true,
+				disabled:true
 			},
 			yAxis: {
 				title: '收益金额 (万元)',
@@ -264,7 +265,7 @@ Page({
 		var categories = [];
 		var data = [];
 		for (var i = 0; i < 10; i++) {
-			categories.push('2016-' + (i + 1));
+			categories.push('2022-' + (i + 1));
 			data.push(Math.random() * (20 - 10) + 10);
 		}
 		// data[4] = null;

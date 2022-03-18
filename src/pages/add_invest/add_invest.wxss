@@ -36,5 +36,6 @@
 .btn1{
   margin-top: 20px;
   width: 50%;
+  color : #02499d
 }
 

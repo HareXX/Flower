@@ -88,7 +88,7 @@
     </view>
   <view class='add_btn'>
     <button class='btn' bindtap="complete">
-        追加投资
+        进行投资
     </button>
   </view>
   <view class='add_btn'>

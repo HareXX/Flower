@@ -1,4 +1,7 @@
-// pages/add_invest/add_invest.js
+const app = getApp()
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+var serverUrl = app.globalData.serverUrl
+
 Page({
 
   /**
@@ -91,33 +94,49 @@ Page({
   },
 
   onSubmit: function(e){
-    var amount=e.detail.value.money
-    console.log(amount)
-    var tempid=wx.getStorageSync('id')
-    var flag=true;
-    console.log(tempid)
-    wx.request({
-      url: 'http://localhost:9001/invest/add',
-      data: {
-        identity:tempid,
-        amount:amount,
-        confirmed:flag
-      }, 
-      method: 'POST',
-      header: {'content-type': 'application/json;charset=UTF-8'},
-      success: function (res) {
-        console.log(res.data)
-        wx.showToast({
-          title: '追加投资成功',
-          icon: 'success',
-          duration: 1000
-        })
-        setTimeout(function(){
-          wx.switchTab({
-            url: '../invest/invest'
-          })  
-        },1000)
-      },
-    })
-  }
+	var amount=e.detail.value.money
+	if (amount < 50000 && amount <= this.data.myasset)
+	{
+		console.log(amount)
+		var tempid=wx.getStorageSync('id')
+		var flag=true;
+		console.log(tempid)
+		wx.request({
+		url: 'http://localhost:9001/invest/add',
+		data: {
+			identity:tempid,
+			amount:amount,
+			confirmed:flag
+		}, 
+		method: 'POST',
+		header: {'content-type': 'application/json;charset=UTF-8'},
+		success: function (res) {
+			console.log(res.data)
+			wx.showToast({
+			title: '追加投资成功',
+			icon: 'success',
+			duration: 1000
+			})
+			setTimeout(function(){
+			wx.switchTab({
+				url: '../invest/invest'
+			})  
+			},1000)
+		},
+		})
+	}
+	else
+	{
+		Dialog.alert({
+			context : this,
+			selector:"#van-dialog",
+			message: '操作存在风险，您的账户已被冻结',
+		}).then(() => {
+			wx.reLaunch({
+			  url: '../homepage/homepage',
+			})
+		});
+	}
+
+	}	
 })

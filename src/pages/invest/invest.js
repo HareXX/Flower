@@ -36,9 +36,9 @@ Page({
 			// 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
 			header: {'content-type': 'application/x-www-form-urlencoded'},
 				 success: function (res) {
-            var myasset=res.data.assets
-            var sumasset=res.data.benefitsSum
-            var yester=res.data.benefitsYesterday
+            var myasset=res.data.assets.toFixed(2)
+            var sumasset=res.data.benefitsSum.toFixed(2)
+            var yester=res.data.benefitsYesterday.toFixed(2)
             that.setData({
               myasset:myasset,
               yester:yester,

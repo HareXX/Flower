@@ -192,6 +192,7 @@ Page({
     });
   },
 
+
   complete :function(){
     console.log(this.data.questionnaireArray[0].content.answer);
     console.log(this.data.questionnaireArray[1].content.answer);
@@ -225,10 +226,9 @@ Page({
         s:s
       }, 
       method: 'POST',
-    // 携带的参数会以url格式传到服务器，信息头我们设置为url编码，utf8编码
-    header: {'content-type': 'application/json;charset=UTF-8'},
+      header: {'content-type': 'application/json;charset=UTF-8'},
        success: function (res) {
-         console.log(res.data)
+         console.log(res)
          console.log(res.data.length)
          wx.setStorageSync('size', res.data.length)
          console.log(res.data[0].fundName)
@@ -240,9 +240,30 @@ Page({
          }
          console.log(list)
          wx.setStorageSync('list', list)
-
-     },
-     
+         wx.request({
+          url: 'http://47.113.191.64:9001/model/glide',
+          data: {
+            alpha:alpha,
+            beta:beta,
+            retire_year:retire_year,
+            c:c,
+            gender:sex,
+            M:M,
+            s:s
+          }, 
+          method: 'POST',
+          header: {'content-type': 'application/json;charset=UTF-8'},
+           success: function (res) {
+             var code=new Array();
+             for(var i=0;i<=9;i++)
+             {
+                code.push(res.data[i])
+             }
+             wx.setStorageSync('array', code)
+             console.log(code)
+           }
+        })
+      }
     })
-  },
+  }
 })

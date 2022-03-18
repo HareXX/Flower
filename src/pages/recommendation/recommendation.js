@@ -1,4 +1,8 @@
 // pages/recommendation/recommendation.js
+const app = getApp()
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+var serverUrl = app.globalData.serverUrl
+
 Page({
 
   /**
@@ -135,6 +139,7 @@ Page({
     var size=wx.getStorageSync('size')
     var money=wx.getStorageSync('investmoney')
     var tempid=wx.getStorageSync('id')
+    
     for(var i=0;i<size;i++)
     {
         if(list[i]=='南方金利A'){

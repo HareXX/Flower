@@ -47,5 +47,6 @@
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
     "minifyWXML": true
-  }
+  },
+  "libVersion": "2.22.0"
 }

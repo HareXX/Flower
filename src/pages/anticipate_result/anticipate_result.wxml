@@ -11,6 +11,9 @@
   <text>\n</text>
   <text>\n</text>
   <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
+  <text>\n</text>
   <!--间隔灰横条-->
   <view class="graydivide"></view>
   <!--风险-->
@@ -40,6 +43,7 @@
   <view>
     <text>\n</text>
     <view class="font">请输入您的预期投资金额</view>
+    <text>\n</text>
     <view class="input-view">
       <form bindsubmit="onSubmit">
         <input  name="money" class="input1" type="number" placeholder="请输入金额(单位:元)"></input>

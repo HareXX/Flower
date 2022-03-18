@@ -257,17 +257,17 @@ Page({
              var code=new Array();
              for(var i=0;i<=9;i++)
              {
-                code.push(res.data[i])
+                code.push(res.data[i]*100)
              }
              wx.setStorageSync('array', code)
              console.log(code)
            }
         })
+
       }
-	})
-	wx.navigateTo({
-	  url: '../anticipate_result/anticipate_result',
-	})({
-	})
+    })
+    wx.redirectTo({
+      url: '../anticipate_result/anticipate_result',
+    })
   }
 })

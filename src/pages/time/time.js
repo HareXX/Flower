@@ -75,13 +75,6 @@ Page({
               { "id": 2, "name": "B:一年后的1070元", "isSelected": false }
             ]
         }
-      },
-      {
-        "type": "SAQ",
-        "content": {
-          "description": "What's your name?",
-          "answer": "i dont know"
-        }
       }
     ],
   },

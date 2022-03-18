@@ -16,6 +16,7 @@
       "list": [
         {
           "name": "",
+<<<<<<< Updated upstream
           "pathName": "pages/anticipate_result/anticipate_result",
           "query": "",
           "launchMode": "default",
@@ -38,20 +39,23 @@
         {
           "name": "",
           "pathName": "pages/add_invest/add_invest",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/invest/invest",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
+=======
           "pathName": "pages/sell_invest/sell_invest",
+>>>>>>> Stashed changes
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/anticipate_result/anticipate_result",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/info_improvement/info_improvement",
           "query": "",
           "scene": null,
           "launchMode": "default"

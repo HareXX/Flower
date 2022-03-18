@@ -1,8 +1,8 @@
 <van-tabs active="{{ active }}" bind:change="onChange">
-	<van-tab title="血压">
+	<van-tab title="血糖">
 		<view wx:for="{{records0}}" wx:for-index="idx">
 			<view style="margin-top: 40rpx;margin-left: 40rpx;">
-				血压：{{records0[idx].level}}
+				血糖：{{records0[idx].level}}
 			</view>
 			<view style="margin-top: 40rpx;margin-left: 40rpx;">
 				时间：{{records0[idx].timestamp}}
@@ -14,10 +14,10 @@
 		</view>
 	</van-tab>
 
-	<van-tab title="血糖">
+	<van-tab title="心率">
 		<view wx:for="{{records1}}" wx:for-index="idx">
 			<view style="margin-top: 40rpx;margin-left: 40rpx;">
-				血糖：{{records1[idx].level}}
+				心率：{{records1[idx].level}}
 			</view>
 			<view style="margin-top: 40rpx;margin-left: 40rpx;">
 				时间：{{records1[idx].timestamp}}
@@ -29,10 +29,10 @@
 		</view>
 	</van-tab>
 
-	<van-tab title="心率">
+	<van-tab title="血压">
 		<view wx:for="{{records2}}" wx:for-index="idx">
 			<view style="margin-top: 40rpx;margin-left: 40rpx;">
-				心率：{{records2[idx].level}}
+				血压：{{records2[idx].level}}
 			</view>
 			<view style="margin-top: 40rpx;margin-left: 40rpx;">
 				时间：{{records2[idx].timestamp}}

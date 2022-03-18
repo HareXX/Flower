@@ -1,3 +1,4 @@
 {
-  "usingComponents": {}
+	"usingComponents": {},
+	"navigationBarTitleText": "病史记录"
 }

@@ -169,13 +169,13 @@ Page({
 			type: 'pie',
 			series: [{
 				name: '南方金利A',
-				data: 10000,
+				data: 3000,
 			}, {
 				name: '国泰上证',
 				data: 3500,
 			}, {
 				name: '嘉实原油',
-				data: 8000,
+				data: 3000,
 			}, ],
 			width: windowWidth,
 			height: 140,

@@ -38,20 +38,6 @@ Page({
       {
         "type": "SCQ",
         "content": {
-          "description": "如果有一个工作稳定但加薪空间较小的岗位和一个加薪空间较大但工作不稳定的岗位，您会更倾向于选择哪个岗位呢？",
-          "options":
-            [
-              { "id": 1, "name": "A:确定选择工作稳定但加薪空间较小的岗位", "isSelected": false},
-              { "id": 2, "name": "B:可能选择工作稳定但加薪空间较小的岗位", "isSelected": false },
-              { "id": 3, "name": "C:不确定", "isSelected": false },
-              { "id": 4, "name": "D:可能选择加薪空间较大但工作不稳定的岗位", "isSelected": false },
-              { "id": 5, "name": "E:确定选择加薪空间较大但工作不稳定的岗位", "isSelected": false }
-            ]
-        }
-      },
-      {
-        "type": "SCQ",
-        "content": {
           "description": "当面对重大的财务决策时，您会更加关注潜在损失或潜在收益？",
           "options":
             [
@@ -150,34 +136,6 @@ Page({
       {
         "type": "SCQ",
         "content": {
-          "description": "想象您在未来某时借了一大笔钱，且并不清楚未来利率变化趋势。这时你可以选择一个随市场利率变化的浮动利率，一个比当前利率高1%的固定利率，或者兼有浮动利率、固定利率的混合利率。那么您会选择按什么利率进行贷款呢？",
-          "options":
-            [
-              { "id": 1, "name": "A:100%可变利率", "isSelected": false },
-              { "id": 2, "name": "B:75%可变利率，25%固定利率", "isSelected": false },
-              { "id": 3, "name": "C:50%可变利率，50%固定利率", "isSelected": false },
-              { "id": 4, "name": "D:25%可变利率，75%固定利率", "isSelected": false },
-              { "id": 5, "name": "E:100%固定利率", "isSelected": false }
-            ]
-        }
-      },
-      {
-        "type": "SCQ",
-        "content": {
-          "description": "保险可以覆盖生活中一系列风险，包括盗窃、火灾、意外事故、疾病、死亡等，您目前所有的保险涉及了多少风险呢？",
-          "options":
-            [
-              { "id": 1, "name": "A:没有", "isSelected": false },
-              { "id": 2, "name": "B:较少风险", "isSelected": false },
-              { "id": 3, "name": "C:部分风险", "isSelected": false },
-              { "id": 4, "name": "D:较多风险", "isSelected": false },
-              { "id": 5, "name": "E:全部风险", "isSelected": false }
-            ]
-        }
-      },
-      {
-        "type": "SCQ",
-        "content": {
           "description": "您目前有一份存在30%风险的金融资产，那么您认为这份金融资产所能够带来的资产回报率为多少呢？",
           "options":
             [
@@ -221,20 +179,6 @@ Page({
       {
         "type": "SCQ",
         "content": {
-          "description": "您的直系家属数量为:",
-          "options":
-            [
-              { "id": 1, "name": "A:2人以下", "isSelected": false },
-              { "id": 2, "name": "B:3人", "isSelected": false },
-              { "id": 3, "name": "C:4人", "isSelected": false },
-              { "id": 4, "name": "D:5人", "isSelected": false },
-              { "id": 5, "name": "E:6人以上", "isSelected": false }
-            ]
-        }
-      },
-      {
-        "type": "SCQ",
-        "content": {
           "description": "您的净资产金额（总资产-总负债）约为:",
           "options":
             [
@@ -263,6 +207,34 @@ Page({
       {
         "type": "SCQ",
         "content": {
+          "description": "在您每年的收入中，可用于金融投资（储蓄存款除外）的比例为？",
+          "options":
+            [
+              { "id": 1, "name": "A:不超过5% ", "isSelected": false },
+              { "id": 2, "name": "B:5% 至 10 % （不包含5% ，包含10%）", "isSelected": false },
+              { "id": 3, "name": "C:10 % 至 25 % （不包含10% ，包含25%）", "isSelected": false },
+              { "id": 4, "name": "D:25 % 至 50 %（不包含25% ，包含50%）", "isSelected": false },
+              { "id": 5, "name": "E:大于 50 %", "isSelected": false }
+            ]
+        }
+      },
+      {
+        "type": "SCQ",
+        "content": {
+          "description": "您是否有尚未偿清的债务：",
+          "options":
+            [
+              { "id": 1, "name": "A:没有", "isSelected": false },
+              { "id": 2, "name": "B:有住房抵押贷款等长期定额债务", "isSelected": false },
+              { "id": 3, "name": "C:有信用卡欠款等短期信用债务", "isSelected": false },
+              { "id": 4, "name": "D:有医疗费用所造成的债务", "isSelected": false },
+              { "id": 5, "name": "E:有亲友之间的债务", "isSelected": false }
+            ]
+        }
+      },
+      {
+        "type": "SCQ",
+        "content": {
           "description": "您有多长时间的投资经历？",
           "options":
             [
@@ -277,30 +249,42 @@ Page({
       {
         "type": "SCQ",
         "content": {
-          "description": "您目前的资产负债率（负债总额/资产总额）为:",
+          "description": "您的健康状况：",
           "options":
             [
-              { "id": 1, "name": "A:0%", "isSelected": false },
-              { "id": 2, "name": "B:0-10%", "isSelected": false },
-              { "id": 3, "name": "C:10%-20%", "isSelected": false },
-              { "id": 4, "name": "D:30%-40%", "isSelected": false },
-              { "id": 5, "name": "E:40%-50%", "isSelected": false },
-              { "id": 6, "name": "E:超过50%", "isSelected": false }
+              { "id": 1, "name": "A:患有一种及以下的慢性病", "isSelected": false },
+              { "id": 2, "name": "B:患有两种以上慢性病", "isSelected": false },
+              { "id": 3, "name": "C:罹患重大疾病", "isSelected": false },
+              { "id": 4, "name": "D:患有其他疾病", "isSelected": false }
             ]
         }
       },
       {
         "type": "SCQ",
         "content": {
-          "description": "您目前的收入负债率（负债总额/收入总额）为:",
+          "description": "您的医疗保险情况：",
           "options":
             [
-              { "id": 1, "name": "A:0%", "isSelected": false },
-              { "id": 2, "name": "B:0-10%", "isSelected": false },
-              { "id": 3, "name": "C:10%-20%", "isSelected": false },
-              { "id": 4, "name": "D:30%-40%", "isSelected": false },
-              { "id": 5, "name": "E:40%-50%", "isSelected": false },
-              { "id": 6, "name": "E:超过50%", "isSelected": false }
+              { "id": 1, "name": "A:无医疗保险", "isSelected": false },
+              { "id": 2, "name": "B:城职职工基本医疗保险", "isSelected": false },
+              { "id": 3, "name": "C:城镇居民基本医疗保险", "isSelected": false },
+              { "id": 4, "name": "D:新型农村合作医疗", "isSelected": false },
+              { "id": 5, "name": "E:商业医疗保险", "isSelected": false },
+              { "id": 6, "name": "F:社会基本医疗保险与商业医疗保险兼有", "isSelected": false }
+            ]
+        }
+      },
+      {
+        "type": "SCQ",
+        "content": {
+          "description": "保险可以覆盖生活中一系列风险，包括盗窃、火灾、意外事故、疾病、死亡等，您目前所有的保险涉及了多少风险呢？",
+          "options":
+            [
+              { "id": 1, "name": "A:没有", "isSelected": false },
+              { "id": 2, "name": "B:较少风险", "isSelected": false },
+              { "id": 3, "name": "C:部分风险", "isSelected": false },
+              { "id": 4, "name": "D:较多风险", "isSelected": false },
+              { "id": 5, "name": "E:全部风险", "isSelected": false }
             ]
         }
       },
@@ -422,59 +406,56 @@ Page({
   complete :function(){
     var arr=this.data.questionnaireArray;
     var x=0
-    for(var i=0;i<=4;i++)
+    for(var i=0;i<=3;i++)
     {
       for(var j=0;j<=4;j++)
       {
         if(arr[i].content.options[j].isSelected==true) x+=(j+1)
       }
     }
-    for(var i=5;i<=9;i++)
+    for(var i=4;i<=9;i++)
     {
       for(var j=0;j<=4;j++)
       {
         if(arr[i].content.options[j].isSelected==true) x+=(j+1)
       }
     }
-    for(var i=10;i<=11;i++)
+    for(var j=0;j<=4;j++)
+    {
+      if(arr[10].content.options[j].isSelected==true) x+=(5-j)
+    }
+    for(var j=0;j<=5;j++)
+    {
+      if(arr[11].content.options[j].isSelected==true) x+=j+1
+    }
+    for(var i=12;i<=14;i++)
     {
       for(var j=0;j<=4;j++)
       {
-        if(arr[i].content.options[j].isSelected==true) x+=(5-j)
+        if(arr[i].content.options[j].isSelected==true) x+=(j+1)
       }
     }
     for(var j=0;j<=4;j++)
     {
-      if(arr[12].content.options[j].isSelected==true) x+=j+1
+      if(arr[15].content.options[j].isSelected==true) x+=(5-j)
     }
     for(var j=0;j<=4;j++)
     {
-      if(arr[13].content.options[j].isSelected==true) x+=(5-j)
+      if(arr[16].content.options[j].isSelected==true) x+=(j+1)
     }
-    if(arr[14].content.options[0].isSelected==true) x+=1
-    if(arr[14].content.options[1].isSelected==true) x+=2
-    if(arr[14].content.options[2].isSelected==true) x+=2
-    if(arr[14].content.options[3].isSelected==true) x+=3
-    if(arr[14].content.options[4].isSelected==true) x+=4
-    if(arr[14].content.options[5].isSelected==true) x+=5
-    for(var i=15;i<=17;i++)
+    if(arr[17].content.options[0].isSelected==true) x+=3
+    if(arr[17].content.options[1].isSelected==true) x+=1
+    if(arr[17].content.options[2].isSelected==true) x+=0
+    if(arr[17].content.options[3].isSelected==true) x+=1
+    if(arr[18].content.options[0].isSelected==true) x+=0
+    if(arr[18].content.options[1].isSelected==true) x+=1
+    if(arr[18].content.options[2].isSelected==true) x+=1
+    if(arr[18].content.options[3].isSelected==true) x+=1
+    if(arr[18].content.options[4].isSelected==true) x+=2
+    if(arr[18].content.options[5].isSelected==true) x+=3
+    for(var j=0;j<=4;j++)
     {
-      for(var j=0;j<=4;j++)
-      {
-        if(arr[i].content.options[j].isSelected==true) x+=j+1
-      }
-    }
-    for(var j=0;j<=3;j++)
-    {
-      if(arr[18].content.options[j].isSelected==true) x+=j
-    }
-    if(arr[18].content.options[4].isSelected==true) x+=5
-    for(var i=19;i<=20;i++)
-    {
-      for(var j=0;j<=5;j++)
-      {
-        if(arr[i].content.options[j].isSelected==true) x+=j
-      }
+      if(arr[19].content.options[j].isSelected==true) x+=(4-j)
     }
     if(x<=42&&x>=18) console.log("保守型")
     if(x>=43&&x<=63) console.log("中庸保守型")

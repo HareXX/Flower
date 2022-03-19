@@ -72,6 +72,47 @@ Page({
 	onLoad: function (e) {
 		var that = this
 		var tempid = wx.getStorageSync('id')
+		that.data.open_ID = wx.getStorageSync('id')
+		wx.request({
+			url: serverUrl + '/risk/process',
+			data: {
+				identity: that.data.open_ID,
+			},
+			method: "GET",
+			header: {
+				'Content-Type': 'text/plain;charset:utf-8;'
+			},
+
+			success: function (res) {
+				console.log("获取风险信息成功")
+				console.log(res)
+				that.setData({
+					isfrozen: res.data.frozen,
+					redNum: res.data.redNum,
+					riskActivities: res.data.riskActVoList
+				})
+
+				console.log(res)
+				if (that.data.isfrozen) {
+					console.log(that.data)
+					Dialog.alert({
+						context: this,
+						selector: "#van-dialog",
+						message: '您的账户已被冻结，请等待三天自动解冻',
+					}).then(() => {
+						wx.exitMiniProgram()
+					});
+				} else {
+					// that.data.redNum = 2
+					// that.data.riskActivities=[1,2]
+					// console.log(that.data)
+				}
+			},
+			fail: function (res) {
+				console.log("获取授权关系失败")
+				console.log(res)
+			}
+		})
 		wx.request({
 			url: 'http://localhost:9001/asset/financial',
 			data: {
@@ -88,6 +129,7 @@ Page({
 				console.log(res.data.benefitsYesterday)
 				console.log(res.data.investedThingsList)
 				var myasset = res.data.assets
+				myasset = 101364.72
 				var sumasset = res.data.benefitsSum
 				var yester = res.data.benefitsYesterday.toFixed(2)
 				var investList = res.data.investedThingsList
@@ -135,6 +177,16 @@ Page({
 				name: '嘉实原油',
 				data: 8000,
 			}, ],
+			// series: [{
+			// 	name: '工银瑞信',
+			// 	data: 2000,
+			// }, {
+			// 	name: '国泰上证',
+			// 	data: 6000,
+			// }, {
+			// 	name: '万家上证',
+			// 	data: 8000,
+			// }, ],
 			width: windowWidth,
 			height: 140,
 			dataLabel: false,

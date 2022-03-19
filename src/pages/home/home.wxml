@@ -88,8 +88,8 @@
 			<van-image
 				width="160rpx"
 				height="160rpx"
+				bindtap="navToInvite"
 				src="/images/声临其境.png"
-				bindtap="gogogo"
 			/>
 			
 		</van-grid-item>
@@ -171,7 +171,7 @@
 	confirmButtonText="接受"
 >
 	<view style="height: 80rpx;text-align: center;padding-top: 50rpx;">
-		小君邀请您体验声临其境功能
+		老涵邀请您体验声临其境功能
 	</view>
 	
 </van-dialog>

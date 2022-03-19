@@ -62,12 +62,13 @@
     <canvas canvas-id="pieCanvas" bindtouchstart="touchHandler"></canvas>
 	
 </view>
-
-<view class="line">
+ <view class="line">
     <canvas canvas-id="lineCanvas" disable-scroll="true"bindtouchstart="touchHandler"></canvas>
 	
-</view>
-
+</view> 
+<!-- <view style="height: 150rpx; text-align: center; font-weight: bolder; font-size: 40rpx;">
+	您今日没有收益！
+</view> -->
 
 <view class="history">
 	<van-button icon="browsing-history-o" type="info" size="large" round="true" bindtap="navToHistory" color="#26499d">查询历史记录</van-button>
@@ -97,7 +98,7 @@
 			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;"> {{riskActivities[idx].userName}}</view>
 			
 			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;">时间: {{riskActivities[idx].timeStamp}}</view>
-			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;">投入资金: {{riskActivities[idx].amount}}</view>
+			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;">卖出资金: {{riskActivities[idx].amount}}</view>
 			<view style="text-align : center;margin-top: 5rpx;margin-bottom: 10rpx;word-break:break-all">风险行为描述: {{riskActivities[idx].description}}</view>
 
 		</view>

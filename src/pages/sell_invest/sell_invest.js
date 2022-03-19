@@ -1,4 +1,7 @@
-// pages/sell_invest/sell_invest.js
+const app = getApp()
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+var serverUrl = app.globalData.serverUrl
+
 Page({
 
   /**
@@ -93,18 +96,27 @@ Page({
   onSubmit: function(e){
     var amount=e.detail.value.money
     console.log(amount)
-    if(amount>this.data.myasset)
+    if(amount>=20000)
     {
-      wx.showToast({
-        title: '超出总资产',
-        icon: 'error',
-        duration: 1000
-      })
-      setTimeout(function(){
-        wx.navigateTo({
-          url: '../sell_invest/sell_invest'
-        })  
-      },1000)
+    //   wx.showToast({
+    //     title: '超出总资产',
+    //     icon: 'error',
+    //     duration: 1000
+    //   })
+    //   setTimeout(function(){
+    //     wx.navigateTo({
+    //       url: '../sell_invest/sell_invest'
+    //     })  
+	//   },1000)
+		Dialog.alert({
+			context : this,
+			selector:"#van-dialog",
+			message: '操作存在风险，您的账户已被冻结',
+		}).then(() => {
+			wx.reLaunch({
+			url: '../homepage/homepage',
+			})
+		});	
     }
     else{
       var tempid=wx.getStorageSync('id')

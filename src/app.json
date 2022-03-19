@@ -82,7 +82,8 @@
 		"pages/history_home/history_home",
 		"pages/history_home/history_user",
 		"pages/business_trainer/QA",
-		"pages/business_trainer/invest"
+		"pages/business_trainer/invest",
+		"pages/invite/invite"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

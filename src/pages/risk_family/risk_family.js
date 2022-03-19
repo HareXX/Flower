@@ -10,6 +10,7 @@ Page({
 		isInFamily : false
 	},
 
+	
 	onLoad: function (options) {
 		var that = this
 		var Pages = getCurrentPages();

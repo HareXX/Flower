@@ -9,7 +9,7 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-		show : false,
+		show : false ,
 		pattern : true,
 		open_ID: null,
 		isInFamily: false,
@@ -92,6 +92,13 @@ Page({
 	navToSeniorHelper(e) {
 		wx.navigateTo({
 			url: '../senior-helper/senior-helper',
+		})
+	},
+
+	navToInvite(e)
+	{
+		wx.navigateTo({
+			url: '../invite/invite',
 		})
 	},
 

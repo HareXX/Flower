@@ -3,7 +3,7 @@ const app = getApp()
 Page({
 
     data: {
-		hasAuth : [true, true, true],
+		hasAuth : [true, false, true],
 		family : [],
 		numOfFamily : 0,
 		open_ID : null,

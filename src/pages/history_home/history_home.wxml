@@ -14,6 +14,7 @@
 						custom-style="width:150rpx"
 						bindtap="navToHistoryUser"
 						data-index="{{idx}}"
+						color="#02499d"
 					>
 						选择
 					</van-button>

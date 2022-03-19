@@ -4,7 +4,7 @@ Page({
 
     data: {
 		tarOpen_ID : null,
-		hasAuth : [true, true, true],
+		hasAuth : [true, false, true],
 		family : [],
 		numOfFamily : 0,
 		open_ID : null,

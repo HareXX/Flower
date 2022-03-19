@@ -37,8 +37,8 @@ Page({
 			  header: {'content-type': 'application/x-www-form-urlencoded'},
 				   success: function (res) {
 			  var myasset=res.data.assets
-			  var sumasset=res.data.benefitsSum
-			  var yester=res.data.benefitsYesterday
+			  var sumasset=res.data.benefitsSum.toFixed(2)
+			  var yester=res.data.benefitsYesterday.toFixed(2)
 			  that.setData({
 				myasset:myasset,
 				yester:yester,

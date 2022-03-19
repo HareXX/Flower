@@ -89,7 +89,7 @@ Page({
 				console.log(res.data.investedThingsList)
 				var myasset = res.data.assets
 				var sumasset = res.data.benefitsSum
-				var yester = res.data.benefitsYesterday
+				var yester = res.data.benefitsYesterday.toFixed(2)
 				var investList = res.data.investedThingsList
 				console.log(investList.length)
 				that.setData({
@@ -111,49 +111,7 @@ Page({
 				console.log(that.data.hasInvestment)
 			}
 		})
-		that.data.open_ID = wx.getStorageSync('id')
-		wx.request({
-			url: serverUrl + '/risk/process',
-			data: {
-				identity: that.data.open_ID,
-			},
-			method: "GET",
-			header: {
-				'Content-Type': 'text/plain;charset:utf-8;'
-			},
-
-			success: function (res) {
-				console.log("获取风险信息成功")
-				console.log(res)
-				that.setData({
-					isfrozen: res.data.frozen,
-					redNum: res.data.redNum,
-					riskActivities: res.data.riskActVoList
-				})
-
-				console.log(res)
-				if (that.data.isfrozen) {
-					console.log(that.data)
-					Dialog.alert({
-						context: this,
-						selector: "#van-dialog",
-						message: '您的账户已被冻结，请等待三天自动解冻',
-					}).then(() => {
-						wx.exitMiniProgram()
-					});
-				} else {
-					// that.data.redNum = 2
-					// that.data.riskActivities=[1,2]
-					// console.log(that.data)
-				}
-			},
-			fail: function (res) {
-				console.log("获取授权关系失败")
-				console.log(res)
-			}
-		})
-		//请求投资组合
-
+		
 		//绘图
 		var windowWidth = 360;
 		try {
@@ -226,6 +184,7 @@ Page({
 
 	onShow: function (e) {
 		this.getTabBar().init();
+		var that = this
 		var windowWidth = 320;
 		try {
 			var res = wx.getSystemInfoSync();
@@ -233,6 +192,50 @@ Page({
 		} catch (e) {
 			console.error('getSystemInfoSync failed!');
 		}
+
+		that.data.open_ID = wx.getStorageSync('id')
+		wx.request({
+			url: serverUrl + '/risk/process',
+			data: {
+				identity: that.data.open_ID,
+			},
+			method: "GET",
+			header: {
+				'Content-Type': 'text/plain;charset:utf-8;'
+			},
+
+			success: function (res) {
+				console.log("获取风险信息成功")
+				console.log(res)
+				that.setData({
+					isfrozen: res.data.frozen,
+					redNum: res.data.redNum,
+					riskActivities: res.data.riskActVoList
+				})
+
+				console.log(res)
+				if (that.data.isfrozen) {
+					console.log(that.data)
+					Dialog.alert({
+						context: this,
+						selector: "#van-dialog",
+						message: '您的账户已被冻结，请等待三天自动解冻',
+					}).then(() => {
+						wx.exitMiniProgram()
+					});
+				} else {
+					// that.data.redNum = 2
+					// that.data.riskActivities=[1,2]
+					// console.log(that.data)
+				}
+			},
+			fail: function (res) {
+				console.log("获取授权关系失败")
+				console.log(res)
+			}
+		})
+		//请求投资组合
+
 	},
 	navToAI_Query(e) {
 		wx.navigateTo({

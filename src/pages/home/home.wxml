@@ -89,7 +89,9 @@
 				width="160rpx"
 				height="160rpx"
 				src="/images/声临其境.png"
+				bindtap="gogogo"
 			/>
+			
 		</van-grid-item>
 
 		<van-grid-item use-slot="true">
@@ -119,9 +121,9 @@
 				bindtap="navToBusinessTrainer"
 			/>
 		</van-grid-item>
-
 		
 	</van-grid>
+	
 </view>
 
 <view wx:else style="width:90%;margin: 0 auto; margin-top: 80rpx;">
@@ -161,4 +163,16 @@
 
 </view>
 
+<van-dialog 
+	use-slot
+	id="van-dialog" 
+	show="{{ show }}"
+	show-cancel-button
+	confirmButtonText="接受"
+>
+	<view style="height: 80rpx;text-align: center;padding-top: 50rpx;">
+		小君邀请您体验声临其境功能
+	</view>
+	
+</van-dialog>
 <view style="height:150rpx;"></view>

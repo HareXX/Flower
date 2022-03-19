@@ -1,12 +1,15 @@
 // pages/home/home.js
 const app = getApp()
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
 var serverUrl = app.globalData.serverUrl
+
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
+		show : false,
 		pattern : true,
 		open_ID: null,
 		isInFamily: false,
@@ -93,6 +96,7 @@ Page({
 	},
 
 	onLoad: function (options) {
+		
 		var tmp = app.globalData.pattern
 		this.setData({
 			pattern : tmp
@@ -147,8 +151,29 @@ Page({
 		})
 	},
 
+	onClose() {
+		this.setData({ show: false });
+	},
+	navToChat(e)
+	{
+		// Dialog.alert({
+		// 	context: this,
+		// 	selector: "#van-dialog",
+		// 	message: '小君邀请您体验声临其境功能',
+		// }).then(() => {
+		// });
+
+	},
+
 	onShow: function () {
 		this.getTabBar().init();
+		
+		// Dialog.alert({
+		// 	context: this,
+		// 	selector: "#van-dialog",
+		// 	message: '小君邀请您体验声临其境',
+		// }).then(() => {
+		// });
 
 		var that = this
 

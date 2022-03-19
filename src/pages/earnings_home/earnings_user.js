@@ -4,12 +4,12 @@ const app = getApp()
 var serverUrl = app.globalData.serverUrl
 Page({
   data: {
-	  tarOpen_ID : null,
+	tarOpen_ID:null,
     date: date,
     show: false,
     minDate: new Date(2022, 0, 1).getTime(),
     maxDate: new Date(2022, 12, 31).getTime(),
-    total_income: '114514',
+    total_income: '0.00',
     open_ID: wx.getStorageSync('id'),
     fundsBenefit: [],
     records: [],
@@ -26,19 +26,22 @@ Page({
   },
   onLoad: function () {
 	var that = this
-		var Pages = getCurrentPages();
-		var prevPage = Pages[Pages.length - 2];
-		console.log(prevPage.data);
-		that.setData({
-			tarOpen_ID : prevPage.data.tarOpen_ID
-		})
-		console.log(that.data.tarOpen_ID)
-    var that = this
+	var Pages = getCurrentPages();
+	var prevPage = Pages[Pages.length - 2];
+	var serverUrl = app.globalData.serverUrl
+	this.setData({
+		tarOpen_ID : prevPage.data.tarOpen_ID
+	})
+    var tmp = this.formatDate(this.data.date).split("/")
+    var timeStamp = new Date().getFullYear()
+    tmp[0] = tmp[0].length == 1 ? "0" + tmp[0] : tmp[0]
+    timeStamp = timeStamp + "-" + tmp[0] + "-" + tmp[1]
+    console.log(timeStamp)
     wx.request({
       url: serverUrl + '/asset/history',
       data: {
         identity: that.data.tarOpen_ID,
-        timestamp: '2022-03-15',
+        timestamp: new Date(timeStamp),
       },
       method: 'POST',
       header: {
@@ -46,12 +49,13 @@ Page({
       },
 
       success: function (res) {
+        console.log(new Date(date))
         console.log('成功')
         that.setData({
-          total_income: res.data[3].benefitsDaySum.toFixed(2),
-          fundsBenefit: res.data[3].investedThingsDailyFundBenefits,
-          records: res.data[3].investedThingsRecordList,
-        })
+          total_income: res.data[0].benefitsDaySum,
+          fundsBenefit: res.data[0].investedThingsDailyFundBenefits,
+          records: res.data[0].investedThingsRecordList,
+		})
         // console.log(that.data.records)
         // var len = that.data.records.length
         // that.data.recordFundName = new Array(len)
@@ -67,7 +71,7 @@ Page({
         console.log('失败！')
       }
     })
-
+	
   },
 
 
@@ -94,6 +98,37 @@ Page({
       show: false,
       date: this.formatDate(event.detail),
     });
+    var that = this
+    var timeStamp = new Date().getFullYear()
+    var tmp = this.data.date.split("/")
+    tmp[0] = tmp[0].length == 1 ? "0" + tmp[0] : tmp[0]
+    timeStamp = timeStamp + "-" + tmp[0] + "-" + tmp[1]
+    console.log(timeStamp)
+    wx.request({
+      url: serverUrl + '/asset/history',
+      data: {
+        identity: that.data.open_ID,
+        timestamp: new Date(timeStamp),
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json;charset=utf-8',
+      },
+
+      success: function (res) {
+        console.log('成功')
+        that.setData({
+          total_income: res.data[0].benefitsDaySum.toFixed(2),
+          fundsBenefit: res.data[0].investedThingsDailyFundBenefits,
+          records: res.data[0].investedThingsRecordList,
+        })
+
+        console.log(that.data)
+      },
+      fail: function (err) {
+        console.log('失败！')
+      }
+    })
   },
 
 

@@ -1,4 +1,5 @@
-// pages/display_card/display_card.js
+const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
 
   /**
@@ -19,7 +20,7 @@ Page({
     var identity=wx.getStorageSync('id')
     console.log(identity)
     wx.request({
-      url: 'http://localhost:9001/user/hascard',
+      url: serverUrl + '/user/hascard',
       data: {
         identity:identity,
       }, 

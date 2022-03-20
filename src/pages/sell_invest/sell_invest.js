@@ -21,7 +21,7 @@ Page({
     var that=this
     var tempid=wx.getStorageSync('id')
     wx.request({
-      url: 'http://localhost:9001/asset/financial',
+      url: serverUrl + '/asset/financial',
       data: {
         identity:tempid,
       }, 
@@ -123,7 +123,7 @@ Page({
       var flag=true;
       console.log(tempid)
       wx.request({
-        url: 'http://localhost:9001/invest/sell',
+        url: serverUrl + '/invest/sell',
         data: {
           identity:tempid,
           amount:amount

@@ -114,7 +114,7 @@ Page({
 			}
 		})
 		wx.request({
-			url: 'http://localhost:9001/asset/financial',
+			url: serverUrl + '/asset/financial',
 			data: {
 				identity: tempid,
 			},

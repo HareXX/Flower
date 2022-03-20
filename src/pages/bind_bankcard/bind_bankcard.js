@@ -1,5 +1,6 @@
-// pages/bind_bankcard/bind_bankcard.js
 var util = require('../../utils/util.js');
+const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
 
   /**
@@ -89,7 +90,7 @@ Page({
       var identity=wx.getStorageSync('id')
       console.log(identity)
       wx.request({
-        url: 'http://localhost:9001/user/bankcard',
+        url: serverUrl + '/user/bankcard',
         data: {
           ownerIdentity:identity,
           cardID:this.data.bankNumber,

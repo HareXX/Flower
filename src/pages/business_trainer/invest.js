@@ -1,3 +1,5 @@
+const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
 
 	/**
@@ -28,7 +30,7 @@ Page({
 		var tempid=wx.getStorageSync('id')
 		console.log(tempid)
 			  wx.request({
-				  url: 'http://localhost:9001/asset/financial',
+				url: serverUrl + '/asset/financial',
 				  data: {
 					  identity:tempid,
 				  }, 
@@ -48,7 +50,7 @@ Page({
 		})
 		var size=wx.getStorageSync('size')
 		wx.request({
-				  url: 'http://localhost:9001/asset/homepage',
+			url: serverUrl + '/asset/homepage',
 				  data: {
 					  identity:tempid,
 				  }, 

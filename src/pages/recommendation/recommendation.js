@@ -144,7 +144,7 @@ Page({
     {
         if(list[i]=='南方金利A'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"南方金利A",
@@ -162,7 +162,7 @@ Page({
         if(list[i]=='泰信增强收益A')
         {
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"泰信增强收益A",
@@ -179,7 +179,7 @@ Page({
         }
         if(list[i]=='华安日日鑫货币H'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"华安日日鑫货币H",
@@ -196,7 +196,7 @@ Page({
         }
         if(list[i]=='海富通上证城投债ETF'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"海富通上证城投债ETF",
@@ -213,7 +213,7 @@ Page({
         }
         if(list[i]=='国泰上证5年期国债ETF'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"国泰上证5年期国债ETF",
@@ -230,7 +230,7 @@ Page({
         }
         if(list[i]=='富国中证煤炭A'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"富国中证煤炭A",
@@ -247,7 +247,7 @@ Page({
         }
         if(list[i]=='嘉实原油'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"嘉实原油",
@@ -264,7 +264,7 @@ Page({
         }
         if(list[i]=='工银瑞信生态环境'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"工银瑞信生态环境",
@@ -281,7 +281,7 @@ Page({
         }
         if(list[i]=='华安创业板50ETF'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"华安创业板50ETF",
@@ -298,7 +298,7 @@ Page({
         }
         if(list[i]=='万家上证50ETF'){
           wx.request({
-            url: 'http://localhost:9001/invest/buy',
+            url: serverUrl + '/invest/buy',
             data: {
               identity:tempid,
               fundName:"万家上证50ETF",

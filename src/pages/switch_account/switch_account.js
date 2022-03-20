@@ -1,4 +1,5 @@
-// pages/switch_account/switch_account.js
+const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
 
 
@@ -12,7 +13,7 @@ Page({
     //触发登陆请求
       wx.request({
         method:"POST", //指定为http协议中的POST方法
-      url: 'http://localhost:9000/user/login', //后端接口完整URL
+        url: serverUrl + '/user/login', //后端接口完整URL
         data: {
           name: e.detail.value.name, //将表单中name的值绑定给对象的name属性
           phone: e.detail.value.phone,

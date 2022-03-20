@@ -21,10 +21,10 @@
                 },
                 {
                     "name": "",
-                    "pathName": "pages/chartTest/chartTest.js",
+                    "pathName": "pages/questionnare/questionnare",
                     "query": "",
-                    "scene": null,
-                    "launchMode": "default"
+                    "launchMode": "default",
+                    "scene": null
                 },
                 {
                     "name": "",
@@ -32,6 +32,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/pattern_switch/pattern_switch",
+                    "query": "",
+                    "scene": null,
+                    "launchMode": "default"
                 }
             ]
         }

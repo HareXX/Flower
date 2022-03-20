@@ -1,5 +1,7 @@
 // pages/addsign/addsign.js
 var util = require('../../utils/util');
+const app = getApp()
+var serverUrl = app.globalData.serverUrl
 Page({
   /**
    * 页面的初始数据
@@ -99,7 +101,7 @@ Page({
         console.log(tempsex)
         console.log(tempphone)
         wx.request({
-          url: 'http://localhost:9001/user/register',
+          url: serverUrl + '/user/register',
           data: {
             identity:tempid,
             userName:tempname,
